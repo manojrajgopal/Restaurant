@@ -35,7 +35,7 @@ export function SignatureSpotlight({ data, menu }: SignatureSpotlightProps) {
               key={item.id}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: false, margin: "-12% 0px -12% 0px" }}
               transition={{
                 duration: 0.8,
                 delay: i * 0.1,

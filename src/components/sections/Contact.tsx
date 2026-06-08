@@ -68,7 +68,7 @@ export function Contact({ data, brand }: ContactProps) {
           <motion.aside
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: false, margin: "-12% 0px -12% 0px" }}
             transition={{ duration: 0.7 }}
             className="lg:col-span-5"
           >
@@ -137,7 +137,7 @@ export function Contact({ data, brand }: ContactProps) {
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: false, margin: "-12% 0px -12% 0px" }}
             transition={{ duration: 0.7, delay: 0.1 }}
             className="lg:col-span-7"
           >
@@ -290,13 +290,15 @@ function Field({
       >
         {label}
       </label>
-      <input
+      <motion.input
         id={name}
         name={name}
         type={type}
         required={required}
         value={value}
         onChange={onChange}
+        whileFocus={{ scale: 1.015 }}
+        transition={{ type: "spring", stiffness: 300, damping: 24 }}
         className="rounded-2xl bg-white/[0.04] border border-white/10 px-5 py-3.5 text-sm text-cream-50 placeholder:text-cream-100/35 focus:outline-none focus:border-gold-300/40 focus:bg-white/[0.06] transition-colors"
       />
     </div>

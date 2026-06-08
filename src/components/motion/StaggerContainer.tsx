@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import type { ReactNode } from "react";
-import { staggerContainer, viewportOnce } from "@/lib/motion";
+import { staggerContainer, viewportReveal, viewportOnce } from "@/lib/motion";
 
 interface StaggerContainerProps {
   children: ReactNode;
@@ -10,6 +10,8 @@ interface StaggerContainerProps {
   step?: number;
   delay?: number;
   as?: "div" | "ul" | "ol" | "section";
+  /** Play once instead of replaying on scroll up & down (default: replay). */
+  once?: boolean;
 }
 
 export function StaggerContainer({
@@ -18,6 +20,7 @@ export function StaggerContainer({
   step = 0.08,
   delay = 0,
   as = "div",
+  once = false,
 }: StaggerContainerProps) {
   const reduce = useReducedMotion();
   const MotionTag = motion(as);
@@ -27,7 +30,7 @@ export function StaggerContainer({
       variants={staggerContainer(reduce ? 0 : step, reduce ? 0 : delay)}
       initial="hidden"
       whileInView="show"
-      viewport={viewportOnce}
+      viewport={once ? viewportOnce : viewportReveal}
     >
       {children}
     </MotionTag>

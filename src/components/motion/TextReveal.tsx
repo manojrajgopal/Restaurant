@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { useMemo } from "react";
 import { cn } from "@/lib/utils";
-import { easing, viewportOnce } from "@/lib/motion";
+import { easing, viewportReveal } from "@/lib/motion";
 
 interface TextRevealProps {
   text: string;
@@ -71,7 +71,7 @@ export function TextReveal({
         variants={variants}
         initial="hidden"
         whileInView="show"
-        viewport={viewportOnce}
+        viewport={viewportReveal}
         className="inline"
       >
         {words.map((word, i) => {

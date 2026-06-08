@@ -6,6 +6,7 @@ import type { ServicesData } from "@/types/brand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { DynamicIcon } from "@/components/ui/DynamicIcon";
 import { RevealImage } from "@/components/motion/RevealImage";
+import { MotionCard } from "@/components/motion/MotionCard";
 import { Stagger, staggerItem } from "@/components/animations/Reveal";
 
 interface ServicesProps {
@@ -37,10 +38,9 @@ export function Services({ data }: ServicesProps) {
             <motion.article
               key={s.title}
               variants={staggerItem}
-              whileHover={{ y: -6 }}
-              transition={{ type: "spring", stiffness: 200, damping: 22 }}
               className="group relative"
             >
+              <MotionCard className="h-full" tilt={4} lift={8} glare={false}>
               <div className="relative h-full rounded-3xl overflow-hidden glass shadow-lift">
                 <div className="grid sm:grid-cols-5 h-full">
                   {/* Image */}
@@ -101,6 +101,7 @@ export function Services({ data }: ServicesProps) {
                   className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-transparent group-hover:ring-gold-300/30 transition-colors"
                 />
               </div>
+              </MotionCard>
             </motion.article>
           ))}
         </Stagger>

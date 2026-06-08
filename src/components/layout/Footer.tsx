@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
 import type { BrandData, FooterData } from "@/types/brand";
 import { DynamicIcon } from "@/components/ui/DynamicIcon";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
 
 interface FooterProps {
   brand: BrandData;
@@ -25,7 +26,7 @@ export function Footer({ brand, footer }: FooterProps) {
 
       <div className="relative container py-20 lg:py-28">
         {/* Top: Newsletter band */}
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 mb-16">
+        <ScrollReveal variant="fade-up" className="grid lg:grid-cols-12 gap-10 lg:gap-16 mb-16">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-3 mb-6">
               <span className="grid place-items-center h-11 w-11 rounded-2xl bg-gradient-to-br from-gold-300 via-gold-500 to-gold-600 text-ink-950 font-display shadow-glow">
@@ -87,10 +88,10 @@ export function Footer({ brand, footer }: FooterProps) {
               </div>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Newsletter */}
-        <div className="relative glass rounded-3xl p-8 sm:p-10 grid lg:grid-cols-12 gap-8 items-center overflow-hidden">
+        <ScrollReveal variant="fade-scale" className="relative glass rounded-3xl p-8 sm:p-10 grid lg:grid-cols-12 gap-8 items-center overflow-hidden">
           <div
             aria-hidden
             className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-gold-400/20 blur-3xl"
@@ -131,7 +132,7 @@ export function Footer({ brand, footer }: FooterProps) {
               </motion.button>
             </div>
           </form>
-        </div>
+        </ScrollReveal>
 
         {/* Bottom row */}
         <div className="mt-14 pt-8 border-t border-white/5 flex flex-col md:flex-row md:items-center justify-between gap-6">

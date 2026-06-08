@@ -19,6 +19,14 @@ export const duration = {
 export const viewportOnce = { once: true, margin: "-15% 0px -10% 0px" };
 export const viewportRepeat = { once: false, margin: "-10% 0px" };
 
+/**
+ * Bi-directional reveal viewport. Animations replay when an element
+ * re-enters the viewport from either direction (scroll down OR scroll up).
+ * The generous bottom/top margins prevent flicker by only resetting the
+ * "hidden" state once the element is comfortably out of view.
+ */
+export const viewportReveal = { once: false, margin: "-12% 0px -12% 0px" };
+
 /* =========================================================================
    Reusable variants
    ========================================================================= */
@@ -55,12 +63,57 @@ export const fadeLeft: Variants = {
   show: { opacity: 1, x: 0, transition: { duration: duration.base, ease: easing.out } },
 };
 
+export const fadeDown: Variants = {
+  hidden: { opacity: 0, y: -28 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: duration.base, ease: easing.out },
+  },
+};
+
 export const scaleIn: Variants = {
   hidden: { opacity: 0, scale: 0.94 },
   show: {
     opacity: 1,
     scale: 1,
     transition: { duration: duration.base, ease: easing.out },
+  },
+};
+
+/** Fade in with a gentle settle from slightly below + scaled down. */
+export const fadeInScale: Variants = {
+  hidden: { opacity: 0, y: 24, scale: 0.96 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: duration.slow, ease: easing.out },
+  },
+};
+
+/**
+ * Layered 3D "depth rise" — element lifts toward the viewer while it
+ * settles into place. Pairs with a `perspective-1200` ancestor.
+ */
+export const depthRise: Variants = {
+  hidden: { opacity: 0, y: 44, rotateX: 8, scale: 0.97 },
+  show: {
+    opacity: 1,
+    y: 0,
+    rotateX: 0,
+    scale: 1,
+    transition: { duration: duration.slow, ease: easing.out },
+  },
+};
+
+/** Horizontal line / divider that draws in from the center. */
+export const revealLine: Variants = {
+  hidden: { scaleX: 0, opacity: 0 },
+  show: {
+    scaleX: 1,
+    opacity: 1,
+    transition: { duration: duration.slow, ease: easing.inOut },
   },
 };
 
@@ -135,6 +188,12 @@ export const hoverLift = {
   whileHover: { y: -6 },
   whileTap: { y: -2, scale: 0.99 },
   transition: { type: "spring", stiffness: 240, damping: 22 } as Transition,
+};
+
+export const hoverLiftDeep = {
+  whileHover: { y: -10, scale: 1.015 },
+  whileTap: { y: -4, scale: 0.99 },
+  transition: { type: "spring", stiffness: 260, damping: 24 } as Transition,
 };
 
 export const hoverTilt = {

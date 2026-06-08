@@ -3,7 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import type { ReactNode, ElementType } from "react";
-import { fadeUp, viewportOnce } from "@/lib/motion";
+import { fadeUp, viewportReveal, viewportOnce } from "@/lib/motion";
 
 interface FadeInOnViewProps {
   children: ReactNode;
@@ -12,12 +12,13 @@ interface FadeInOnViewProps {
   variants?: Variants;
   /** Render as a different element/tag */
   as?: ElementType;
-  /** Re-trigger on re-entry */
-  repeat?: boolean;
+  /** Play once instead of replaying on scroll up & down (default: replay). */
+  once?: boolean;
 }
 
 /**
  * Drop-in viewport-triggered fade/slide. Honors prefers-reduced-motion.
+ * Replays on re-entry (scroll up & down) unless `once` is set.
  */
 export function FadeInOnView({
   children,
@@ -25,7 +26,7 @@ export function FadeInOnView({
   delay = 0,
   variants = fadeUp,
   as,
-  repeat = false,
+  once = false,
 }: FadeInOnViewProps) {
   const reduce = useReducedMotion();
   const MotionTag = motion(as ?? "div");
@@ -39,7 +40,7 @@ export function FadeInOnView({
       variants={variants}
       initial="hidden"
       whileInView="show"
-      viewport={repeat ? { once: false, margin: "-10% 0px" } : viewportOnce}
+      viewport={once ? viewportOnce : viewportReveal}
       transition={{ delay }}
     >
       {children}

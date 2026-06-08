@@ -49,7 +49,7 @@ export function AboutTeaser({ data }: AboutTeaserProps) {
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false, margin: "-12% 0px -12% 0px" }}
                   transition={{ duration: 0.9, delay: 0.2 }}
                   className="absolute -right-3 sm:-right-8 -bottom-8 w-[88%] sm:w-[78%] glass rounded-2xl p-5 shadow-lift"
                 >

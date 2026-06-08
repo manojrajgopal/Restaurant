@@ -53,7 +53,7 @@ export function About({ data }: AboutProps) {
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
+                  viewport={{ once: false, margin: "-12% 0px -12% 0px" }}
                   transition={{ duration: 0.9, delay: 0.2 }}
                   className="absolute -right-4 sm:-right-10 -bottom-10 w-44 sm:w-56 aspect-square rounded-2xl overflow-hidden shadow-lift ring-1 ring-white/15"
                 >
@@ -71,7 +71,7 @@ export function About({ data }: AboutProps) {
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false, margin: "-12% 0px -12% 0px" }}
                   transition={{ duration: 0.9, delay: 0.35 }}
                   className="absolute -left-4 sm:-left-10 top-12 glass rounded-2xl px-5 py-4 shadow-lift"
                 >

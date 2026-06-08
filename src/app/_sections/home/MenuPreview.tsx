@@ -7,6 +7,7 @@ import { ArrowUpRight, Star } from "lucide-react";
 import type { HomeData, MenuData } from "@/types/brand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
+import { MotionCard } from "@/components/motion/MotionCard";
 import { Stagger, staggerItem } from "@/components/animations/Reveal";
 
 interface MenuPreviewProps {
@@ -47,9 +48,9 @@ export function MenuPreview({ data, menu }: MenuPreviewProps) {
             <motion.article
               key={item.id}
               variants={staggerItem}
-              whileHover={{ y: -6 }}
               className="group relative"
             >
+              <MotionCard className="h-full" tilt={6} lift={9}>
               <div className="relative h-full rounded-3xl overflow-hidden glass shadow-lift flex flex-col">
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <Image
@@ -85,6 +86,7 @@ export function MenuPreview({ data, menu }: MenuPreviewProps) {
                   </div>
                 </div>
               </div>
+              </MotionCard>
             </motion.article>
           ))}
         </Stagger>

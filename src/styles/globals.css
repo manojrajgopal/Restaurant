@@ -184,6 +184,42 @@ html {
   .field-label {
     @apply block text-[10px] uppercase tracking-[0.28em] text-cream-100/55 mb-2;
   }
+
+  /* =======================================================================
+     Depth / 3D surfaces
+     ======================================================================= */
+  /* Elevated card with layered shadow + inset edge highlight.
+     Transition is GPU-friendly (transform + box-shadow only). */
+  .card-3d {
+    @apply relative rounded-3xl border border-white/10 bg-white/[0.04];
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 2px 6px -2px rgba(0, 0, 0, 0.4),
+      0 24px 60px -36px rgba(0, 0, 0, 0.75);
+    transition:
+      box-shadow 0.5s var(--ease-out),
+      border-color 0.5s var(--ease-out),
+      transform 0.5s var(--ease-out);
+  }
+  .card-3d:hover {
+    border-color: rgba(217, 173, 74, 0.28);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.14),
+      0 8px 20px -6px rgba(0, 0, 0, 0.5),
+      0 50px 110px -45px rgba(0, 0, 0, 0.85),
+      0 30px 90px -50px rgba(217, 173, 74, 0.5);
+  }
+
+  /* Soft glowing edge ring — overlay on hover for premium accent. */
+  .glow-ring::after {
+    content: "";
+    @apply absolute inset-0 rounded-[inherit] opacity-0 transition-opacity duration-500 pointer-events-none;
+    box-shadow: 0 0 0 1px rgba(217, 173, 74, 0.4), 0 0 38px -6px rgba(217, 173, 74, 0.45);
+  }
+  .glow-ring:hover::after {
+    @apply opacity-100;
+  }
+
 }
 
 /* =========================================================================
@@ -193,8 +229,21 @@ html {
   .perspective-1200 {
     perspective: 1200px;
   }
+  .perspective-1600 {
+    perspective: 1600px;
+  }
   .preserve-3d {
     transform-style: preserve-3d;
+  }
+  .translate-z-0 {
+    transform: translateZ(0);
+  }
+  /* Push a layer toward the viewer inside a preserve-3d parent. */
+  .depth-pop {
+    transform: translateZ(40px);
+  }
+  .depth-pop-sm {
+    transform: translateZ(20px);
   }
   .mask-fade-b {
     -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
