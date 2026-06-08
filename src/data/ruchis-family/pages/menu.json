@@ -1,0 +1,14 @@
+{
+  "banner": {
+    "eyebrow": "Our Menu",
+    "title": "Authentic flavors from across India and beyond.",
+    "subtitle": "A diverse menu featuring South Indian, North Indian, Chinese, Biryanis, and more — all made fresh to order.",
+    "image": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=2000&q=80"
+  },
+  "signatureSpotlight": {
+    "eyebrow": "Must-Try Dishes",
+    "title": "Our most loved signature dishes.",
+    "subtitle": "Dishes that our guests keep coming back for, time and time again.",
+    "ids": ["m8", "m23", "m24", "m25"]
+  }
+}

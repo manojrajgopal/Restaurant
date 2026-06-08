@@ -1,0 +1,35 @@
+{
+  "eyebrow": "Our Services",
+  "title": "More than a meal — experiences for every occasion.",
+  "subtitle": "From family dinners to private celebrations, we create the perfect setting for your special moments.",
+  "items": [
+    {
+      "icon": "utensils",
+      "title": "Family Dining",
+      "description": "Spacious seating with a diverse menu that caters to all age groups and taste preferences.",
+      "features": ["Multi-cuisine menu", "Kids-friendly options", "Comfortable seating"],
+      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "users",
+      "title": "Party Hall",
+      "description": "A separate party room for kitty parties, birthday celebrations, and private gatherings.",
+      "features": ["Up to 50 guests", "Customizable décor", "Special menu packages"],
+      "image": "https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "sun",
+      "title": "Rooftop Seating",
+      "description": "Enjoy your meal under the open sky with our beautiful rooftop dining area.",
+      "features": ["Evening ambience", "Fresh air dining", "Perfect for couples"],
+      "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "gift",
+      "title": "Catering Services",
+      "description": "We bring our flavors to your doorstep for weddings, corporate events, and house parties.",
+      "features": ["Custom menus", "Full-service setup", "Delivery available"],
+      "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80"
+    }
+  ]
+}

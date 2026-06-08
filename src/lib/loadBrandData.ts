@@ -1,47 +1,36 @@
 import type { Brand } from "@/types/brand";
+import path from "path";
+import fs from "fs";
 
 /**
- * Available brand slugs. To register a new brand, drop a folder under
- * `src/data/<slug>` with the same JSON file names, then add its slug here.
+ * Dynamic brand loading — just drop a folder under `src/data/<slug>`
+ * with the required JSON files, set NEXT_PUBLIC_BRAND_SLUG in .env.local,
+ * and it works. No code changes needed.
  */
-const REGISTRY = {
-  "royal-bistro": () =>
-    Promise.all([
-      import("@/data/royal-bistro/brand.json"),
-      import("@/data/royal-bistro/navigation.json"),
-      import("@/data/royal-bistro/hero.json"),
-      import("@/data/royal-bistro/highlights.json"),
-      import("@/data/royal-bistro/about.json"),
-      import("@/data/royal-bistro/menu.json"),
-      import("@/data/royal-bistro/services.json"),
-      import("@/data/royal-bistro/gallery.json"),
-      import("@/data/royal-bistro/testimonials.json"),
-      import("@/data/royal-bistro/faq.json"),
-      import("@/data/royal-bistro/contact.json"),
-      import("@/data/royal-bistro/footer.json"),
-      import("@/data/royal-bistro/home.json"),
-      import("@/data/royal-bistro/pages/about.json"),
-      import("@/data/royal-bistro/pages/menu.json"),
-      import("@/data/royal-bistro/pages/gallery.json"),
-      import("@/data/royal-bistro/pages/contact.json"),
-      import("@/data/royal-bistro/pages/reserve.json"),
-    ]),
-} as const;
 
-export type BrandSlug = keyof typeof REGISTRY;
+export type BrandSlug = string;
 
-export const DEFAULT_BRAND: BrandSlug = "royal-bistro";
+export const DEFAULT_BRAND = "royal-bistro";
 
-export function resolveBrandSlug(): BrandSlug {
-  const envSlug = process.env.NEXT_PUBLIC_BRAND_SLUG as BrandSlug | undefined;
-  if (envSlug && envSlug in REGISTRY) return envSlug;
-  return DEFAULT_BRAND;
+export function resolveBrandSlug(): string {
+  return process.env.NEXT_PUBLIC_BRAND_SLUG || DEFAULT_BRAND;
+}
+
+async function importJson(filePath: string) {
+  const raw = fs.readFileSync(filePath, "utf-8");
+  return JSON.parse(raw);
 }
 
 export async function loadBrandData(
-  slug: BrandSlug = resolveBrandSlug()
+  slug: string = resolveBrandSlug()
 ): Promise<Brand> {
-  const loader = REGISTRY[slug] ?? REGISTRY[DEFAULT_BRAND];
+  const dataDir = path.join(process.cwd(), "src", "data", slug);
+
+  // Fallback to default if the folder doesn't exist
+  const resolvedDir = fs.existsSync(dataDir)
+    ? dataDir
+    : path.join(process.cwd(), "src", "data", DEFAULT_BRAND);
+
   const [
     brand,
     navigation,
@@ -61,28 +50,47 @@ export async function loadBrandData(
     pageGallery,
     pageContact,
     pageReserve,
-  ] = await loader();
+  ] = await Promise.all([
+    importJson(path.join(resolvedDir, "brand.json")),
+    importJson(path.join(resolvedDir, "navigation.json")),
+    importJson(path.join(resolvedDir, "hero.json")),
+    importJson(path.join(resolvedDir, "highlights.json")),
+    importJson(path.join(resolvedDir, "about.json")),
+    importJson(path.join(resolvedDir, "menu.json")),
+    importJson(path.join(resolvedDir, "services.json")),
+    importJson(path.join(resolvedDir, "gallery.json")),
+    importJson(path.join(resolvedDir, "testimonials.json")),
+    importJson(path.join(resolvedDir, "faq.json")),
+    importJson(path.join(resolvedDir, "contact.json")),
+    importJson(path.join(resolvedDir, "footer.json")),
+    importJson(path.join(resolvedDir, "home.json")),
+    importJson(path.join(resolvedDir, "pages", "about.json")),
+    importJson(path.join(resolvedDir, "pages", "menu.json")),
+    importJson(path.join(resolvedDir, "pages", "gallery.json")),
+    importJson(path.join(resolvedDir, "pages", "contact.json")),
+    importJson(path.join(resolvedDir, "pages", "reserve.json")),
+  ]);
 
   return {
-    brand: brand.default as Brand["brand"],
-    navigation: navigation.default as Brand["navigation"],
-    hero: hero.default as Brand["hero"],
-    highlights: highlights.default as Brand["highlights"],
-    about: about.default as Brand["about"],
-    menu: menu.default as Brand["menu"],
-    services: services.default as Brand["services"],
-    gallery: gallery.default as Brand["gallery"],
-    testimonials: testimonials.default as Brand["testimonials"],
-    faq: faq.default as Brand["faq"],
-    contact: contact.default as Brand["contact"],
-    footer: footer.default as Brand["footer"],
-    home: home.default as Brand["home"],
+    brand: brand as Brand["brand"],
+    navigation: navigation as Brand["navigation"],
+    hero: hero as Brand["hero"],
+    highlights: highlights as Brand["highlights"],
+    about: about as Brand["about"],
+    menu: menu as Brand["menu"],
+    services: services as Brand["services"],
+    gallery: gallery as Brand["gallery"],
+    testimonials: testimonials as Brand["testimonials"],
+    faq: faq as Brand["faq"],
+    contact: contact as Brand["contact"],
+    footer: footer as Brand["footer"],
+    home: home as Brand["home"],
     pages: {
-      about: pageAbout.default as Brand["pages"]["about"],
-      menu: pageMenu.default as Brand["pages"]["menu"],
-      gallery: pageGallery.default as Brand["pages"]["gallery"],
-      contact: pageContact.default as Brand["pages"]["contact"],
-      reserve: pageReserve.default as Brand["pages"]["reserve"],
+      about: pageAbout as Brand["pages"]["about"],
+      menu: pageMenu as Brand["pages"]["menu"],
+      gallery: pageGallery as Brand["pages"]["gallery"],
+      contact: pageContact as Brand["pages"]["contact"],
+      reserve: pageReserve as Brand["pages"]["reserve"],
     },
   };
 }

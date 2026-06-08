@@ -1,0 +1,36 @@
+{
+  "aboutTeaser": {
+    "eyebrow": "Our Story",
+    "title": "More than a restaurant. A family tradition.",
+    "subtitle": "A vibrant culinary destination in Tiptur that brings together authentic flavors, warm hospitality, and unforgettable celebrations.",
+    "cta": { "label": "Read Our Story", "href": "/about" },
+    "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80",
+    "marks": [
+      { "value": "210+", "label": "Happy Reviews" },
+      { "value": "50+", "label": "Menu Items" },
+      { "value": "3.9★", "label": "Google Rating" }
+    ]
+  },
+  "menuPreview": {
+    "eyebrow": "From the Menu",
+    "title": "A taste of what awaits you.",
+    "subtitle": "Some of our most loved dishes — explore the full menu for even more options.",
+    "cta": { "label": "View Full Menu", "href": "/menu" },
+    "highlightIds": ["m1", "m10", "m23", "m25"]
+  },
+  "galleryPreview": {
+    "eyebrow": "Inside Ruchi's",
+    "title": "Vibrant décor, warm lighting, and a welcoming space.",
+    "subtitle": "Take a peek at our restaurant interiors, rooftop, and beautifully plated dishes.",
+    "cta": { "label": "View Full Gallery", "href": "/gallery" },
+    "limit": 6
+  },
+  "closingCta": {
+    "eyebrow": "Join Us for a Meal",
+    "title": "Family gatherings. Celebrations. Or just a great meal.",
+    "subtitle": "Whether it's a casual dinner or a special occasion, we're ready to serve you with love and flavor.",
+    "primary": { "label": "Reserve a Table", "href": "/reserve" },
+    "secondary": { "label": "View Menu", "href": "/menu" },
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80"
+  }
+}

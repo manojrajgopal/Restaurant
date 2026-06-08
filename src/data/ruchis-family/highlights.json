@@ -1,0 +1,31 @@
+{
+  "eyebrow": "Why Ruchi's",
+  "title": "A dining experience that brings families together.",
+  "subtitle": "From our vibrant décor to our carefully crafted menu, every detail is designed to make your visit memorable.",
+  "items": [
+    {
+      "icon": "utensils",
+      "title": "Multi-Cuisine Menu",
+      "description": "From spicy Chettinad Chicken to classic Paneer Butter Masala, our diverse menu caters to every palate.",
+      "accent": "from-orange-400/30 to-red-400/10"
+    },
+    {
+      "icon": "users",
+      "title": "Party Hall Available",
+      "description": "A separate party room for kitty parties, birthday celebrations, and family gatherings of all sizes.",
+      "accent": "from-emerald-400/30 to-teal-400/10"
+    },
+    {
+      "icon": "sparkles",
+      "title": "Inviting Ambience",
+      "description": "Attractive décor, comfortable furniture, and Instagram-worthy interiors that elevate your dining experience.",
+      "accent": "from-purple-400/30 to-fuchsia-400/10"
+    },
+    {
+      "icon": "leaf",
+      "title": "Vegetarian Friendly",
+      "description": "An extensive vegetarian menu featuring fresh ingredients and balanced flavors for every taste preference.",
+      "accent": "from-yellow-300/30 to-green-400/10"
+    }
+  ]
+}

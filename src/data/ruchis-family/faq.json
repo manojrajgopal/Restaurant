@@ -1,0 +1,31 @@
+{
+  "eyebrow": "Helpful Information",
+  "title": "Things to know before your visit.",
+  "subtitle": "Have a question? Find quick answers below or reach out to us directly.",
+  "items": [
+    {
+      "question": "Do you accept reservations?",
+      "answer": "Yes, we accept reservations for both our main dining hall and our private party room. Call us at +91 9964-544555 to book your table."
+    },
+    {
+      "question": "Is there a separate vegetarian menu?",
+      "answer": "Absolutely! We have an extensive vegetarian menu with over 25 options including starters, main courses, biryanis, and rice dishes."
+    },
+    {
+      "question": "Do you have a party hall for private events?",
+      "answer": "Yes, we have a separate party room that can accommodate up to 50 guests. Perfect for birthday parties, kitty parties, and family celebrations."
+    },
+    {
+      "question": "What is the average cost for a meal?",
+      "answer": "The average cost is ₹200-600 per person depending on your order. Family meals and special platters offer great value."
+    },
+    {
+      "question": "Is rooftop seating available?",
+      "answer": "Yes! Our rooftop area is open during evenings and is perfect for a relaxed dining experience under the stars."
+    },
+    {
+      "question": "Do you offer takeaway and delivery?",
+      "answer": "Yes, we offer takeaway for all menu items. Delivery is available within Tiptur city limits."
+    }
+  ]
+}

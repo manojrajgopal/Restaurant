@@ -164,7 +164,7 @@ export function Testimonials({ data }: TestimonialsProps) {
                 transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               >
                 <p className="mt-2 font-display text-2xl sm:text-3xl lg:text-[2.1rem] leading-snug text-cream-50 text-balance">
-                  &ldquo;{active.quote}&rdquo;
+                  {active.quote}
                 </p>
                 <footer className="mt-8 flex items-center gap-4">
                   <div>

@@ -1,0 +1,31 @@
+{
+  "brandName": "Ruchi's Family Restaurant",
+  "shortName": "Ruchi's",
+  "tagline": "Where Every Meal Feels Like Home",
+  "description": "A vibrant family restaurant in Tiptur, Karnataka, offering an enticing blend of South Indian, North Indian, and Chinese flavors with warm hospitality.",
+  "logoMark": "RF",
+  "established": "Est. 2018",
+  "theme": {
+    "primary": "#d4451a",
+    "secondary": "#1a5c2e",
+    "accent": "#f5a623",
+    "background": "#0a0a08",
+    "foreground": "#fdf8f3"
+  },
+  "contact": {
+    "phone": "+91 9964-544555",
+    "email": "info@ruchisfamily.com",
+    "address": "Hassan Rd, opp. KIT, Vidya Nagar, Tiptur, Karnataka 572201, India",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.123456!2d76.4754!3d13.2604"
+  },
+  "workingHours": [
+    { "day": "Monday – Friday", "hours": "11:30 AM – 3:30 PM, 6:30 PM – 10:30 PM" },
+    { "day": "Saturday – Sunday", "hours": "11:00 AM – 11:00 PM" },
+    { "day": "Holidays", "hours": "11:00 AM – 11:00 PM" }
+  ],
+  "socialLinks": [
+    { "label": "Instagram", "href": "https://instagram.com", "icon": "instagram" },
+    { "label": "Facebook", "href": "https://facebook.com", "icon": "facebook" },
+    { "label": "Google Maps", "href": "https://maps.google.com", "icon": "map-pin" }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "eyebrow": "Our Menu",
+  "title": "Authentic flavors from across India and beyond.",
+  "subtitle": "From spicy Chettinad Chicken to aromatic Ambur Biriyani — a diverse menu crafted to satisfy every craving.",
+  "categories": [
+    { "id": "all", "label": "All", "description": "Our complete menu selection." },
+    { "id": "veg-starters", "label": "Veg Starters", "description": "Flavorful vegetarian appetizers." },
+    { "id": "non-veg-starters", "label": "Non-Veg Starters", "description": "Sizzling non-vegetarian starters." },
+    { "id": "veg-main", "label": "Veg Main Course", "description": "Hearty vegetarian mains." },
+    { "id": "non-veg-main", "label": "Non-Veg Main Course", "description": "Rich non-vegetarian mains." },
+    { "id": "biryani", "label": "Biryani", "description": "Fragrant rice specialties." },
+    { "id": "breads", "label": "Breads", "description": "Freshly baked accompaniments." }
+  ],
+  "items": [
+    {
+      "id": "m1",
+      "name": "Chilli Gobhi",
+      "description": "Crispy cauliflower tossed in spicy Indo-Chinese sauce with peppers and onions.",
+      "price": "₹215",
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Vegetarian"],
+      "category": "veg-starters",
+      "popular": true
+    },
+    {
+      "id": "m2",
+      "name": "Gobhi Manchurian",
+      "description": "Deep-fried cauliflower florets coated in a tangy Manchurian sauce.",
+      "price": "₹200",
+      "image": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Vegetarian"],
+      "category": "veg-starters"
+    },
+    {
+      "id": "m3",
+      "name": "Baby Corn Manchurian",
+      "description": "Crispy baby corn in a savory Manchurian gravy with aromatic spices.",
+      "price": "₹230",
+      "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Vegetarian"],
+      "category": "veg-starters"
+    },
+    {
+      "id": "m4",
+      "name": "Baby Corn Chilli",
+      "description": "Stir-fried baby corn with bell peppers in a hot chilli sauce.",
+      "price": "₹255",
+      "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Vegetarian"],
+      "category": "veg-starters"
+    },
+    {
+      "id": "m5",
+      "name": "Mushroom Manchurian",
+      "description": "Button mushrooms in a rich Manchurian sauce with fresh herbs.",
+      "price": "₹240",
+      "image": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Vegetarian"],
+      "category": "veg-starters"
+    },
+    {
+      "id": "m6",
+      "name": "Mushroom Chilli",
+      "description": "Spicy mushroom stir-fry with green chillies and garlic.",
+      "price": "₹255",
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Vegetarian"],
+      "category": "veg-starters"
+    },
+    {
+      "id": "m7",
+      "name": "Egg Chilli",
+      "description": "Boiled eggs tossed in a spicy chilli sauce with onions and peppers.",
+      "price": "₹215",
+      "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Non-Veg"],
+      "category": "non-veg-starters"
+    },
+    {
+      "id": "m8",
+      "name": "Balochi Chicken",
+      "description": "Tender chicken marinated in traditional Balochi spices and grilled to perfection.",
+      "price": "₹405",
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Non-Veg", "Signature"],
+      "category": "non-veg-starters",
+      "signature": true
+    },
+    {
+      "id": "m9",
+      "name": "Achari Chicken",
+      "description": "Chicken cooked with pickle spices for a tangy, bold flavor profile.",
+      "price": "₹280",
+      "image": "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Non-Veg"],
+      "category": "non-veg-starters"
+    },
+    {
+      "id": "m10",
+      "name": "Tandoori Chicken",
+      "description": "Classic tandoor-roasted chicken marinated in yogurt and aromatic spices.",
+      "price": "₹420",
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Non-Veg", "Popular"],
+      "category": "non-veg-starters",
+      "popular": true
+    },
+    {
+      "id": "m11",
+      "name": "Chicken Tikka",
+      "description": "Succulent boneless chicken pieces marinated and grilled in tandoor.",
+      "price": "₹365",
+      "image": "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Non-Veg"],
+      "category": "non-veg-starters"
+    },
+    {
+      "id": "m12",
+      "name": "Golden Chicken",
+      "description": "Crispy fried chicken with a golden batter and house special seasoning.",
+      "price": "₹280",
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Non-Veg"],
+      "category": "non-veg-starters"
+    },
+    {
+      "id": "m13",
+      "name": "Banjara Murg",
+      "description": "Spicy chicken cooked in the nomadic Banjara style with rich gravy.",
+      "price": "₹365",
+      "image": "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Non-Veg"],
+      "category": "non-veg-starters"
+    },
+    {
+      "id": "m14",
+      "name": "Mutton Pepper Dry",
+      "description": "Tender mutton pieces dry-roasted with crushed black pepper and curry leaves.",
+      "price": "₹350",
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Non-Veg"],
+      "category": "non-veg-starters"
+    },
+    {
+      "id": "m15",
+      "name": "Mutton Bhuna Roast",
+      "description": "Slow-cooked mutton bhuna with rich caramelized onion gravy.",
+      "price": "₹350",
+      "image": "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Non-Veg"],
+      "category": "non-veg-starters"
+    },
+    {
+      "id": "m16",
+      "name": "Andhra Mutton Fry",
+      "description": "Spicy deep-fried mutton in fiery Andhra-style masala.",
+      "price": "₹350",
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Non-Veg", "Spicy"],
+      "category": "non-veg-starters"
+    },
+    {
+      "id": "m17",
+      "name": "Dal Butter Fry",
+      "description": "Creamy lentils cooked with butter and tempered with aromatic spices.",
+      "price": "₹230",
+      "image": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Vegetarian"],
+      "category": "veg-main"
+    },
+    {
+      "id": "m18",
+      "name": "Dal Tadka",
+      "description": "Yellow lentils tempered with cumin, garlic, and dried red chillies.",
+      "price": "₹230",
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Vegetarian"],
+      "category": "veg-main"
+    },
+    {
+      "id": "m19",
+      "name": "Tomato Curry",
+      "description": "Tangy tomato-based curry with a blend of South Indian spices.",
+      "price": "₹200",
+      "image": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Vegetarian"],
+      "category": "veg-main"
+    },
+    {
+      "id": "m20",
+      "name": "Veg Kolhapuri",
+      "description": "Mixed vegetables in a fiery Kolhapuri masala with fresh coconut.",
+      "price": "₹255",
+      "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Vegetarian", "Spicy"],
+      "category": "veg-main"
+    },
+    {
+      "id": "m21",
+      "name": "Kadhai Mushroom",
+      "description": "Fresh mushrooms cooked in a kadhai with bell peppers and tomatoes.",
+      "price": "₹255",
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Vegetarian"],
+      "category": "veg-main"
+    },
+    {
+      "id": "m22",
+      "name": "Palak Paneer",
+      "description": "Cottage cheese cubes in a smooth, creamy spinach gravy.",
+      "price": "₹270",
+      "image": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Vegetarian", "Popular"],
+      "category": "veg-main",
+      "popular": true
+    },
+    {
+      "id": "m23",
+      "name": "Paneer Butter Masala",
+      "description": "Rich and creamy paneer in a buttery tomato-based gravy.",
+      "price": "₹280",
+      "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Vegetarian", "Signature"],
+      "category": "veg-main",
+      "signature": true
+    },
+    {
+      "id": "m24",
+      "name": "Chettinad Chicken",
+      "description": "A flavorful delicacy from Chettinad, known for its rich spices and tender chicken.",
+      "price": "₹380",
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Non-Veg", "Signature", "Spicy"],
+      "category": "non-veg-main",
+      "signature": true
+    },
+    {
+      "id": "m25",
+      "name": "Ambur Biriyani",
+      "description": "A traditional biriyani celebrated for its fragrant layers and juicy meat.",
+      "price": "₹320",
+      "image": "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Non-Veg", "Signature"],
+      "category": "biryani",
+      "signature": true
+    }
+  ]
+}
