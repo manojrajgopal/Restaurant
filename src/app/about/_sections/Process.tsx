@@ -115,7 +115,7 @@ export function Process({ data }: ProcessProps) {
                   >
                     <span className="relative grid place-items-center h-4 w-4">
                       <span className="absolute inset-0 rounded-full bg-gold-400/30 animate-ping" />
-                      <span className="relative h-2 w-2 rounded-full bg-gold-400 shadow-[0_0_0_4px_rgba(8,8,6,1)]" />
+                      <span className="relative h-2 w-2 rounded-full bg-gold-400 shadow-[0_0_0_4px_rgb(var(--ink-950))]" />
                     </span>
                   </motion.div>
                 </li>

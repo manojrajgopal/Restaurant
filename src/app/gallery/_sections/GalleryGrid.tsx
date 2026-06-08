@@ -46,7 +46,7 @@ export function GalleryGrid({ gallery, filters }: GalleryGridProps) {
                   className={cn(
                     "relative px-5 py-2.5 rounded-full text-sm transition-colors focus-ring whitespace-nowrap",
                     isActive
-                      ? "text-ink-950"
+                      ? "text-onaccent"
                       : "text-cream-100/75 hover:text-cream-50"
                   )}
                 >
@@ -84,7 +84,7 @@ export function GalleryGrid({ gallery, filters }: GalleryGridProps) {
                 }}
                 whileHover={{ y: -4 }}
                 className={cn(
-                  "group relative overflow-hidden rounded-2xl sm:rounded-3xl shadow-soft",
+                  "group relative isolate overflow-hidden rounded-2xl sm:rounded-3xl shadow-soft",
                   img.span ? spanMap[img.span] : "aspect-square"
                 )}
               >
@@ -96,7 +96,7 @@ export function GalleryGrid({ gallery, filters }: GalleryGridProps) {
                   hoverZoom
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/10 to-transparent pointer-events-none" />
-                <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl sm:rounded-3xl pointer-events-none" />
+                <div className="absolute inset-0 ring-1 ring-inset ring-[color:var(--ring-media)] rounded-2xl sm:rounded-3xl pointer-events-none" />
 
                 <figcaption className="absolute left-4 right-4 bottom-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                   <p className="text-[10px] uppercase tracking-[0.25em] text-gold-300">

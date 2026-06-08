@@ -14,7 +14,7 @@ export function Skeleton({ className, rounded = "rounded-2xl" }: SkeletonProps) 
   return (
     <div
       className={cn(
-        "relative overflow-hidden bg-white/[0.04] border border-white/5",
+        "relative overflow-hidden bg-[color:var(--surface-bg)] border border-[color:var(--surface-border-soft)]",
         rounded,
         className
       )}

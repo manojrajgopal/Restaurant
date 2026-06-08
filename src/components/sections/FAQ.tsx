@@ -33,8 +33,8 @@ export function FAQ({ data }: FAQProps) {
                     className={cn(
                       "rounded-2xl border transition-all duration-500",
                       isOpen
-                        ? "border-gold-300/30 bg-white/[0.035] shadow-lift"
-                        : "border-white/[0.06] hover:border-white/15 bg-white/[0.015]"
+                        ? "border-gold-300/30 bg-[color:var(--surface-bg)] shadow-lift"
+                        : "border-[color:var(--surface-border-soft)] hover:border-[color:var(--surface-border-strong)] bg-[color:var(--surface-bg-soft)]"
                     )}
                   >
                     <button
@@ -54,8 +54,8 @@ export function FAQ({ data }: FAQProps) {
                         className={cn(
                           "grid place-items-center h-9 w-9 rounded-full border transition-colors shrink-0",
                           isOpen
-                            ? "bg-gold-400 text-ink-950 border-gold-400"
-                            : "border-white/15 text-cream-100/70"
+                            ? "bg-gold-400 text-onaccent border-gold-400"
+                            : "border-[color:var(--surface-border-strong)] text-cream-100/70"
                         )}
                       >
                         <Plus className="h-4 w-4" />

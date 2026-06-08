@@ -52,7 +52,7 @@ export function Gallery({ data }: GalleryProps) {
                 className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/10 to-transparent" />
-              <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl sm:rounded-3xl" />
+              <div className="absolute inset-0 ring-1 ring-inset ring-[color:var(--ring-media)] rounded-2xl sm:rounded-3xl" />
 
               <figcaption className="absolute left-4 right-4 bottom-4 flex items-end justify-between gap-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                 <div>

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "dev:warm": "node scripts/warmup.js & next dev",
+    "dev:warm": "next dev & sleep 5 && node scripts/warmup.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

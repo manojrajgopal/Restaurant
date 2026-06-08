@@ -25,7 +25,7 @@ export function Testimonials({ data }: TestimonialsProps) {
     <section id="testimonials" className="section">
       <div
         aria-hidden
-        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"
+        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[color:var(--hairline)] to-transparent"
       />
       <div className="container">
         <SectionHeading
@@ -41,7 +41,7 @@ export function Testimonials({ data }: TestimonialsProps) {
               {/* Orbits */}
               <div
                 aria-hidden
-                className="absolute inset-0 rounded-full border border-white/5"
+                className="absolute inset-0 rounded-full border border-[color:var(--surface-border-soft)]"
               />
               <div
                 aria-hidden
@@ -49,7 +49,7 @@ export function Testimonials({ data }: TestimonialsProps) {
               />
               <div
                 aria-hidden
-                className="absolute inset-14 rounded-full border border-white/5"
+                className="absolute inset-14 rounded-full border border-[color:var(--surface-border-soft)]"
               />
 
               {/* Center active avatar */}
@@ -116,7 +116,7 @@ export function Testimonials({ data }: TestimonialsProps) {
                         className={`block h-full w-full rounded-full overflow-hidden ring-2 transition-colors ${
                           isActive
                             ? "ring-gold-400 shadow-glow"
-                            : "ring-white/15 group-hover:ring-gold-300/60"
+                            : "ring-[color:var(--ring-media)] group-hover:ring-gold-300/60"
                         }`}
                         animate={
                           reduce

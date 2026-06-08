@@ -17,7 +17,7 @@ export function Highlights({ data }: HighlightsProps) {
     <section id="highlights" className="section">
       <div
         aria-hidden
-        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"
+        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[color:var(--hairline)] to-transparent"
       />
       <div className="container">
         <SectionHeading
@@ -44,7 +44,7 @@ export function Highlights({ data }: HighlightsProps) {
                     )}
                   />
                   {/* Big number */}
-                  <span className="absolute right-6 top-5 font-display text-6xl text-white/[0.04] leading-none">
+                  <span className="absolute right-6 top-5 font-display text-6xl text-[color:var(--ghost)] leading-none">
                     0{i + 1}
                   </span>
 
@@ -52,7 +52,7 @@ export function Highlights({ data }: HighlightsProps) {
                     <motion.div
                       whileHover={{ rotate: 6, scale: 1.05 }}
                       transition={{ type: "spring", stiffness: 260, damping: 18 }}
-                      className="grid place-items-center h-14 w-14 rounded-2xl bg-gradient-to-br from-white/10 to-white/[0.02] border border-white/10 text-gold-300 shadow-ring"
+                      className="grid place-items-center h-14 w-14 rounded-2xl bg-gradient-to-br from-[color:var(--surface-bg-strong)] to-[color:var(--surface-bg-soft)] border border-[color:var(--surface-border)] text-gold-300 shadow-ring"
                     >
                       <DynamicIcon name={item.icon} className="h-6 w-6" />
                     </motion.div>

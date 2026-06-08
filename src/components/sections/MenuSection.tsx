@@ -58,7 +58,7 @@ export function MenuSection({ data }: MenuSectionProps) {
                   className={cn(
                     "relative px-5 py-2.5 rounded-full text-sm transition-colors focus-ring whitespace-nowrap",
                     isActive
-                      ? "text-ink-950"
+                      ? "text-onaccent"
                       : "text-cream-100/75 hover:text-cream-50"
                   )}
                 >
@@ -106,7 +106,7 @@ export function MenuSection({ data }: MenuSectionProps) {
                 className="group relative h-full"
               >
                 <MotionCard className="h-full" tilt={6} lift={10}>
-                <div className="relative rounded-3xl overflow-hidden glass glow-ring shadow-lift h-full flex flex-col [transform-style:preserve-3d]">
+                <div className="relative isolate rounded-3xl overflow-hidden glass glow-ring shadow-lift h-full flex flex-col [transform-style:preserve-3d]">
                   {/* Image */}
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <RevealImage
@@ -131,7 +131,7 @@ export function MenuSection({ data }: MenuSectionProps) {
                           <Badge variant="default">Popular</Badge>
                         )}
                       </div>
-                      <span className="font-display text-xl text-cream-50 px-3 py-1 rounded-full bg-ink-950/70 backdrop-blur-md border border-white/10">
+                      <span className="font-display text-xl text-cream-50 px-3 py-1 rounded-full bg-ink-950/70 backdrop-blur-md border border-[color:var(--surface-border)]">
                         {item.price}
                       </span>
                     </div>
@@ -149,7 +149,7 @@ export function MenuSection({ data }: MenuSectionProps) {
                       {item.tags.map((t) => (
                         <span
                           key={t}
-                          className="text-[10px] uppercase tracking-[0.22em] text-cream-100/55 px-2.5 py-1 rounded-full border border-white/10"
+                          className="text-[10px] uppercase tracking-[0.22em] text-cream-100/55 px-2.5 py-1 rounded-full border border-[color:var(--surface-border)]"
                         >
                           {t}
                         </span>

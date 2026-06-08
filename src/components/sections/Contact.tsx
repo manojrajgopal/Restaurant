@@ -189,8 +189,8 @@ export function Contact({ data, brand }: ContactProps) {
                         onClick={() => setForm((f) => ({ ...f, guests: g }))}
                         className={`px-4 py-2.5 rounded-full text-sm transition-all focus-ring ${
                           form.guests === g
-                            ? "bg-gold-400 text-ink-950 border border-gold-400"
-                            : "border border-white/10 text-cream-100/75 hover:border-gold-300/50"
+                            ? "bg-gold-400 text-onaccent border border-gold-400"
+                            : "border border-[color:var(--surface-border)] text-cream-100/75 hover:border-gold-300/50"
                         }`}
                       >
                         {g} guests
@@ -208,7 +208,7 @@ export function Contact({ data, brand }: ContactProps) {
                     rows={4}
                     value={form.message}
                     onChange={update("message")}
-                    className="rounded-2xl bg-white/[0.04] border border-white/10 px-5 py-4 text-sm text-cream-50 placeholder:text-cream-100/35 focus:outline-none focus:border-gold-300/40 focus:bg-white/[0.06] transition-colors resize-none"
+                    className="rounded-2xl bg-[color:var(--surface-bg)] border border-[color:var(--surface-border)] px-5 py-4 text-sm text-cream-50 placeholder:text-cream-100/35 focus:outline-none focus:border-gold-300/40 focus:bg-[color:var(--surface-bg-strong)] transition-colors resize-none"
                     placeholder="Anniversary, allergies, special requests…"
                   />
                 </div>
@@ -245,7 +245,7 @@ function ContactRow({
 }) {
   const Inner = (
     <div className="flex items-start gap-4">
-      <span className="grid place-items-center h-10 w-10 rounded-xl bg-white/[0.04] border border-white/10 text-gold-300 shrink-0">
+      <span className="grid place-items-center h-10 w-10 rounded-xl bg-[color:var(--surface-bg)] border border-[color:var(--surface-border)] text-gold-300 shrink-0">
         {icon}
       </span>
       <div>
@@ -299,7 +299,7 @@ function Field({
         onChange={onChange}
         whileFocus={{ scale: 1.015 }}
         transition={{ type: "spring", stiffness: 300, damping: 24 }}
-        className="rounded-2xl bg-white/[0.04] border border-white/10 px-5 py-3.5 text-sm text-cream-50 placeholder:text-cream-100/35 focus:outline-none focus:border-gold-300/40 focus:bg-white/[0.06] transition-colors"
+        className="rounded-2xl bg-[color:var(--surface-bg)] border border-[color:var(--surface-border)] px-5 py-3.5 text-sm text-cream-50 placeholder:text-cream-100/35 focus:outline-none focus:border-gold-300/40 focus:bg-[color:var(--surface-bg-strong)] transition-colors"
       />
     </div>
   );

@@ -14,7 +14,7 @@ export function Philosophy({ data }: PhilosophyProps) {
     <section className="section">
       <div
         aria-hidden
-        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"
+        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[color:var(--hairline)] to-transparent"
       />
       <div className="container">
         <SectionHeading

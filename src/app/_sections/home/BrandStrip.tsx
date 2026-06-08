@@ -20,7 +20,7 @@ export function BrandStrip() {
   return (
     <section
       aria-label="Accolades"
-      className="relative border-y border-white/[0.06] bg-white/[0.015] py-5"
+      className="relative border-y border-[color:var(--surface-border-soft)] bg-[color:var(--surface-bg-soft)] py-5"
     >
       <Marquee
         speed={42}

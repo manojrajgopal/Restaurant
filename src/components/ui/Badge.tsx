@@ -7,9 +7,9 @@ interface BadgeProps {
 }
 
 const variants = {
-  default: "bg-white/[0.06] text-cream-100/90 border border-white/10",
+  default: "bg-[color:var(--surface-bg-strong)] text-cream-100/90 border border-[color:var(--surface-border)]",
   gold: "bg-gradient-to-br from-gold-400/20 to-gold-600/10 text-gold-200 border border-gold-400/30",
-  outline: "border border-white/15 text-cream-100/80",
+  outline: "border border-[color:var(--surface-border-strong)] text-cream-100/80",
 };
 
 export function Badge({ children, variant = "default", className }: BadgeProps) {

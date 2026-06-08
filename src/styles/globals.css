@@ -5,14 +5,66 @@
 /* =========================================================================
    Design tokens
    ========================================================================= */
-:root {
+/* =========================================================================
+   Design tokens — DARK theme (default)
+   ========================================================================= */
+:root,
+[data-theme="dark"] {
+  /* Palette scales (space-separated RGB, consumed by Tailwind via
+     rgb(var(--x) / <alpha-value>)). */
+  --ink-950: 8 8 6;
+  --ink-900: 12 12 10;
+  --ink-800: 20 20 17;
+  --ink-700: 28 28 24;
+  --ink-600: 38 38 31;
+
+  --cream-50: 251 247 240;
+  --cream-100: 243 236 223;
+  --cream-200: 230 220 198;
+
+  --gold-200: 243 220 160;
+  --gold-300: 233 198 109;
+  --gold-400: 217 173 74;
+  --gold-500: 194 147 46;
+  --gold-600: 154 114 31;
+
   /* Base surfaces */
-  --bg: 8 8 6;
-  --bg-elev: 14 14 12;
-  --fg: 251 247 240;
-  --fg-muted: 217 215 207;
-  --line: 255 255 255 / 0.08;
-  --line-strong: 255 255 255 / 0.14;
+  --bg: var(--ink-950);
+  --bg-elev: var(--ink-800);
+  --fg: var(--cream-50);
+  --fg-muted: var(--cream-100);
+
+  /* Glass / surface tokens (theme-reactive) */
+  --surface-bg: rgba(255, 255, 255, 0.04);
+  --surface-bg-soft: rgba(255, 255, 255, 0.025);
+  --surface-bg-strong: rgba(255, 255, 255, 0.06);
+  --surface-border: rgba(255, 255, 255, 0.1);
+  --surface-border-soft: rgba(255, 255, 255, 0.07);
+  --surface-border-strong: rgba(255, 255, 255, 0.15);
+  --surface-inset: rgba(255, 255, 255, 0.08);
+  --surface-inset-strong: rgba(255, 255, 255, 0.12);
+  --surface-shadow: 0 30px 80px -40px rgba(0, 0, 0, 0.7);
+  --surface-shadow-strong: 0 50px 120px -50px rgba(0, 0, 0, 0.85);
+  --surface-contact: rgba(0, 0, 0, 0.4);
+  --surface-inset-hover: rgba(255, 255, 255, 0.14);
+  --surface-shadow-hover:
+    0 8px 20px -6px rgba(0, 0, 0, 0.5),
+    0 50px 110px -45px rgba(0, 0, 0, 0.85),
+    0 30px 90px -50px rgba(217, 173, 74, 0.5);
+  --shadow-ring: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --vignette-edge: rgba(8, 8, 6, 0.85);
+  --vignette-glow: rgba(217, 173, 74, 0.12);
+  --ghost: rgba(255, 255, 255, 0.04);
+  --ring-media: rgba(255, 255, 255, 0.15);
+
+  --field-bg: rgba(255, 255, 255, 0.04);
+  --field-bg-focus: rgba(255, 255, 255, 0.06);
+  --field-border: rgba(255, 255, 255, 0.1);
+
+  --hairline: rgba(255, 255, 255, 0.15);
+  --dot: rgba(255, 255, 255, 0.06);
+  --scrollbar-thumb: rgba(255, 255, 255, 0.08);
+  --selection: rgba(217, 173, 74, 0.3);
 
   /* Brand accents */
   --accent: 217 173 74;
@@ -40,6 +92,76 @@
   --duration-fast: 220ms;
   --duration-base: 420ms;
   --duration-slow: 720ms;
+
+  color-scheme: dark;
+}
+
+/* =========================================================================
+   Design tokens — LIGHT theme (warm ivory)
+   ========================================================================= */
+[data-theme="light"] {
+  /* Surfaces become bright warm ivory; "ink" scale lightens. Page is the
+     brightest tone, with progressively deeper recessed/elevation steps. */
+  --ink-950: 248 245 239;
+  --ink-900: 252 250 245;
+  --ink-800: 255 255 255;
+  --ink-700: 238 232 222;
+  --ink-600: 226 218 206;
+
+  /* Text ("cream" scale) darkens to espresso for strong readability. */
+  --cream-50: 26 21 16;
+  --cream-100: 58 50 41;
+  --cream-200: 92 82 70;
+
+  /* Gold deepens for legible contrast on light surfaces. */
+  --gold-200: 158 116 32;
+  --gold-300: 176 128 34;
+  --gold-400: 168 120 30;
+  --gold-500: 146 104 24;
+  --gold-600: 120 86 20;
+
+  --bg: var(--ink-950);
+  --bg-elev: var(--ink-800);
+  --fg: var(--cream-50);
+  --fg-muted: var(--cream-100);
+
+  /* Frosted-white glass on ivory. */
+  --surface-bg: rgba(255, 255, 255, 0.72);
+  --surface-bg-soft: rgba(255, 255, 255, 0.5);
+  --surface-bg-strong: rgba(255, 255, 255, 0.9);
+  --surface-border: rgba(46, 34, 18, 0.1);
+  --surface-border-soft: rgba(46, 34, 18, 0.06);
+  --surface-border-strong: rgba(46, 34, 18, 0.16);
+  --surface-inset: rgba(255, 255, 255, 0.95);
+  --surface-inset-strong: rgba(255, 255, 255, 1);
+  --surface-shadow: 0 24px 60px -32px rgba(74, 56, 24, 0.22);
+  --surface-shadow-strong: 0 40px 90px -44px rgba(74, 56, 24, 0.26);
+  --surface-contact: rgba(74, 56, 24, 0.08);
+  --surface-inset-hover: rgba(255, 255, 255, 1);
+  --surface-shadow-hover:
+    0 6px 18px -8px rgba(74, 56, 24, 0.14),
+    0 30px 70px -40px rgba(74, 56, 24, 0.26),
+    0 24px 70px -46px rgba(176, 128, 34, 0.32);
+  --shadow-ring: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --vignette-edge: rgba(120, 98, 54, 0.08);
+  --vignette-glow: rgba(176, 128, 34, 0.1);
+  --ghost: rgba(46, 34, 18, 0.05);
+  --ring-media: rgba(46, 34, 18, 0.1);
+
+  --field-bg: rgba(255, 255, 255, 0.85);
+  --field-bg-focus: rgba(255, 255, 255, 0.95);
+  --field-border: rgba(46, 34, 18, 0.12);
+
+  --hairline: rgba(46, 34, 18, 0.14);
+  --dot: rgba(46, 34, 18, 0.07);
+  --scrollbar-thumb: rgba(46, 34, 18, 0.16);
+  --selection: rgba(176, 128, 34, 0.25);
+
+  --shadow-soft: 0 18px 50px -25px rgba(70, 52, 22, 0.18);
+  --shadow-lift: 0 40px 100px -50px rgba(70, 52, 22, 0.24);
+  --shadow-glow: 0 30px 80px -40px rgba(176, 128, 34, 0.4);
+
+  color-scheme: light;
 }
 
 /* =========================================================================
@@ -62,7 +184,7 @@ html {
 }
 
 ::selection {
-  background: rgba(217, 173, 74, 0.3);
+  background: var(--selection);
   color: rgb(var(--fg));
 }
 
@@ -75,11 +197,11 @@ html {
   background: rgb(var(--bg));
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--scrollbar-thumb);
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(217, 173, 74, 0.35);
+  background: rgb(var(--accent) / 0.35);
 }
 
 /* =========================================================================
@@ -88,19 +210,25 @@ html {
 @layer components {
   /* Premium glass surface */
   .glass {
-    @apply relative bg-white/[0.04] backdrop-blur-xl border border-white/10;
+    @apply relative backdrop-blur-xl;
+    background: var(--surface-bg);
+    border: 1px solid var(--surface-border);
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.08),
-      0 30px 80px -40px rgba(0, 0, 0, 0.7);
+      inset 0 1px 0 var(--surface-inset),
+      var(--surface-shadow);
   }
   .glass-soft {
-    @apply relative bg-white/[0.025] backdrop-blur-md border border-white/[0.07];
+    @apply relative backdrop-blur-md;
+    background: var(--surface-bg-soft);
+    border: 1px solid var(--surface-border-soft);
   }
   .glass-strong {
-    @apply relative bg-white/[0.06] backdrop-blur-2xl border border-white/15;
+    @apply relative backdrop-blur-2xl;
+    background: var(--surface-bg-strong);
+    border: 1px solid var(--surface-border-strong);
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.12),
-      0 50px 120px -50px rgba(0, 0, 0, 0.85);
+      inset 0 1px 0 var(--surface-inset-strong),
+      var(--surface-shadow-strong);
   }
 
   /* Section paddings */
@@ -142,7 +270,8 @@ html {
 
   /* Hairline divider */
   .hairline {
-    @apply h-px w-full bg-gradient-to-r from-transparent via-white/15 to-transparent;
+    @apply h-px w-full;
+    background: linear-gradient(to right, transparent, var(--hairline), transparent);
   }
 
   /* Premium ring focus */
@@ -152,7 +281,7 @@ html {
 
   /* Decorative dotted backdrop */
   .dot-grid {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-image: radial-gradient(var(--dot) 1px, transparent 1px);
     background-size: 22px 22px;
   }
 
@@ -171,18 +300,63 @@ html {
 
   /* Surface chip — small decorative label */
   .chip {
-    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.28em] text-cream-100/75 border border-white/10 bg-white/[0.03];
+    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.28em] text-cream-100/75;
+    border: 1px solid var(--surface-border);
+    background: var(--surface-bg-soft);
   }
 
   /* Premium form field */
   .field {
-    @apply w-full rounded-2xl bg-white/[0.04] border border-white/10 px-5 py-3.5 text-sm text-cream-50 placeholder:text-cream-100/35 focus:outline-none focus:border-gold-300/40 focus:bg-white/[0.06] transition-colors;
+    @apply w-full rounded-2xl px-5 py-3.5 text-sm text-cream-50 placeholder:text-cream-100/35 focus:outline-none transition-colors;
+    background: var(--field-bg);
+    border: 1px solid var(--field-border);
+    /* Prevent iOS date/time inputs from overflowing their grid/flex cell. */
+    min-width: 0;
+    max-width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .field:focus {
+    border-color: rgba(217, 173, 74, 0.4);
+    background: var(--field-bg-focus);
   }
   .field-lg {
-    @apply w-full rounded-2xl bg-white/[0.04] border border-white/10 px-5 py-4 text-base text-cream-50 placeholder:text-cream-100/35 focus:outline-none focus:border-gold-300/40 focus:bg-white/[0.06] transition-colors resize-none;
+    @apply w-full rounded-2xl px-5 py-4 text-base text-cream-50 placeholder:text-cream-100/35 focus:outline-none transition-colors resize-none;
+    background: var(--field-bg);
+    border: 1px solid var(--field-border);
+    min-width: 0;
+    max-width: 100%;
+  }
+  .field-lg:focus {
+    border-color: rgba(217, 173, 74, 0.4);
+    background: var(--field-bg-focus);
   }
   .field-label {
     @apply block text-[10px] uppercase tracking-[0.28em] text-cream-100/55 mb-2;
+  }
+  /* iOS renders date/time inputs with an intrinsic width + inner spinner that
+     can break out of narrow cards. Normalise their internal layout. */
+  input.field[type="date"],
+  input.field[type="time"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  input.field::-webkit-date-and-time-value {
+    text-align: left;
+    margin: 0;
+    min-width: 0;
+  }
+  input.field::-webkit-calendar-picker-indicator {
+    margin-left: auto;
+    cursor: pointer;
+    filter: invert(54%) sepia(36%) saturate(700%) hue-rotate(2deg);
+    opacity: 0.8;
+  }
+  input.field::-webkit-inner-spin-button,
+  input.field::-webkit-clear-button {
+    display: none;
+    -webkit-appearance: none;
   }
 
   /* =======================================================================
@@ -191,11 +365,13 @@ html {
   /* Elevated card with layered shadow + inset edge highlight.
      Transition is GPU-friendly (transform + box-shadow only). */
   .card-3d {
-    @apply relative rounded-3xl border border-white/10 bg-white/[0.04];
+    @apply relative rounded-3xl;
+    background: var(--surface-bg);
+    border: 1px solid var(--surface-border);
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.08),
-      0 2px 6px -2px rgba(0, 0, 0, 0.4),
-      0 24px 60px -36px rgba(0, 0, 0, 0.75);
+      inset 0 1px 0 var(--surface-inset),
+      0 2px 6px -2px var(--surface-contact),
+      var(--surface-shadow);
     transition:
       box-shadow 0.5s var(--ease-out),
       border-color 0.5s var(--ease-out),
@@ -204,10 +380,8 @@ html {
   .card-3d:hover {
     border-color: rgba(217, 173, 74, 0.28);
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.14),
-      0 8px 20px -6px rgba(0, 0, 0, 0.5),
-      0 50px 110px -45px rgba(0, 0, 0, 0.85),
-      0 30px 90px -50px rgba(217, 173, 74, 0.5);
+      inset 0 1px 0 var(--surface-inset-hover),
+      var(--surface-shadow-hover);
   }
 
   /* Soft glowing edge ring — overlay on hover for premium accent. */
@@ -275,11 +449,16 @@ html {
     mix-blend-mode: overlay;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
   }
-  /* Soft radial vignette for hero / banner backgrounds */
+  /* In light mode, overlay-blended noise darkens the page; soften it. */
+  [data-theme="light"] .bg-noise::after {
+    mix-blend-mode: soft-light;
+    opacity: 0.025;
+  }
+  /* Soft radial vignette for hero / banner backgrounds (theme-aware) */
   .vignette {
     background:
-      radial-gradient(ellipse at center, transparent 0%, transparent 55%, rgba(8, 8, 6, 0.85) 100%),
-      radial-gradient(ellipse at top, rgba(217, 173, 74, 0.12), transparent 60%);
+      radial-gradient(ellipse at center, transparent 0%, transparent 58%, var(--vignette-edge) 100%),
+      radial-gradient(ellipse at top, var(--vignette-glow), transparent 60%);
   }
 }
 
@@ -292,5 +471,63 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* =========================================================================
+   Theme switching — cinematic transition
+   ========================================================================= */
+
+/* Smooth color/shadow morph applied briefly during a theme switch.
+   Used as a graceful fallback when the View Transitions API is missing,
+   and to soften any element the circular reveal doesn't repaint. */
+@media (prefers-reduced-motion: no-preference) {
+  .theme-anim,
+  .theme-anim *,
+  .theme-anim *::before,
+  .theme-anim *::after {
+    transition:
+      background-color 0.55s var(--ease-out),
+      background-image 0.55s var(--ease-out),
+      border-color 0.55s var(--ease-out),
+      color 0.55s var(--ease-out),
+      fill 0.55s var(--ease-out),
+      stroke 0.55s var(--ease-out),
+      box-shadow 0.55s var(--ease-out) !important;
+  }
+}
+
+/* Expanding circular reveal of the incoming theme. The new snapshot is
+   clipped from a point (the toggle position) outward — see ThemeProvider. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 2147483646;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Simple, elegant cross-fade instead of the expanding circle. */
+  ::view-transition-old(root) {
+    animation: theme-fade-out 0.3s var(--ease-out) both;
+  }
+  ::view-transition-new(root) {
+    animation: theme-fade-in 0.3s var(--ease-out) both;
+  }
+}
+
+@keyframes theme-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes theme-fade-in {
+  from {
+    opacity: 0;
   }
 }

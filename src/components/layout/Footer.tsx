@@ -18,7 +18,7 @@ export function Footer({ brand, footer }: FooterProps) {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <footer className="relative overflow-hidden border-t border-white/5 bg-ink-950">
+    <footer className="relative overflow-hidden border-t border-[color:var(--surface-border-soft)] bg-ink-950">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-40 left-1/2 -translate-x-1/2 h-[420px] w-[820px] rounded-full bg-gold-400/10 blur-[160px]" />
         <div className="absolute inset-0 dot-grid opacity-20" />
@@ -29,7 +29,7 @@ export function Footer({ brand, footer }: FooterProps) {
         <ScrollReveal variant="fade-up" className="grid lg:grid-cols-12 gap-10 lg:gap-16 mb-16">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-3 mb-6">
-              <span className="grid place-items-center h-11 w-11 rounded-2xl bg-gradient-to-br from-gold-300 via-gold-500 to-gold-600 text-ink-950 font-display shadow-glow">
+              <span className="grid place-items-center h-11 w-11 rounded-2xl bg-gradient-to-br from-gold-300 via-gold-500 to-gold-600 text-onaccent font-display shadow-glow">
                 {brand.logoMark}
               </span>
               <div>
@@ -112,7 +112,7 @@ export function Footer({ brand, footer }: FooterProps) {
             }}
             className="lg:col-span-6 relative"
           >
-            <div className="flex flex-col sm:flex-row gap-3 p-2 rounded-2xl bg-white/[0.04] border border-white/10">
+            <div className="flex flex-col sm:flex-row gap-3 p-2 rounded-2xl bg-[color:var(--surface-bg)] border border-[color:var(--surface-border)]">
               <input
                 type="email"
                 required
@@ -126,7 +126,7 @@ export function Footer({ brand, footer }: FooterProps) {
                 whileHover={{ y: -1 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="px-6 py-3 rounded-xl bg-gradient-to-br from-gold-300 via-gold-400 to-gold-600 text-ink-950 text-sm font-medium focus-ring"
+                className="px-6 py-3 rounded-xl bg-gradient-to-br from-gold-300 via-gold-400 to-gold-600 text-onaccent text-sm font-medium focus-ring"
               >
                 {submitted ? "Subscribed ✓" : footer.newsletter.cta}
               </motion.button>
@@ -135,7 +135,7 @@ export function Footer({ brand, footer }: FooterProps) {
         </ScrollReveal>
 
         {/* Bottom row */}
-        <div className="mt-14 pt-8 border-t border-white/5 flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div className="mt-14 pt-8 border-t border-[color:var(--surface-border-soft)] flex flex-col md:flex-row md:items-center justify-between gap-6">
           <p className="text-xs text-cream-100/50 tracking-wide">
             {footer.copyright}
           </p>
@@ -147,7 +147,7 @@ export function Footer({ brand, footer }: FooterProps) {
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label={s.label}
-                className="grid place-items-center h-10 w-10 rounded-full border border-white/10 text-cream-100/70 hover:text-gold-200 hover:border-gold-300/40 transition-colors focus-ring"
+                className="grid place-items-center h-10 w-10 rounded-full border border-[color:var(--surface-border)] text-cream-100/70 hover:text-gold-200 hover:border-gold-300/40 transition-colors focus-ring"
               >
                 <DynamicIcon name={s.icon} className="h-4 w-4" />
               </a>

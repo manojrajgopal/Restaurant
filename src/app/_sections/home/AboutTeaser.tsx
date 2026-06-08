@@ -37,7 +37,7 @@ export function AboutTeaser({ data }: AboutTeaserProps) {
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-transparent to-transparent" />
-                  <div className="absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-white/15" />
+                  <div className="absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-[color:var(--ring-media)]" />
 
                   {/* Editorial stamp */}
                   <div className="absolute left-6 top-6">
@@ -53,7 +53,7 @@ export function AboutTeaser({ data }: AboutTeaserProps) {
                   transition={{ duration: 0.9, delay: 0.2 }}
                   className="absolute -right-3 sm:-right-8 -bottom-8 w-[88%] sm:w-[78%] glass rounded-2xl p-5 shadow-lift"
                 >
-                  <div className="grid grid-cols-3 divide-x divide-white/10">
+                  <div className="grid grid-cols-3 divide-x divide-[color:var(--surface-border)]">
                     {data.marks.map((m) => (
                       <div
                         key={m.label}

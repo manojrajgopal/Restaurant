@@ -73,7 +73,7 @@ export function GalleryPreview({ data, gallery }: GalleryPreviewProps) {
               <span className="absolute left-3 bottom-3 text-[10px] uppercase tracking-[0.22em] text-cream-50/85">
                 {img.caption}
               </span>
-              <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl sm:rounded-3xl" />
+              <div className="absolute inset-0 ring-1 ring-inset ring-[color:var(--ring-media)] rounded-2xl sm:rounded-3xl" />
             </motion.figure>
           ))}
         </div>

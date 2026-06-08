@@ -81,7 +81,7 @@ export function PageBanner({ data, pageLabel, align = "left" }: PageBannerProps)
       {/* Bottom hairline */}
       <div
         aria-hidden
-        className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"
+        className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[color:var(--hairline)] to-transparent"
       />
     </section>
   );

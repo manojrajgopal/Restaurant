@@ -5,6 +5,10 @@ import { loadBrandData } from "@/lib/loadBrandData";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/motion/ScrollProgress";
+import {
+  ThemeProvider,
+  THEME_INIT_SCRIPT,
+} from "@/components/theme/ThemeProvider";
 
 const sans = Inter({
   subsets: ["latin"],
@@ -53,12 +57,23 @@ export default async function RootLayout({
 }) {
   const data = await loadBrandData();
   return (
-    <html lang="en" className={`${sans.variable} ${display.variable}`}>
+    <html
+      lang="en"
+      className={`${sans.variable} ${display.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }}
+        />
+      </head>
       <body className="bg-ink-950 text-cream-50 antialiased selection:bg-gold-400/30">
-        <ScrollProgress />
-        <Navbar brand={data.brand} navigation={data.navigation} />
-        <main className="relative">{children}</main>
-        <Footer brand={data.brand} footer={data.footer} />
+        <ThemeProvider>
+          <ScrollProgress />
+          <Navbar brand={data.brand} navigation={data.navigation} />
+          <main className="relative">{children}</main>
+          <Footer brand={data.brand} footer={data.footer} />
+        </ThemeProvider>
       </body>
     </html>
   );

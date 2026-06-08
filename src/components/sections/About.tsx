@@ -31,7 +31,7 @@ export function About({ data }: AboutProps) {
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent" />
-                  <div className="absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-white/15" />
+                  <div className="absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-[color:var(--ring-media)]" />
 
                   {/* Signature plate */}
                   <div className="absolute left-6 bottom-6 right-6 flex items-end justify-between gap-4">
@@ -55,7 +55,7 @@ export function About({ data }: AboutProps) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: false, margin: "-12% 0px -12% 0px" }}
                   transition={{ duration: 0.9, delay: 0.2 }}
-                  className="absolute -right-4 sm:-right-10 -bottom-10 w-44 sm:w-56 aspect-square rounded-2xl overflow-hidden shadow-lift ring-1 ring-white/15"
+                  className="absolute -right-4 sm:-right-10 -bottom-10 w-44 sm:w-56 aspect-square rounded-2xl overflow-hidden shadow-lift ring-1 ring-[color:var(--ring-media)]"
                 >
                   <Image
                     src={data.secondaryImage}
@@ -110,7 +110,7 @@ export function About({ data }: AboutProps) {
             <div className="mt-10 grid sm:grid-cols-1 gap-3">
               {data.pillars.map((p, i) => (
                 <Reveal key={p.title} delay={0.25 + i * 0.07}>
-                  <div className="group flex gap-5 p-5 rounded-2xl border border-white/[0.06] hover:border-gold-300/30 hover:bg-white/[0.02] transition-colors">
+                  <div className="group flex gap-5 p-5 rounded-2xl border border-[color:var(--surface-border-soft)] hover:border-gold-300/30 hover:bg-[color:var(--surface-bg-soft)] transition-colors">
                     <div className="shrink-0 grid place-items-center h-10 w-10 rounded-xl bg-gold-400/10 border border-gold-400/20 text-gold-300 font-display">
                       0{i + 1}
                     </div>
@@ -129,7 +129,7 @@ export function About({ data }: AboutProps) {
 
             {/* Stats row */}
             <Reveal delay={0.4}>
-              <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-white/5">
+              <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-[color:var(--surface-border-soft)]">
                 {data.stats.map((s) => (
                   <div key={s.label}>
                     <p className="font-display text-3xl text-cream-50">

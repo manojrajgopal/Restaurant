@@ -85,7 +85,7 @@ export function SignatureSpotlight({ data, menu }: SignatureSpotlightProps) {
                     {item.tags.map((t) => (
                       <span
                         key={t}
-                        className="text-[10px] uppercase tracking-[0.22em] text-cream-100/55 px-2.5 py-1 rounded-full border border-white/10"
+                        className="text-[10px] uppercase tracking-[0.22em] text-cream-100/55 px-2.5 py-1 rounded-full border border-[color:var(--surface-border)]"
                       >
                         {t}
                       </span>

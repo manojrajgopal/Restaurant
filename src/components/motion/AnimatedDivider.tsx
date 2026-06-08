@@ -27,7 +27,7 @@ export function AnimatedDivider({
   return (
     <div className={cn("relative h-px w-full overflow-hidden", className)} aria-hidden>
       <motion.div
-        className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent"
+        className="h-px w-full bg-gradient-to-r from-transparent via-[color:var(--hairline)] to-transparent"
         style={{ transformOrigin: origin === "center" ? "center" : "left" }}
         initial={{ scaleX: 0, opacity: 0 }}
         whileInView={{ scaleX: 1, opacity: 1 }}

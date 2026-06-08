@@ -64,84 +64,97 @@ export function ReserveFlow({ experiences, form, brand }: ReserveFlowProps) {
           />
 
           <div className="mt-14 grid lg:grid-cols-3 gap-5 lg:gap-6">
-            {experiences.items.map((exp) => {
+            {experiences.items.map((exp, i) => {
               const active = exp.id === selectedId;
               return (
-                <motion.button
-                  type="button"
+                <motion.div
                   key={exp.id}
-                  onClick={() => setSelectedId(exp.id)}
-                  whileHover={{ y: -6 }}
-                  transition={{ type: "spring", stiffness: 220, damping: 22 }}
-                  aria-pressed={active}
-                  className={cn(
-                    "group relative text-left rounded-3xl overflow-hidden glass shadow-lift focus-ring transition-all duration-500",
-                    active
-                      ? "ring-2 ring-gold-400 shadow-glow"
-                      : "ring-1 ring-inset ring-white/0 hover:ring-white/15"
-                  )}
+                  initial={{ opacity: 0, y: 48 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false, margin: "-12% 0px -12% 0px" }}
+                  transition={{
+                    duration: 0.7,
+                    ease: [0.22, 1, 0.36, 1],
+                    delay: i * 0.12,
+                  }}
+                  className="h-full"
                 >
-                  <div className="relative aspect-[5/4] overflow-hidden">
-                    <Image
-                      src={exp.image}
-                      alt={exp.name}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 33vw"
-                      className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-ink-950/95 via-ink-950/30 to-transparent" />
+                  <motion.button
+                    type="button"
+                    onClick={() => setSelectedId(exp.id)}
+                    whileHover={{ y: -6 }}
+                    whileTap={{ scale: 0.985 }}
+                    transition={{ type: "spring", stiffness: 220, damping: 22 }}
+                    aria-pressed={active}
+                    className={cn(
+                      "group relative isolate flex h-full w-full flex-col text-left rounded-3xl overflow-hidden glass shadow-lift focus-ring transition-shadow duration-500",
+                      active
+                        ? "ring-2 ring-gold-400 shadow-glow"
+                        : "ring-1 ring-inset ring-white/0 hover:ring-[color:var(--ring-media)]"
+                    )}
+                  >
+                    <div className="relative aspect-[5/4] overflow-hidden">
+                      <Image
+                        src={exp.image}
+                        alt={exp.name}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 33vw"
+                        className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-ink-950/95 via-ink-950/30 to-transparent" />
 
-                    <div className="absolute top-5 right-5">
-                      <span
-                        className={cn(
-                          "grid place-items-center h-9 w-9 rounded-full transition-all",
-                          active
-                            ? "bg-gold-400 text-ink-950"
-                            : "bg-white/[0.06] border border-white/15 text-cream-100/60"
-                        )}
-                      >
-                        {active ? (
-                          <Check className="h-4 w-4" />
-                        ) : (
-                          <span className="block h-2 w-2 rounded-full bg-current" />
-                        )}
-                      </span>
+                      <div className="absolute top-5 right-5">
+                        <span
+                          className={cn(
+                            "grid place-items-center h-9 w-9 rounded-full transition-all",
+                            active
+                              ? "bg-gold-400 text-onaccent"
+                              : "bg-[color:var(--surface-bg-strong)] border border-[color:var(--surface-border-strong)] text-cream-100/60"
+                          )}
+                        >
+                          {active ? (
+                            <Check className="h-4 w-4" />
+                          ) : (
+                            <span className="block h-2 w-2 rounded-full bg-current" />
+                          )}
+                        </span>
+                      </div>
+
+                      <div className="absolute inset-x-5 bottom-5">
+                        <p className="text-[10px] uppercase tracking-[0.28em] text-gold-300">
+                          {exp.price}
+                        </p>
+                        <h3 className="mt-2 font-display text-2xl text-cream-50 leading-tight">
+                          {exp.name}
+                        </h3>
+                      </div>
                     </div>
 
-                    <div className="absolute inset-x-5 bottom-5">
-                      <p className="text-[10px] uppercase tracking-[0.28em] text-gold-300">
-                        {exp.price}
+                    <div className="p-6 sm:p-7">
+                      <p className="text-sm text-cream-100/70 leading-relaxed">
+                        {exp.summary}
                       </p>
-                      <h3 className="mt-2 font-display text-2xl text-cream-50 leading-tight">
-                        {exp.name}
-                      </h3>
+                      <div className="mt-5 grid grid-cols-2 gap-3 text-xs text-cream-100/75">
+                        <span className="inline-flex items-center gap-2">
+                          <Clock className="h-3.5 w-3.5 text-gold-300" />
+                          {exp.duration}
+                        </span>
+                        <span className="inline-flex items-center gap-2">
+                          <Users className="h-3.5 w-3.5 text-gold-300" />
+                          {exp.guests}
+                        </span>
+                      </div>
+                      <ul className="mt-5 space-y-2 text-sm text-cream-100/75">
+                        {exp.features.map((f) => (
+                          <li key={f} className="flex items-start gap-2.5">
+                            <Check className="h-4 w-4 text-gold-300 mt-0.5 shrink-0" />
+                            {f}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  </div>
-
-                  <div className="p-6 sm:p-7">
-                    <p className="text-sm text-cream-100/70 leading-relaxed">
-                      {exp.summary}
-                    </p>
-                    <div className="mt-5 grid grid-cols-2 gap-3 text-xs text-cream-100/75">
-                      <span className="inline-flex items-center gap-2">
-                        <Clock className="h-3.5 w-3.5 text-gold-300" />
-                        {exp.duration}
-                      </span>
-                      <span className="inline-flex items-center gap-2">
-                        <Users className="h-3.5 w-3.5 text-gold-300" />
-                        {exp.guests}
-                      </span>
-                    </div>
-                    <ul className="mt-5 space-y-2 text-sm text-cream-100/75">
-                      {exp.features.map((f) => (
-                        <li key={f} className="flex items-start gap-2.5">
-                          <Check className="h-4 w-4 text-gold-300 mt-0.5 shrink-0" />
-                          {f}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </motion.button>
+                  </motion.button>
+                </motion.div>
               );
             })}
           </div>
@@ -209,7 +222,7 @@ export function ReserveFlow({ experiences, form, brand }: ReserveFlowProps) {
                   <Field label="Phone" type="tel" name="phone" value={state.phone} onChange={update("phone")} />
                   <Field label="Preferred Date" type="date" name="date" value={state.date} onChange={update("date")} required />
                   <Field label="Preferred Time" type="time" name="time" value={state.time} onChange={update("time")} />
-                  <div className="flex flex-col gap-2">
+                  <div className="flex min-w-0 flex-col gap-2">
                     <label className="field-label">Number of Guests</label>
                     <div className="flex flex-wrap gap-2">
                       {["2", "3", "4", "6", "8", "10+"].map((g) => (
@@ -220,8 +233,8 @@ export function ReserveFlow({ experiences, form, brand }: ReserveFlowProps) {
                           className={cn(
                             "px-4 py-2.5 rounded-full text-sm transition-all focus-ring",
                             state.guests === g
-                              ? "bg-gold-400 text-ink-950 border border-gold-400"
-                              : "border border-white/10 text-cream-100/75 hover:border-gold-300/50"
+                              ? "bg-gold-400 text-onaccent border border-gold-400"
+                              : "border border-[color:var(--surface-border)] text-cream-100/75 hover:border-gold-300/50"
                           )}
                         >
                           {g}
@@ -230,7 +243,7 @@ export function ReserveFlow({ experiences, form, brand }: ReserveFlowProps) {
                     </div>
                   </div>
 
-                  <div className="sm:col-span-2 flex flex-col gap-2">
+                  <div className="sm:col-span-2 flex min-w-0 flex-col gap-2">
                     <label htmlFor="message" className="field-label">
                       Anything we should know?
                     </label>
@@ -279,7 +292,7 @@ function Field({
   required?: boolean;
 }) {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex min-w-0 flex-col gap-2">
       <label htmlFor={name} className="field-label">
         {label}
       </label>
@@ -308,7 +321,7 @@ function Row({
   return (
     <div className="flex items-center justify-between gap-4">
       <dt className="flex items-center gap-3 text-cream-100/65">
-        <span className="grid place-items-center h-8 w-8 rounded-lg bg-white/[0.04] border border-white/10 text-gold-300">
+        <span className="grid place-items-center h-8 w-8 rounded-lg bg-[color:var(--surface-bg)] border border-[color:var(--surface-border)] text-gold-300">
           {icon}
         </span>
         {label}

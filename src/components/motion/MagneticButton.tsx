@@ -21,9 +21,9 @@ interface MagneticButtonProps {
 
 const styles: Record<Variant, string> = {
   primary:
-    "bg-gradient-to-br from-gold-300 via-gold-400 to-gold-600 text-ink-950 shadow-glow hover:shadow-[0_30px_80px_-30px_rgba(217,173,74,0.85)]",
+    "bg-gradient-to-br from-gold-300 via-gold-400 to-gold-600 text-onaccent shadow-glow hover:shadow-[0_30px_80px_-30px_rgba(217,173,74,0.85)]",
   secondary:
-    "bg-white/[0.04] text-cream-50 border border-white/15 backdrop-blur-md hover:border-gold-300/50 hover:bg-white/[0.07]",
+    "bg-[color:var(--surface-bg)] text-cream-50 border border-[color:var(--surface-border-strong)] backdrop-blur-md hover:border-gold-300/50 hover:bg-[color:var(--surface-bg-strong)]",
   ghost: "text-cream-50/90 hover:text-gold-300",
 };
 

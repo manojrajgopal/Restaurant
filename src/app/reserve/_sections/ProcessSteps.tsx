@@ -35,10 +35,10 @@ export function ProcessSteps({ data }: ProcessStepsProps) {
             >
               <div className="relative rounded-3xl glass p-7 h-full">
                 <div className="flex items-center gap-4">
-                  <span className="grid place-items-center h-12 w-12 rounded-xl bg-gradient-to-br from-gold-300 via-gold-500 to-gold-600 text-ink-950 font-display text-lg shadow-glow">
+                  <span className="grid place-items-center h-12 w-12 rounded-xl bg-gradient-to-br from-gold-300 via-gold-500 to-gold-600 text-onaccent font-display text-lg shadow-glow">
                     {it.step}
                   </span>
-                  <div className="h-px flex-1 bg-white/10" />
+                  <div className="h-px flex-1 bg-[color:var(--surface-border)]" />
                 </div>
                 <h3 className="mt-5 font-display text-lg text-cream-50">
                   {it.title}

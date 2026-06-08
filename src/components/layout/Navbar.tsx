@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import type { BrandData, NavigationData } from "@/types/brand";
 import { CTAButton } from "@/components/ui/CTAButton";
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { isActiveRoute } from "@/lib/routes";
 import { cn } from "@/lib/utils";
 
@@ -65,7 +66,7 @@ export function Navbar({ brand, navigation }: NavbarProps) {
               className="group flex items-center gap-3 focus-ring"
               aria-label={brand.brandName}
             >
-              <span className="relative grid place-items-center h-10 w-10 rounded-2xl bg-gradient-to-br from-gold-300 via-gold-500 to-gold-600 text-ink-950 font-display text-base shadow-glow">
+              <span className="relative grid place-items-center h-10 w-10 rounded-2xl bg-gradient-to-br from-gold-300 via-gold-500 to-gold-600 text-onaccent font-display text-base shadow-glow">
                 {brand.logoMark}
                 <span className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/30" />
               </span>
@@ -98,7 +99,7 @@ export function Navbar({ brand, navigation }: NavbarProps) {
                     {active && (
                       <motion.span
                         layoutId="nav-active"
-                        className="absolute inset-0 rounded-full bg-white/[0.05] border border-white/10"
+                        className="absolute inset-0 rounded-full bg-[color:var(--surface-bg-strong)] border border-[color:var(--surface-border)]"
                         transition={{
                           type: "spring",
                           stiffness: 320,
@@ -121,6 +122,7 @@ export function Navbar({ brand, navigation }: NavbarProps) {
             </nav>
 
             <div className="flex items-center gap-3">
+              <ThemeToggle />
               <div className="hidden sm:block">
                 <CTAButton
                   href={navigation.cta.href}
@@ -174,7 +176,7 @@ export function Navbar({ brand, navigation }: NavbarProps) {
                         href={item.href}
                         onClick={() => setOpen(false)}
                         className={cn(
-                          "flex items-baseline justify-between gap-4 py-4 font-display text-3xl border-b border-white/5 transition-colors",
+                          "flex items-baseline justify-between gap-4 py-4 font-display text-3xl border-b border-[color:var(--surface-border-soft)] transition-colors",
                           active
                             ? "text-gold-200"
                             : "text-cream-50 hover:text-gold-200"
@@ -189,12 +191,13 @@ export function Navbar({ brand, navigation }: NavbarProps) {
                   );
                 })}
               </ul>
-              <div className="mt-10">
+              <div className="mt-10 flex items-center gap-4">
                 <CTAButton
                   href={navigation.cta.href}
                   label={navigation.cta.label}
-                  className="w-full justify-center"
+                  className="flex-1 justify-center"
                 />
+                <ThemeToggle />
               </div>
               <div className="mt-10 text-sm text-cream-100/60 leading-relaxed">
                 <p className="font-display text-cream-100 text-base mb-2">

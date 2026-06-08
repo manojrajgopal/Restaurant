@@ -199,7 +199,7 @@ export function Hero({ hero, brand }: HeroProps) {
                   aria-hidden
                   className="absolute -top-20 -right-10 h-48 w-48 rounded-full bg-white/15 blur-2xl pointer-events-none"
                 />
-                <div className="absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-white/15 pointer-events-none" />
+                <div className="absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-[color:var(--ring-media)] pointer-events-none" />
               </motion.div>
 
               {/* Floating glass card */}
@@ -250,7 +250,7 @@ export function Hero({ hero, brand }: HeroProps) {
                     <button
                       type="button"
                       aria-label="Play teaser"
-                      className="grid place-items-center h-9 w-9 rounded-full bg-gold-400 text-ink-950 hover:bg-gold-300 transition-colors"
+                      className="grid place-items-center h-9 w-9 rounded-full bg-gold-400 text-onaccent hover:bg-gold-300 transition-colors"
                     >
                       <Play className="h-3.5 w-3.5 fill-current" aria-hidden />
                     </button>
@@ -285,7 +285,7 @@ export function Hero({ hero, brand }: HeroProps) {
                 aria-hidden
                 className="pointer-events-none absolute inset-0 -z-10"
               >
-                <div className="absolute inset-0 m-auto h-[110%] w-[110%] rounded-full border border-white/5" />
+                <div className="absolute inset-0 m-auto h-[110%] w-[110%] rounded-full border border-[color:var(--surface-border-soft)]" />
                 <div className="absolute inset-0 m-auto h-[85%] w-[85%] rounded-full border border-gold-400/15" />
               </div>
             </div>

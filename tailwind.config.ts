@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: ["selector", '[data-theme="dark"]'],
   content: ["./src/**/*.{ts,tsx,js,jsx,mdx}"],
   theme: {
     container: {
@@ -26,23 +27,23 @@ const config: Config = {
       },
       colors: {
         ink: {
-          950: "#080806",
-          900: "#0c0c0a",
-          800: "#141411",
-          700: "#1c1c18",
-          600: "#26261f",
+          950: "rgb(var(--ink-950) / <alpha-value>)",
+          900: "rgb(var(--ink-900) / <alpha-value>)",
+          800: "rgb(var(--ink-800) / <alpha-value>)",
+          700: "rgb(var(--ink-700) / <alpha-value>)",
+          600: "rgb(var(--ink-600) / <alpha-value>)",
         },
         cream: {
-          50: "#fbf7f0",
-          100: "#f3ecdf",
-          200: "#e6dcc6",
+          50: "rgb(var(--cream-50) / <alpha-value>)",
+          100: "rgb(var(--cream-100) / <alpha-value>)",
+          200: "rgb(var(--cream-200) / <alpha-value>)",
         },
         gold: {
-          200: "#f3dca0",
-          300: "#e9c66d",
-          400: "#d9ad4a",
-          500: "#c2932e",
-          600: "#9a721f",
+          200: "rgb(var(--gold-200) / <alpha-value>)",
+          300: "rgb(var(--gold-300) / <alpha-value>)",
+          400: "rgb(var(--gold-400) / <alpha-value>)",
+          500: "rgb(var(--gold-500) / <alpha-value>)",
+          600: "rgb(var(--gold-600) / <alpha-value>)",
         },
         forest: {
           400: "#3d6b58",
@@ -50,12 +51,15 @@ const config: Config = {
           600: "#1f4233",
           700: "#143126",
         },
+        /* Always-dark foreground for text sitting on gold accents.
+           Stays dark in both light & dark themes. */
+        onaccent: "#0c0c0a",
       },
       boxShadow: {
-        glow: "0 30px 80px -40px rgba(217,173,74,0.55)",
-        lift: "0 40px 100px -50px rgba(0,0,0,0.7)",
-        soft: "0 18px 50px -25px rgba(0,0,0,0.5)",
-        ring: "inset 0 1px 0 rgba(255,255,255,0.08)",
+        glow: "var(--shadow-glow)",
+        lift: "var(--shadow-lift)",
+        soft: "var(--shadow-soft)",
+        ring: "var(--shadow-ring)",
       },
       backgroundImage: {
         "grain":

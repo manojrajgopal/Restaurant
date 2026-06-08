@@ -25,7 +25,7 @@ export default function NotFound() {
           <CTAButton href="/" label="Back to Home" />
           <Link
             href="/reserve"
-            className="px-6 py-3.5 rounded-full text-sm text-cream-50 border border-white/15 hover:border-gold-300/50 transition-colors focus-ring"
+            className="px-6 py-3.5 rounded-full text-sm text-cream-50 border border-[color:var(--surface-border-strong)] hover:border-gold-300/50 transition-colors focus-ring"
           >
             Reserve a Table
           </Link>
