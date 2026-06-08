@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Plus } from "lucide-react";
 import type { FaqData } from "@/types/brand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { RevealCard } from "@/components/animations/Reveal";
+import { Stagger, staggerItem } from "@/components/animations/Reveal";
 import { cn } from "@/lib/utils";
 
 interface FAQProps {
@@ -24,11 +24,11 @@ export function FAQ({ data }: FAQProps) {
           subtitle={data.subtitle}
         />
 
-        <div className="mt-14 max-w-3xl mx-auto space-y-3">
+        <Stagger className="mt-14 max-w-3xl mx-auto space-y-3" once>
           {data.items.map((item, i) => {
             const isOpen = open === i;
             return (
-              <RevealCard key={item.question} index={i} as="div" effect="fade-up">
+              <motion.div key={item.question} variants={staggerItem}>
                 <div
                   className={cn(
                     "rounded-2xl border transition-all duration-500",
@@ -77,10 +77,10 @@ export function FAQ({ data }: FAQProps) {
                       )}
                     </AnimatePresence>
                 </div>
-              </RevealCard>
+              </motion.div>
             );
           })}
-        </div>
+        </Stagger>
       </div>
     </section>
   );
