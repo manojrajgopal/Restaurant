@@ -33,6 +33,12 @@ export function Philosophy({ data }: PhilosophyProps) {
               className="group relative"
             >
               <div className="relative rounded-3xl glass p-8 sm:p-10 overflow-hidden h-full">
+                <span
+                  aria-hidden
+                  className="absolute top-4 right-6 font-display text-[10px] uppercase tracking-[0.3em] text-cream-100/30"
+                >
+                  Principle {String(i + 1).padStart(2, "0")}
+                </span>
                 <div
                   aria-hidden
                   className="absolute -top-20 -right-20 h-48 w-48 rounded-full bg-gold-400/15 blur-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-700"
@@ -52,12 +58,6 @@ export function Philosophy({ data }: PhilosophyProps) {
                   className="absolute inset-x-8 bottom-0 h-px bg-gradient-to-r from-transparent via-gold-300/0 to-transparent group-hover:via-gold-300/70 transition-colors duration-700"
                 />
               </div>
-              <span
-                aria-hidden
-                className="absolute -top-2 right-6 font-display text-[10px] uppercase tracking-[0.3em] text-cream-100/30"
-              >
-                Principle {String(i + 1).padStart(2, "0")}
-              </span>
             </motion.article>
           ))}
         </Stagger>
