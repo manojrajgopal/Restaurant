@@ -2,6 +2,9 @@
   "name": "premium-restaurant-frontend",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=18.17.0 <21.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "dev:warm": "next dev & sleep 5 && node scripts/warmup.js",
