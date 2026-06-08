@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { DynamicIcon } from "@/components/ui/DynamicIcon";
 import { RevealImage } from "@/components/motion/RevealImage";
 import { MotionCard } from "@/components/motion/MotionCard";
-import { Stagger, staggerItem } from "@/components/animations/Reveal";
+import { RevealCard, cardItem } from "@/components/animations/Reveal";
 
 interface ServicesProps {
   data: ServicesData;
@@ -33,11 +33,11 @@ export function Services({ data }: ServicesProps) {
           subtitle={data.subtitle}
         />
 
-        <Stagger className="mt-16 grid md:grid-cols-2 gap-6 lg:gap-7">
+        <div className="mt-16 grid md:grid-cols-2 gap-6 lg:gap-7">
           {data.items.map((s, i) => (
-            <motion.article
+            <RevealCard
               key={s.title}
-              variants={staggerItem}
+              index={i}
               className="group relative"
             >
               <MotionCard className="h-full" tilt={4} lift={8} glare={false}>
@@ -61,18 +61,21 @@ export function Services({ data }: ServicesProps) {
 
                   {/* Content */}
                   <div className="sm:col-span-3 p-7 lg:p-8 flex flex-col">
-                    <div className="flex items-center gap-3">
+                    <motion.div variants={cardItem} className="flex items-center gap-3">
                       <div className="grid place-items-center h-11 w-11 rounded-2xl bg-gold-400/10 border border-gold-400/25 text-gold-300">
                         <DynamicIcon name={s.icon} className="h-5 w-5" />
                       </div>
                       <h3 className="font-display text-2xl text-cream-50">
                         {s.title}
                       </h3>
-                    </div>
-                    <p className="mt-4 text-sm text-cream-100/70 leading-relaxed">
+                    </motion.div>
+                    <motion.p
+                      variants={cardItem}
+                      className="mt-4 text-sm text-cream-100/70 leading-relaxed"
+                    >
                       {s.description}
-                    </p>
-                    <ul className="mt-6 space-y-2.5">
+                    </motion.p>
+                    <motion.ul variants={cardItem} className="mt-6 space-y-2.5">
                       {s.features.map((f) => (
                         <li
                           key={f}
@@ -84,14 +87,15 @@ export function Services({ data }: ServicesProps) {
                           {f}
                         </li>
                       ))}
-                    </ul>
+                    </motion.ul>
 
-                    <a
+                    <motion.a
+                      variants={cardItem}
                       href="#contact"
                       className="mt-7 inline-flex items-center gap-2 text-sm text-gold-300 hover:text-gold-200 link-underline self-start"
                     >
                       Enquire about {s.title.toLowerCase()} →
-                    </a>
+                    </motion.a>
                   </div>
                 </div>
 
@@ -102,9 +106,9 @@ export function Services({ data }: ServicesProps) {
                 />
               </div>
               </MotionCard>
-            </motion.article>
+            </RevealCard>
           ))}
-        </Stagger>
+        </div>
       </div>
     </section>
   );

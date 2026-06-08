@@ -7,6 +7,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import type { BrandData, FooterData } from "@/types/brand";
 import { DynamicIcon } from "@/components/ui/DynamicIcon";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
+import { RevealCard, cardItem } from "@/components/animations/Reveal";
 
 interface FooterProps {
   brand: BrandData;
@@ -68,24 +69,24 @@ export function Footer({ brand, footer }: FooterProps) {
           </div>
 
           <div className="lg:col-span-7 grid sm:grid-cols-3 gap-10">
-            {footer.columns.map((col) => (
-              <div key={col.title}>
+            {footer.columns.map((col, ci) => (
+              <RevealCard key={col.title} as="div" index={ci} effect="fade-up">
                 <h4 className="text-xs uppercase tracking-[0.3em] text-gold-300 mb-5">
                   {col.title}
                 </h4>
                 <ul className="space-y-3">
                   {col.links.map((l) => (
-                    <li key={l.label}>
+                    <motion.li key={l.label} variants={cardItem}>
                       <Link
                         href={l.href}
                         className="text-sm text-cream-100/75 hover:text-gold-200 transition-colors link-underline"
                       >
                         {l.label}
                       </Link>
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
-              </div>
+              </RevealCard>
             ))}
           </div>
         </ScrollReveal>
@@ -135,22 +136,34 @@ export function Footer({ brand, footer }: FooterProps) {
         </ScrollReveal>
 
         {/* Bottom row */}
-        <div className="mt-14 pt-8 border-t border-[color:var(--surface-border-soft)] flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-14 pt-8 border-t border-[color:var(--surface-border-soft)] flex flex-col md:flex-row md:items-center justify-between gap-6"
+        >
           <p className="text-xs text-cream-100/50 tracking-wide">
             {footer.copyright}
           </p>
           <div className="flex items-center gap-2">
-            {brand.socialLinks.map((s) => (
-              <a
+            {brand.socialLinks.map((s, i) => (
+              <motion.a
                 key={s.label}
                 href={s.href}
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label={s.label}
+                initial={{ opacity: 0, scale: 0.6 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ margin: "-10% 0px -10% 0px" }}
+                transition={{
+                  duration: 0.4,
+                  delay: i * 0.07,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                whileHover={{ y: -3 }}
                 className="grid place-items-center h-10 w-10 rounded-full border border-[color:var(--surface-border)] text-cream-100/70 hover:text-gold-200 hover:border-gold-300/40 transition-colors focus-ring"
               >
                 <DynamicIcon name={s.icon} className="h-4 w-4" />
-              </a>
+              </motion.a>
             ))}
           </div>
           <div className="flex items-center gap-5">
@@ -164,7 +177,7 @@ export function Footer({ brand, footer }: FooterProps) {
               </Link>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </footer>
   );

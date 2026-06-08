@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Plus } from "lucide-react";
 import type { FaqData } from "@/types/brand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { RevealCard } from "@/components/animations/Reveal";
 import { cn } from "@/lib/utils";
 
 interface FAQProps {
@@ -23,20 +24,19 @@ export function FAQ({ data }: FAQProps) {
           subtitle={data.subtitle}
         />
 
-        <div className="mt-14 max-w-3xl mx-auto">
-          <ul className="space-y-3">
-            {data.items.map((item, i) => {
-              const isOpen = open === i;
-              return (
-                <li key={item.question}>
-                  <div
-                    className={cn(
-                      "rounded-2xl border transition-all duration-500",
-                      isOpen
-                        ? "border-gold-300/30 bg-[color:var(--surface-bg)] shadow-lift"
-                        : "border-[color:var(--surface-border-soft)] hover:border-[color:var(--surface-border-strong)] bg-[color:var(--surface-bg-soft)]"
-                    )}
-                  >
+        <div className="mt-14 max-w-3xl mx-auto space-y-3">
+          {data.items.map((item, i) => {
+            const isOpen = open === i;
+            return (
+              <RevealCard key={item.question} index={i} as="div" effect="fade-up">
+                <div
+                  className={cn(
+                    "rounded-2xl border transition-all duration-500",
+                    isOpen
+                      ? "border-gold-300/30 bg-[color:var(--surface-bg)] shadow-lift"
+                      : "border-[color:var(--surface-border-soft)] hover:border-[color:var(--surface-border-strong)] bg-[color:var(--surface-bg-soft)]"
+                  )}
+                >
                     <button
                       onClick={() => setOpen(isOpen ? null : i)}
                       aria-expanded={isOpen}
@@ -76,11 +76,10 @@ export function FAQ({ data }: FAQProps) {
                         </motion.div>
                       )}
                     </AnimatePresence>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
+                </div>
+              </RevealCard>
+            );
+          })}
         </div>
       </div>
     </section>

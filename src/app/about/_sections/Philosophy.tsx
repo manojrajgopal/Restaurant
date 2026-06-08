@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import type { AboutPageData } from "@/types/brand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Stagger, staggerItem } from "@/components/animations/Reveal";
+import { RevealCard, cardItem } from "@/components/animations/Reveal";
 
 interface PhilosophyProps {
   data: AboutPageData["philosophy"];
@@ -23,11 +23,11 @@ export function Philosophy({ data }: PhilosophyProps) {
           subtitle={data.subtitle}
         />
 
-        <Stagger className="mt-14 grid sm:grid-cols-2 gap-5">
+        <div className="mt-14 grid sm:grid-cols-2 gap-5">
           {data.items.map((item, i) => (
-            <motion.article
+            <RevealCard
               key={item.title}
-              variants={staggerItem}
+              index={i}
               whileHover={{ y: -4 }}
               transition={{ type: "spring", stiffness: 220, damping: 22 }}
               className="group relative"
@@ -43,24 +43,24 @@ export function Philosophy({ data }: PhilosophyProps) {
                   aria-hidden
                   className="absolute -top-20 -right-20 h-48 w-48 rounded-full bg-gold-400/15 blur-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-700"
                 />
-                <span className="font-display italic text-5xl text-gold-gradient">
+                <motion.span variants={cardItem} className="font-display italic text-5xl text-gold-gradient">
                   {item.number}
-                </span>
-                <h3 className="mt-6 font-display text-2xl text-cream-50">
+                </motion.span>
+                <motion.h3 variants={cardItem} className="mt-6 font-display text-2xl text-cream-50">
                   {item.title}
-                </h3>
-                <p className="mt-3 text-[15px] text-cream-100/70 leading-relaxed">
+                </motion.h3>
+                <motion.p variants={cardItem} className="mt-3 text-[15px] text-cream-100/70 leading-relaxed">
                   {item.description}
-                </p>
+                </motion.p>
                 {/* Bottom shine */}
                 <div
                   aria-hidden
                   className="absolute inset-x-8 bottom-0 h-px bg-gradient-to-r from-transparent via-gold-300/0 to-transparent group-hover:via-gold-300/70 transition-colors duration-700"
                 />
               </div>
-            </motion.article>
+            </RevealCard>
           ))}
-        </Stagger>
+        </div>
       </div>
     </section>
   );

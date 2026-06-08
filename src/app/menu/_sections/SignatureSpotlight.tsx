@@ -5,11 +5,27 @@ import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 import type { MenuData, MenuPageData } from "@/types/brand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { cardItem } from "@/components/animations/Reveal";
 
 interface SignatureSpotlightProps {
   data: MenuPageData["signatureSpotlight"];
   menu: MenuData;
 }
+
+const spotlightVariants = {
+  hidden: { opacity: 0, y: 40 },
+  show: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      delay: i * 0.1,
+      ease: [0.22, 1, 0.36, 1] as const,
+      staggerChildren: 0.07,
+      delayChildren: i * 0.1 + 0.2,
+    },
+  }),
+};
 
 export function SignatureSpotlight({ data, menu }: SignatureSpotlightProps) {
   const items = data.ids
@@ -33,14 +49,11 @@ export function SignatureSpotlight({ data, menu }: SignatureSpotlightProps) {
           {items.map((item, i) => (
             <motion.article
               key={item.id}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              custom={i}
+              variants={spotlightVariants}
+              initial="hidden"
+              whileInView="show"
               viewport={{ once: false, margin: "-12% 0px -12% 0px" }}
-              transition={{
-                duration: 0.8,
-                delay: i * 0.1,
-                ease: [0.22, 1, 0.36, 1],
-              }}
               whileHover={{ y: -8 }}
               className={`group relative ${
                 i === 1 ? "lg:-translate-y-8" : ""
@@ -70,18 +83,18 @@ export function SignatureSpotlight({ data, menu }: SignatureSpotlightProps) {
                 </div>
 
                 <div className="p-7 sm:p-8">
-                  <div className="flex items-baseline justify-between gap-4">
+                  <motion.div variants={cardItem} className="flex items-baseline justify-between gap-4">
                     <h3 className="font-display text-2xl text-cream-50">
                       {item.name}
                     </h3>
                     <span className="font-display text-xl text-gold-300 shrink-0">
                       {item.price}
                     </span>
-                  </div>
-                  <p className="mt-3 text-sm text-cream-100/70 leading-relaxed">
+                  </motion.div>
+                  <motion.p variants={cardItem} className="mt-3 text-sm text-cream-100/70 leading-relaxed">
                     {item.description}
-                  </p>
-                  <div className="mt-5 flex flex-wrap gap-1.5">
+                  </motion.p>
+                  <motion.div variants={cardItem} className="mt-5 flex flex-wrap gap-1.5">
                     {item.tags.map((t) => (
                       <span
                         key={t}
@@ -90,7 +103,7 @@ export function SignatureSpotlight({ data, menu }: SignatureSpotlightProps) {
                         {t}
                       </span>
                     ))}
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </motion.article>

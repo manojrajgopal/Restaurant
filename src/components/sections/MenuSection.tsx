@@ -8,12 +8,32 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { RevealImage } from "@/components/motion/RevealImage";
 import { MotionCard } from "@/components/motion/MotionCard";
 import { Badge } from "@/components/ui/Badge";
+import { cardItem } from "@/components/animations/Reveal";
 import { easing, viewportReveal } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 interface MenuSectionProps {
   data: MenuData;
 }
+
+const menuCardVariants = {
+  hidden: { opacity: 0, y: 44, scale: 0.96, filter: "blur(10px)" },
+  show: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.7,
+      // Column-based stagger keeps every card lively without long delays.
+      delay: (i % 3) * 0.1,
+      ease: easing.out,
+      // Cascade the card's inner content after it settles.
+      staggerChildren: 0.06,
+      delayChildren: (i % 3) * 0.1 + 0.25,
+    },
+  }),
+};
 
 export function MenuSection({ data }: MenuSectionProps) {
   const [active, setActive] = useState<string>(data.categories[0]?.id ?? "all");
@@ -92,17 +112,12 @@ export function MenuSection({ data }: MenuSectionProps) {
               <motion.article
                 layout
                 key={item.id}
-                initial={{ opacity: 0, y: 44, scale: 0.96, filter: "blur(10px)" }}
-                whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+                custom={idx}
+                variants={menuCardVariants}
+                initial="hidden"
+                whileInView="show"
                 exit={{ opacity: 0, y: 12, scale: 0.97 }}
                 viewport={viewportReveal}
-                transition={{
-                  duration: 0.7,
-                  // Column-based stagger keeps every card lively without
-                  // long delays when there are many items.
-                  delay: (idx % 3) * 0.1,
-                  ease: easing.out,
-                }}
                 className="group relative h-full"
               >
                 <MotionCard className="h-full" tilt={6} lift={10}>
@@ -139,13 +154,13 @@ export function MenuSection({ data }: MenuSectionProps) {
 
                   {/* Content */}
                   <div className="relative p-6 flex flex-col flex-1">
-                    <h3 className="font-display text-xl text-cream-50">
+                    <motion.h3 variants={cardItem} className="font-display text-xl text-cream-50">
                       {item.name}
-                    </h3>
-                    <p className="mt-2 text-sm text-cream-100/65 leading-relaxed flex-1">
+                    </motion.h3>
+                    <motion.p variants={cardItem} className="mt-2 text-sm text-cream-100/65 leading-relaxed flex-1">
                       {item.description}
-                    </p>
-                    <div className="mt-5 flex flex-wrap gap-1.5">
+                    </motion.p>
+                    <motion.div variants={cardItem} className="mt-5 flex flex-wrap gap-1.5">
                       {item.tags.map((t) => (
                         <span
                           key={t}
@@ -154,7 +169,7 @@ export function MenuSection({ data }: MenuSectionProps) {
                           {t}
                         </span>
                       ))}
-                    </div>
+                    </motion.div>
                   </div>
 
                   {/* Hover sheen */}

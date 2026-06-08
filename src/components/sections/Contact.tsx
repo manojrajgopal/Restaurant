@@ -12,6 +12,20 @@ interface ContactProps {
   brand: BrandData;
 }
 
+const listStagger = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
+};
+
+const listItem = {
+  hidden: { opacity: 0, x: -16 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
+  },
+};
+
 interface FormState {
   name: string;
   email: string;
@@ -83,7 +97,13 @@ export function Contact({ data, brand }: ContactProps) {
                   We respond in person — typically within the hour.
                 </h3>
 
-                <ul className="mt-8 space-y-5">
+                <motion.ul
+                  className="mt-8 space-y-5"
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: false, margin: "-10% 0px -10% 0px" }}
+                  variants={listStagger}
+                >
                   <ContactRow
                     icon={<MapPin className="h-4 w-4" />}
                     label="Address"
@@ -101,7 +121,7 @@ export function Contact({ data, brand }: ContactProps) {
                     value={brand.contact.email}
                     href={`mailto:${brand.contact.email}`}
                   />
-                </ul>
+                </motion.ul>
 
                 <div className="hairline my-7" />
 
@@ -110,19 +130,26 @@ export function Contact({ data, brand }: ContactProps) {
                     <Clock className="h-4 w-4" />
                     Hours of service
                   </p>
-                  <ul className="mt-4 space-y-2">
+                  <motion.ul
+                    className="mt-4 space-y-2"
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: false, margin: "-10% 0px -10% 0px" }}
+                    variants={listStagger}
+                  >
                     {brand.workingHours.map((h) => (
-                      <li
+                      <motion.li
                         key={h.day}
+                        variants={listItem}
                         className="flex items-baseline justify-between gap-4 text-sm"
                       >
                         <span className="text-cream-100/80">{h.day}</span>
                         <span className="text-cream-100/55 tabular-nums">
                           {h.hours}
                         </span>
-                      </li>
+                      </motion.li>
                     ))}
-                  </ul>
+                  </motion.ul>
                 </div>
 
                 <div className="mt-8 flex items-start gap-3 text-xs text-cream-100/60">
@@ -181,11 +208,18 @@ export function Contact({ data, brand }: ContactProps) {
                   <label className="text-[10px] uppercase tracking-[0.28em] text-cream-100/55">
                     {data.formLabels.guests}
                   </label>
-                  <div className="flex gap-2 flex-wrap">
+                  <motion.div
+                    className="flex gap-2 flex-wrap"
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: false, margin: "-10% 0px -10% 0px" }}
+                    variants={listStagger}
+                  >
                     {["2", "3", "4", "6", "8", "10+"].map((g) => (
-                      <button
+                      <motion.button
                         key={g}
                         type="button"
+                        variants={listItem}
                         onClick={() => setForm((f) => ({ ...f, guests: g }))}
                         className={`px-4 py-2.5 rounded-full text-sm transition-all focus-ring ${
                           form.guests === g
@@ -194,9 +228,9 @@ export function Contact({ data, brand }: ContactProps) {
                         }`}
                       >
                         {g} guests
-                      </button>
+                      </motion.button>
                     ))}
-                  </div>
+                  </motion.div>
                 </div>
 
                 <div className="sm:col-span-2 flex flex-col gap-2">
@@ -257,13 +291,13 @@ function ContactRow({
     </div>
   );
   return href ? (
-    <li>
+    <motion.li variants={listItem}>
       <a href={href} className="block group focus-ring rounded-xl">
         {Inner}
       </a>
-    </li>
+    </motion.li>
   ) : (
-    <li>{Inner}</li>
+    <motion.li variants={listItem}>{Inner}</motion.li>
   );
 }
 

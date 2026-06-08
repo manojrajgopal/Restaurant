@@ -3,10 +3,26 @@
 import { motion } from "framer-motion";
 import type { ReservePageData } from "@/types/brand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { cardItem } from "@/components/animations/Reveal";
 
 interface ProcessStepsProps {
   data: ReservePageData["steps"];
 }
+
+const stepVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay: i * 0.08,
+      ease: [0.22, 1, 0.36, 1] as const,
+      staggerChildren: 0.06,
+      delayChildren: i * 0.08 + 0.15,
+    },
+  }),
+};
 
 export function ProcessSteps({ data }: ProcessStepsProps) {
   return (
@@ -27,25 +43,26 @@ export function ProcessSteps({ data }: ProcessStepsProps) {
           {data.items.map((it, i) => (
             <motion.div
               key={it.step}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              custom={i}
+              variants={stepVariants}
+              initial="hidden"
+              whileInView="show"
               viewport={{ once: false, margin: "-12% 0px -12% 0px" }}
-              transition={{ duration: 0.6, delay: i * 0.08 }}
               className="relative"
             >
               <div className="relative rounded-3xl glass p-7 h-full">
-                <div className="flex items-center gap-4">
+                <motion.div variants={cardItem} className="flex items-center gap-4">
                   <span className="grid place-items-center h-12 w-12 rounded-xl bg-gradient-to-br from-gold-300 via-gold-500 to-gold-600 text-onaccent font-display text-lg shadow-glow">
                     {it.step}
                   </span>
                   <div className="h-px flex-1 bg-[color:var(--surface-border)]" />
-                </div>
-                <h3 className="mt-5 font-display text-lg text-cream-50">
+                </motion.div>
+                <motion.h3 variants={cardItem} className="mt-5 font-display text-lg text-cream-50">
                   {it.title}
-                </h3>
-                <p className="mt-2 text-sm text-cream-100/65 leading-relaxed">
+                </motion.h3>
+                <motion.p variants={cardItem} className="mt-2 text-sm text-cream-100/65 leading-relaxed">
                   {it.description}
-                </p>
+                </motion.p>
               </div>
             </motion.div>
           ))}

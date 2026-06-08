@@ -8,7 +8,7 @@ import type { HomeData, MenuData } from "@/types/brand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
 import { MotionCard } from "@/components/motion/MotionCard";
-import { Stagger, staggerItem } from "@/components/animations/Reveal";
+import { RevealCard, cardItem } from "@/components/animations/Reveal";
 
 interface MenuPreviewProps {
   data: HomeData["menuPreview"];
@@ -43,11 +43,11 @@ export function MenuPreview({ data, menu }: MenuPreviewProps) {
           </Link>
         </div>
 
-        <Stagger className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
-          {items.map((item) => (
-            <motion.article
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+          {items.map((item, i) => (
+            <RevealCard
               key={item.id}
-              variants={staggerItem}
+              index={i}
               className="group relative"
             >
               <MotionCard className="h-full" tilt={6} lift={9}>
@@ -72,24 +72,30 @@ export function MenuPreview({ data, menu }: MenuPreviewProps) {
                   )}
 
                   <div className="absolute inset-x-5 bottom-5">
-                    <div className="flex items-baseline justify-between gap-3">
+                    <motion.div
+                      variants={cardItem}
+                      className="flex items-baseline justify-between gap-3"
+                    >
                       <h3 className="font-display text-lg text-cream-50 leading-tight">
                         {item.name}
                       </h3>
                       <span className="font-display text-gold-300 text-base shrink-0">
                         {item.price}
                       </span>
-                    </div>
-                    <p className="mt-2 text-xs text-cream-100/65 leading-relaxed line-clamp-2">
+                    </motion.div>
+                    <motion.p
+                      variants={cardItem}
+                      className="mt-2 text-xs text-cream-100/65 leading-relaxed line-clamp-2"
+                    >
                       {item.description}
-                    </p>
+                    </motion.p>
                   </div>
                 </div>
               </div>
               </MotionCard>
-            </motion.article>
+            </RevealCard>
           ))}
-        </Stagger>
+        </div>
       </div>
     </section>
   );

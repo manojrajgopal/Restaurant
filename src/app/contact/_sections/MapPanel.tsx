@@ -27,7 +27,7 @@ export function MapPanel({ data, brand }: MapPanelProps) {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: false, margin: "-12% 0px -12% 0px" }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-7 relative rounded-3xl overflow-hidden glass shadow-lift min-h-[420px]"
           >
@@ -153,18 +153,38 @@ export function MapPanel({ data, brand }: MapPanelProps) {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
+            viewport={{ once: false, margin: "-12% 0px -12% 0px" }}
             transition={{ duration: 0.8, delay: 0.1 }}
             className="lg:col-span-5 rounded-3xl glass p-7 sm:p-8 shadow-lift"
           >
             <p className="text-xs uppercase tracking-[0.3em] text-gold-300">
               Getting Here
             </p>
-            <ul className="mt-6 space-y-5">
+            <motion.ul
+              className="mt-6 space-y-5"
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, margin: "-10% 0px -10% 0px" }}
+              variants={{
+                hidden: {},
+                show: { transition: { staggerChildren: 0.1, delayChildren: 0.15 } },
+              }}
+            >
               {data.directions.map((d, i) => {
                 const Icon = ICONS[i % ICONS.length];
                 return (
-                  <li key={d.label} className="flex items-start gap-4">
+                  <motion.li
+                    key={d.label}
+                    className="flex items-start gap-4"
+                    variants={{
+                      hidden: { opacity: 0, x: -16 },
+                      show: {
+                        opacity: 1,
+                        x: 0,
+                        transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+                      },
+                    }}
+                  >
                     <span className="grid place-items-center h-10 w-10 rounded-xl bg-gold-400/10 border border-gold-400/25 text-gold-300 shrink-0">
                       <Icon className="h-4 w-4" />
                     </span>
@@ -176,10 +196,10 @@ export function MapPanel({ data, brand }: MapPanelProps) {
                         {d.value}
                       </p>
                     </div>
-                  </li>
+                  </motion.li>
                 );
               })}
-            </ul>
+            </motion.ul>
           </motion.div>
         </div>
       </div>

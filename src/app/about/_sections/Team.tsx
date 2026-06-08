@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import type { AboutPageData } from "@/types/brand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Stagger, staggerItem } from "@/components/animations/Reveal";
+import { RevealCard, cardItem } from "@/components/animations/Reveal";
 
 interface TeamProps {
   data: AboutPageData["team"];
@@ -20,11 +20,11 @@ export function Team({ data }: TeamProps) {
           subtitle={data.subtitle}
         />
 
-        <Stagger className="mt-14 grid md:grid-cols-3 gap-6 lg:gap-8">
-          {data.members.map((m) => (
-            <motion.article
+        <div className="mt-14 grid md:grid-cols-3 gap-6 lg:gap-8">
+          {data.members.map((m, i) => (
+            <RevealCard
               key={m.name}
-              variants={staggerItem}
+              index={i}
               whileHover={{ y: -6 }}
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
               className="group relative"
@@ -40,28 +40,28 @@ export function Team({ data }: TeamProps) {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink-950/95 via-ink-950/30 to-transparent" />
 
-                  <div className="absolute inset-x-6 bottom-6">
+                  <motion.div variants={cardItem} className="absolute inset-x-6 bottom-6">
                     <p className="text-[10px] uppercase tracking-[0.28em] text-gold-300">
                       {m.role}
                     </p>
                     <h3 className="mt-2 font-display text-2xl text-cream-50 leading-tight">
                       {m.name}
                     </h3>
-                  </div>
+                  </motion.div>
                 </div>
                 <div className="p-6 sm:p-7">
-                  <p className="text-sm text-cream-100/70 leading-relaxed">
+                  <motion.p variants={cardItem} className="text-sm text-cream-100/70 leading-relaxed">
                     {m.bio}
-                  </p>
+                  </motion.p>
                 </div>
                 <div
                   aria-hidden
                   className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-transparent group-hover:ring-gold-300/30 transition-colors"
                 />
               </div>
-            </motion.article>
+            </RevealCard>
           ))}
-        </Stagger>
+        </div>
       </div>
     </section>
   );
