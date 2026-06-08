@@ -1,0 +1,35 @@
+{
+  "eyebrow": "Signature Experiences",
+  "title": "More than dinner. A handful of nights you'll keep returning to.",
+  "subtitle": "From the chef's counter to bespoke private evenings, every format keeps the same obsession at its center.",
+  "items": [
+    {
+      "icon": "utensils",
+      "title": "Chef's Counter",
+      "description": "Six seats, a direct line to the pass, and dishes that never appear on the public menu.",
+      "features": ["Seven courses", "Optional wine pairing", "Conversation with the chef"],
+      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "users",
+      "title": "Private Dining",
+      "description": "Take the whole room. A bespoke menu shaped around your evening, your guests, your moment.",
+      "features": ["Up to 12 guests", "Custom menu design", "Dedicated team"],
+      "image": "https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "leaf",
+      "title": "Sunday Harvest Brunch",
+      "description": "A slower service centered around the week's final delivery from our regional farms.",
+      "features": ["Five-course brunch", "Botanical cocktails", "Vinyl-only soundtrack"],
+      "image": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "gift",
+      "title": "Off-Site Atelier",
+      "description": "We bring the kitchen to you — for milestone evenings, brand dinners, and quiet celebrations.",
+      "features": ["Full-service catering", "Bar program included", "Anywhere within 60 miles"],
+      "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80"
+    }
+  ]
+}

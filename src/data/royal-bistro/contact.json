@@ -1,0 +1,15 @@
+{
+  "eyebrow": "Reserve a Table",
+  "title": "Let's plan your evening.",
+  "subtitle": "Tell us a little about you and we will follow up within the hour during service.",
+  "formLabels": {
+    "name": "Your Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "date": "Preferred Date",
+    "guests": "Number of Guests",
+    "message": "Anything we should know?",
+    "submit": "Request Reservation"
+  },
+  "promise": "We respond personally to every request. Your details are never shared."
+}

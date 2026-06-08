@@ -1,0 +1,10 @@
+{
+  "items": [
+    { "label": "Home", "href": "/" },
+    { "label": "Our Story", "href": "/about" },
+    { "label": "Menu", "href": "/menu" },
+    { "label": "Gallery", "href": "/gallery" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "cta": { "label": "Reserve a Table", "href": "/reserve" }
+}

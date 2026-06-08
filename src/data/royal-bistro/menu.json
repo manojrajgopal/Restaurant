@@ -1,0 +1,111 @@
+{
+  "eyebrow": "The Menu",
+  "title": "Composed nightly. Sourced within ninety miles. Served with intent.",
+  "subtitle": "A glimpse of dishes currently on the chef's tasting menu. The full pairing is presented at the table.",
+  "categories": [
+    { "id": "all", "label": "All", "description": "Every dish currently on the pass." },
+    { "id": "starters", "label": "Openers", "description": "Bright, considered first bites." },
+    { "id": "mains", "label": "Mains", "description": "Hearth-led centerpieces." },
+    { "id": "desserts", "label": "Desserts", "description": "Quiet finales, never too sweet." },
+    { "id": "pairings", "label": "Pairings", "description": "Wine, fermented teas, low-ABV finds." }
+  ],
+  "items": [
+    {
+      "id": "m1",
+      "name": "Heirloom Tomato Confit",
+      "description": "Hand-pulled burrata, basil oil, sourdough crisp, aged balsamic pearls.",
+      "price": "$24",
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Vegetarian", "Seasonal"],
+      "category": "starters",
+      "signature": true
+    },
+    {
+      "id": "m2",
+      "name": "Hokkaido Scallop Crudo",
+      "description": "Yuzu kosho, finger lime, cucumber granita, micro shiso.",
+      "price": "$32",
+      "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Gluten-Free", "Raw"],
+      "category": "starters",
+      "popular": true
+    },
+    {
+      "id": "m3",
+      "name": "Saffron Risotto Milanese",
+      "description": "Carnaroli rice, Vialone Nano stock, aged Parmigiano, gold leaf finish.",
+      "price": "$38",
+      "image": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Vegetarian", "Chef's Pick"],
+      "category": "mains",
+      "signature": true
+    },
+    {
+      "id": "m4",
+      "name": "Hearth-Roasted Duck Breast",
+      "description": "Sour cherry gastrique, charred endive, smoked potato purée.",
+      "price": "$46",
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Hearth"],
+      "category": "mains",
+      "popular": true
+    },
+    {
+      "id": "m5",
+      "name": "Wagyu A5 with Bone Marrow",
+      "description": "Binchotan-grilled tenderloin, brown butter, fermented black garlic.",
+      "price": "$92",
+      "image": "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Premium", "Signature"],
+      "category": "mains",
+      "signature": true
+    },
+    {
+      "id": "m6",
+      "name": "Wild Sea Bass en Papillote",
+      "description": "Local fennel, preserved lemon, vermouth nage, dill oil.",
+      "price": "$44",
+      "image": "https://images.unsplash.com/photo-1485921325833-c519f76c4927?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Pescatarian"],
+      "category": "mains"
+    },
+    {
+      "id": "m7",
+      "name": "Dark Chocolate Cremeux",
+      "description": "Single-origin 72%, olive oil, fleur de sel, raspberry sorbet.",
+      "price": "$18",
+      "image": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Vegetarian"],
+      "category": "desserts",
+      "popular": true
+    },
+    {
+      "id": "m8",
+      "name": "Crème Brûlée à la Lavande",
+      "description": "Lavender-infused Madagascar vanilla, candied violets, shortbread.",
+      "price": "$16",
+      "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Signature", "Gluten-Free"],
+      "category": "desserts",
+      "signature": true
+    },
+    {
+      "id": "m9",
+      "name": "Reserve Pinot Noir Flight",
+      "description": "Three half-pours from Sonoma, Willamette and Burgundy. Served at the bar.",
+      "price": "$48",
+      "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Sommelier"],
+      "category": "pairings"
+    },
+    {
+      "id": "m10",
+      "name": "House Botanical Aperitif",
+      "description": "Cold-pressed grapefruit, juniper tonic, smoked rosemary garnish.",
+      "price": "$16",
+      "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80",
+      "tags": ["Zero-Proof"],
+      "category": "pairings"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "banner": {
+    "eyebrow": "Gallery",
+    "title": "An atmosphere designed in low light and soft brass.",
+    "subtitle": "Twelve seats, an open hearth, and a kitchen that doubles as the stage.",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=80"
+  },
+  "filters": [
+    { "id": "all", "label": "Everything" },
+    { "id": "Interiors", "label": "Interiors" },
+    { "id": "Dishes", "label": "Dishes" },
+    { "id": "Kitchen", "label": "Kitchen" },
+    { "id": "Wine", "label": "Wine" }
+  ]
+}

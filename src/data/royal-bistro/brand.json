@@ -1,0 +1,33 @@
+{
+  "brandName": "Maison Royale",
+  "shortName": "Royale",
+  "tagline": "Where Every Plate Tells a Story",
+  "description": "An intimate fine-dining sanctuary celebrating modern European cuisine with a quiet, contemporary soul.",
+  "logoMark": "MR",
+  "established": "Est. 2009",
+  "theme": {
+    "primary": "#c2932e",
+    "secondary": "#1f4233",
+    "accent": "#e9c66d",
+    "background": "#080806",
+    "foreground": "#fbf7f0"
+  },
+  "contact": {
+    "phone": "+1 (415) 555-0182",
+    "email": "reservations@maisonroyale.com",
+    "address": "248 Larkspur Avenue, Suite 4, San Francisco, CA 94110",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50470.776791899726!2d-122.474!3d37.7577"
+  },
+  "workingHours": [
+    { "day": "Tuesday – Thursday", "hours": "5:30 PM – 10:30 PM" },
+    { "day": "Friday – Saturday", "hours": "5:00 PM – 11:30 PM" },
+    { "day": "Sunday Brunch", "hours": "11:00 AM – 3:00 PM" },
+    { "day": "Monday", "hours": "Reserved for private events" }
+  ],
+  "socialLinks": [
+    { "label": "Instagram", "href": "https://instagram.com", "icon": "instagram" },
+    { "label": "Facebook", "href": "https://facebook.com", "icon": "facebook" },
+    { "label": "Pinterest", "href": "https://pinterest.com", "icon": "pinterest" },
+    { "label": "YouTube", "href": "https://youtube.com", "icon": "youtube" }
+  ]
+}

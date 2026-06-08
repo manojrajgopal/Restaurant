@@ -1,0 +1,14 @@
+{
+  "banner": {
+    "eyebrow": "The Menu",
+    "title": "Composed nightly. Sourced within ninety miles.",
+    "subtitle": "A glimpse of dishes currently on the chef's tasting. The full pairing is presented at the table.",
+    "image": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=2000&q=80"
+  },
+  "signatureSpotlight": {
+    "eyebrow": "Signature Dishes",
+    "title": "Three plates we keep coming back to.",
+    "subtitle": "Drawn from the current season — they appear in different forms throughout the year.",
+    "ids": ["m3", "m5", "m8"]
+  }
+}

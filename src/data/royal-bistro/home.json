@@ -1,0 +1,36 @@
+{
+  "aboutTeaser": {
+    "eyebrow": "Our Story",
+    "title": "A small room. A long obsession.",
+    "subtitle": "Fourteen years, twelve seats, one shared evening at a time — a quiet atelier built around the seasons.",
+    "cta": { "label": "Read the Full Story", "href": "/about" },
+    "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80",
+    "marks": [
+      { "value": "14+", "label": "Years of practice" },
+      { "value": "12", "label": "Seats per evening" },
+      { "value": "320", "label": "Wines in the cellar" }
+    ]
+  },
+  "menuPreview": {
+    "eyebrow": "From the Menu",
+    "title": "A glimpse of tonight's pass.",
+    "subtitle": "Four dishes from the current tasting — the full menu is presented when you arrive.",
+    "cta": { "label": "View the Full Menu", "href": "/menu" },
+    "highlightIds": ["m1", "m3", "m5", "m8"]
+  },
+  "galleryPreview": {
+    "eyebrow": "Inside the Room",
+    "title": "Soft brass, low light, and quiet pauses.",
+    "subtitle": "A look at the dining room, the kitchen, and the moments in between.",
+    "cta": { "label": "Open the Full Gallery", "href": "/gallery" },
+    "limit": 6
+  },
+  "closingCta": {
+    "eyebrow": "Reserve Your Evening",
+    "title": "Two seatings. Twelve seats. One unforgettable night.",
+    "subtitle": "Weekend tables open four weeks in advance and rarely last the day. We hold a small list of weekday seats for last-minute guests.",
+    "primary": { "label": "Reserve a Table", "href": "/reserve" },
+    "secondary": { "label": "Get in Touch", "href": "/contact" },
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80"
+  }
+}
