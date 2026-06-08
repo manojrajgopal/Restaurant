@@ -61,7 +61,7 @@ export function Hero({ hero, brand }: HeroProps) {
       />
 
       <div className="relative container">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 lg:items-center">
           {/* LEFT: Copy */}
           <motion.div style={{ y }} className="lg:col-span-7 relative z-10">
             <motion.div
@@ -156,7 +156,7 @@ export function Hero({ hero, brand }: HeroProps) {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 1.25, ease: easing.out }}
-              className="mt-12 grid grid-cols-3 gap-4 sm:gap-6 max-w-md"
+              className="relative z-10 mt-12 mb-6 lg:mb-0 grid grid-cols-3 gap-4 sm:gap-6 max-w-md"
             >
               {hero.stats.map((s, i) => (
                 <motion.div
@@ -177,7 +177,7 @@ export function Hero({ hero, brand }: HeroProps) {
           </motion.div>
 
           {/* RIGHT: 3D-style stacked visual */}
-          <div className="lg:col-span-5 relative">
+          <div className="lg:col-span-5 relative z-0 mt-8 lg:mt-0">
             <div className="relative perspective-1200">
               <motion.div
                 initial={{ opacity: 0, y: 40, rotateY: -10 }}

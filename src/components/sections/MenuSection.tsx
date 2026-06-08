@@ -45,7 +45,7 @@ export function MenuSection({ data }: MenuSectionProps) {
           <div
             role="tablist"
             aria-label="Menu categories"
-            className="inline-flex flex-wrap items-center gap-1.5 p-1.5 rounded-full glass max-w-full overflow-x-auto"
+            className="inline-flex flex-wrap items-center gap-1.5 p-1.5 rounded-xl sm:rounded-full glass max-w-full overflow-x-auto"
           >
             {data.categories.map((c) => {
               const isActive = c.id === active;
@@ -56,7 +56,7 @@ export function MenuSection({ data }: MenuSectionProps) {
                   aria-selected={isActive}
                   onClick={() => setActive(c.id)}
                   className={cn(
-                    "relative px-5 py-2.5 rounded-full text-sm transition-colors focus-ring whitespace-nowrap",
+                    "relative px-5 py-2.5 rounded-xl sm:rounded-full text-sm transition-colors focus-ring whitespace-nowrap",
                     isActive
                       ? "text-onaccent"
                       : "text-cream-100/75 hover:text-cream-50"
@@ -65,7 +65,7 @@ export function MenuSection({ data }: MenuSectionProps) {
                   {isActive && (
                     <motion.span
                       layoutId="menu-tab"
-                      className="absolute inset-0 rounded-full bg-gradient-to-br from-gold-200 via-gold-400 to-gold-600 shadow-glow"
+                      className="absolute inset-0 rounded-xl sm:rounded-full bg-gradient-to-br from-gold-200 via-gold-400 to-gold-600 shadow-glow"
                       transition={{ type: "spring", stiffness: 300, damping: 28 }}
                     />
                   )}
