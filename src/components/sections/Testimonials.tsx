@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 import type { TestimonialsData } from "@/types/brand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -13,6 +13,8 @@ interface TestimonialsProps {
 
 export function Testimonials({ data }: TestimonialsProps) {
   const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const reduce = useReducedMotion();
   const count = data.items.length;
   const active = data.items[index];
 
@@ -70,39 +72,79 @@ export function Testimonials({ data }: TestimonialsProps) {
                 </motion.div>
               </AnimatePresence>
 
-              {/* Orbiting avatar pills */}
-              {data.items.map((t, i) => {
-                const angle = (i / count) * Math.PI * 2 - Math.PI / 2;
-                const r = 46; // %
-                const x = 50 + Math.cos(angle) * r;
-                const y = 50 + Math.sin(angle) * r;
-                const isActive = i === index;
-                return (
-                  <button
-                    key={t.name}
-                    onClick={() => setIndex(i)}
-                    aria-label={`Show review from ${t.name}`}
-                    style={{
-                      left: `${x}%`,
-                      top: `${y}%`,
-                      transform: "translate(-50%, -50%)",
-                    }}
-                    className={`absolute h-12 w-12 sm:h-14 sm:w-14 rounded-full overflow-hidden ring-2 transition-all duration-500 focus-ring ${
-                      isActive
-                        ? "ring-gold-400 scale-110 shadow-glow"
-                        : "ring-white/15 hover:ring-gold-300/60 opacity-70 hover:opacity-100"
-                    }`}
-                  >
-                    <Image
-                      src={t.avatar}
-                      alt={t.name}
-                      fill
-                      sizes="56px"
-                      className="object-cover"
-                    />
-                  </button>
-                );
-              })}
+              {/* Orbiting avatar pills — slow rotation, paused on hover */}
+              <motion.div
+                className="absolute inset-0"
+                onHoverStart={() => setPaused(true)}
+                onHoverEnd={() => setPaused(false)}
+                animate={reduce ? undefined : { rotate: paused ? undefined : 360 }}
+                transition={
+                  reduce
+                    ? undefined
+                    : {
+                        repeat: Infinity,
+                        ease: "linear",
+                        duration: 38,
+                      }
+                }
+                style={{ transformOrigin: "50% 50%" }}
+              >
+                {data.items.map((t, i) => {
+                  const angle = (i / count) * Math.PI * 2 - Math.PI / 2;
+                  const r = 46; // %
+                  const x = 50 + Math.cos(angle) * r;
+                  const y = 50 + Math.sin(angle) * r;
+                  const isActive = i === index;
+                  return (
+                    <button
+                      key={t.name}
+                      onClick={() => setIndex(i)}
+                      aria-label={`Show review from ${t.name}`}
+                      style={{
+                        left: `${x}%`,
+                        top: `${y}%`,
+                        transform: "translate(-50%, -50%)",
+                      }}
+                      className={`group absolute h-12 w-12 sm:h-14 sm:w-14 rounded-full transition-all duration-500 focus-ring ${
+                        isActive
+                          ? "scale-110"
+                          : "opacity-70 hover:opacity-100 hover:scale-105"
+                      }`}
+                    >
+                      {/* Counter-rotate the portrait so it stays upright */}
+                      <motion.span
+                        className={`block h-full w-full rounded-full overflow-hidden ring-2 transition-colors ${
+                          isActive
+                            ? "ring-gold-400 shadow-glow"
+                            : "ring-white/15 group-hover:ring-gold-300/60"
+                        }`}
+                        animate={
+                          reduce
+                            ? undefined
+                            : { rotate: paused ? undefined : -360 }
+                        }
+                        transition={
+                          reduce
+                            ? undefined
+                            : {
+                                repeat: Infinity,
+                                ease: "linear",
+                                duration: 38,
+                              }
+                        }
+                      >
+                        <Image
+                          src={t.avatar}
+                          alt={t.name}
+                          fill
+                          sizes="56px"
+                          className="object-cover"
+                        />
+                      </motion.span>
+                    </button>
+                  );
+                })}
+              </motion.div>
             </div>
           </div>
 
