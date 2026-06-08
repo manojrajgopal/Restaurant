@@ -156,32 +156,53 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
           />
         </AnimatePresence>
 
-        {/* Morphing icon */}
-        <AnimatePresence mode="wait" initial={false}>
-          {isLight ? (
-            <motion.span
-              key="sun"
-              initial={reduce ? false : { rotate: -90, scale: 0, opacity: 0 }}
-              animate={{ rotate: 0, scale: 1, opacity: 1 }}
-              exit={reduce ? undefined : { rotate: 90, scale: 0, opacity: 0 }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="text-onaccent"
-            >
-              <Sun className="h-4 w-4" strokeWidth={2.4} />
-            </motion.span>
-          ) : (
-            <motion.span
-              key="moon"
-              initial={reduce ? false : { rotate: 90, scale: 0, opacity: 0 }}
-              animate={{ rotate: 0, scale: 1, opacity: 1 }}
-              exit={reduce ? undefined : { rotate: -90, scale: 0, opacity: 0 }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="text-cream-100"
-            >
-              <Moon className="h-3.5 w-3.5 fill-current" strokeWidth={2} />
-            </motion.span>
-          )}
-        </AnimatePresence>
+        {/* Morphing icon — moon turns into sun (both always mounted so
+            something is visible the whole time). */}
+        <motion.span
+          className="relative grid h-4 w-4 place-items-center"
+          animate={{ rotate: isLight ? 0 : -360 }}
+          transition={
+            reduce
+              ? { duration: 0 }
+              : { type: "spring", stiffness: 140, damping: 18, mass: 0.8 }
+          }
+        >
+          {/* Sun */}
+          <motion.span
+            aria-hidden
+            className="absolute inset-0 grid place-items-center text-onaccent"
+            animate={{
+              opacity: isLight ? 1 : 0,
+              scale: isLight ? 1 : 0.3,
+              rotate: isLight ? 0 : -90,
+            }}
+            transition={
+              reduce
+                ? { duration: 0 }
+                : { duration: 0.45, ease: [0.22, 1, 0.36, 1] }
+            }
+          >
+            <Sun className="h-4 w-4" strokeWidth={2.4} />
+          </motion.span>
+
+          {/* Moon */}
+          <motion.span
+            aria-hidden
+            className="absolute inset-0 grid place-items-center text-cream-100"
+            animate={{
+              opacity: isLight ? 0 : 1,
+              scale: isLight ? 0.3 : 1,
+              rotate: isLight ? 90 : 0,
+            }}
+            transition={
+              reduce
+                ? { duration: 0 }
+                : { duration: 0.45, ease: [0.22, 1, 0.36, 1] }
+            }
+          >
+            <Moon className="h-3.5 w-3.5 fill-current" strokeWidth={2} />
+          </motion.span>
+        </motion.span>
       </motion.span>
     </motion.button>
   );

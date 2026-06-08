@@ -3,7 +3,7 @@
     "eyebrow": "Reservations",
     "title": "Reserve your table at Ruchi's.",
     "subtitle": "Planning a family dinner, birthday party, or special gathering? Let us set the perfect table for you.",
-    "image": "https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=2000&q=80"
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=80"
   },
   "experiences": {
     "eyebrow": "Choose Your Experience",
@@ -22,7 +22,7 @@
           "Comfortable AC seating",
           "Rooftop option available"
         ],
-        "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80"
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
       },
       {
         "id": "party",
@@ -36,7 +36,7 @@
           "Custom menu options",
           "Décor arrangements available"
         ],
-        "image": "https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=1200&q=80"
+        "image": "https://images.unsplash.com/photo-1530062845289-9109b2c9c868?auto=format&fit=crop&w=1200&q=80"
       },
       {
         "id": "rooftop",
@@ -50,7 +50,40 @@
           "Evening ambience",
           "Full menu available"
         ],
-        "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=1200&q=80"
+        "image": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1200&q=80"
+      }
+    ]
+  },
+  "form": {
+    "eyebrow": "Your Details",
+    "title": "Tell us about your reservation.",
+    "subtitle": "Fill in your details and we'll get back to you shortly to confirm your booking.",
+    "submit": "Send Reservation Request",
+    "promise": "We respond to every request. For immediate assistance, call us at +91 9964-544555."
+  },
+  "steps": {
+    "eyebrow": "What Happens Next",
+    "title": "From request to confirmation.",
+    "items": [
+      {
+        "step": "01",
+        "title": "Request received",
+        "description": "Your details reach our team — we check availability for your preferred date and time."
+      },
+      {
+        "step": "02",
+        "title": "Confirmation call",
+        "description": "We call or message you to confirm your table, discuss any special requirements or party arrangements."
+      },
+      {
+        "step": "03",
+        "title": "You're all set",
+        "description": "Arrive on the day and enjoy your meal — your table will be ready and waiting."
+      },
+      {
+        "step": "04",
+        "title": "We see you at sundown",
+        "description": "Your evening begins the moment you step through the door."
       }
     ]
   }

@@ -28,20 +28,14 @@ const STORAGE_KEY = "theme";
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
-function getSystemTheme(): Theme {
-  if (typeof window === "undefined") return "dark";
-  return window.matchMedia("(prefers-color-scheme: light)").matches
-    ? "light"
-    : "dark";
-}
-
 function readInitialTheme(): Theme {
   if (typeof document !== "undefined") {
     // The inline FOUC script has already resolved & applied a theme.
     const applied = document.documentElement.dataset.theme as Theme | undefined;
     if (applied === "light" || applied === "dark") return applied;
   }
-  return getSystemTheme();
+  // Dark is the default when no explicit choice exists.
+  return "dark";
 }
 
 function applyThemeToDOM(theme: Theme) {
@@ -68,19 +62,6 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
       /* ignore */
     }
   }, []);
-
-  // Follow the system theme until the user makes an explicit choice.
-  useEffect(() => {
-    if (hasStoredPreference) return;
-    const mq = window.matchMedia("(prefers-color-scheme: light)");
-    const onChange = () => {
-      const sys = mq.matches ? "light" : "dark";
-      applyThemeToDOM(sys);
-      setThemeState(sys);
-    };
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
-  }, [hasStoredPreference]);
 
   const commitTheme = useCallback((next: Theme) => {
     applyThemeToDOM(next);
@@ -113,21 +94,27 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
         }
       ).startViewTransition;
 
-      // Briefly enable global color-morph smoothing (helps elements the
-      // circular clip doesn't repaint, and is the full effect when the
-      // View Transitions API is unavailable).
       const root = document.documentElement;
-      root.classList.add("theme-anim");
-      if (animTimeout.current) clearTimeout(animTimeout.current);
-      animTimeout.current = setTimeout(() => {
-        root.classList.remove("theme-anim");
-      }, 700);
 
+      // No View Transitions API (or reduced motion): fall back to a light
+      // global color-morph. This is the ONLY place the costly all-element
+      // transition runs — never alongside a view transition, which is what
+      // previously caused the lag.
       if (!startViewTransition || prefersReduced) {
+        if (!prefersReduced) {
+          root.classList.add("theme-anim");
+          if (animTimeout.current) clearTimeout(animTimeout.current);
+          animTimeout.current = setTimeout(() => {
+            root.classList.remove("theme-anim");
+          }, 600);
+        }
         commitTheme(next);
         return;
       }
 
+      // View Transitions path: the GPU-composited snapshot repaints the whole
+      // page on its own, so we deliberately skip the global CSS transition to
+      // keep the circular reveal buttery smooth.
       const transition = startViewTransition.call(document, () => {
         commitTheme(next);
       });
@@ -192,4 +179,4 @@ export function useTheme(): ThemeContextValue {
  * Inline script string that resolves & applies the theme before first paint,
  * preventing any flash of the wrong theme (FOUC). Injected in <head>.
  */
-export const THEME_INIT_SCRIPT = `(function(){try{var k='${STORAGE_KEY}';var t=localStorage.getItem(k);if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}var r=document.documentElement;r.dataset.theme=t;r.style.colorScheme=t;}catch(e){document.documentElement.dataset.theme='dark';}})();`;
+export const THEME_INIT_SCRIPT = `(function(){try{var k='${STORAGE_KEY}';var t=localStorage.getItem(k);if(t!=='light'&&t!=='dark'){t='dark';}var r=document.documentElement;r.dataset.theme=t;r.style.colorScheme=t;}catch(e){document.documentElement.dataset.theme='dark';}})();`;

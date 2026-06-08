@@ -5,7 +5,7 @@
   "subheadline": "A vibrant culinary destination in Tiptur offering an enticing blend of South Indian, North Indian, and Chinese cuisines — perfect for family gatherings and celebrations.",
   "primaryCta": { "label": "Reserve a Table", "href": "/reserve" },
   "secondaryCta": { "label": "Explore the Menu", "href": "/menu" },
-  "backgroundImage": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=80",
+  "backgroundImage": "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=2000&q=80",
   "foregroundImage": "images/brands/ruchis-family/main-image.png",
   "badges": [
     { "icon": "star", "label": "3.9 ★ Google Rating" },
@@ -20,7 +20,7 @@
   "floatingCard": {
     "title": "Today's Special",
     "subtitle": "Chettinad Chicken & Ambur Biriyani",
-    "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80",
+    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
     "rating": 3.9
   }
 }

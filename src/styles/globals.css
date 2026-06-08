@@ -487,13 +487,11 @@ html {
   .theme-anim *::before,
   .theme-anim *::after {
     transition:
-      background-color 0.55s var(--ease-out),
-      background-image 0.55s var(--ease-out),
-      border-color 0.55s var(--ease-out),
-      color 0.55s var(--ease-out),
-      fill 0.55s var(--ease-out),
-      stroke 0.55s var(--ease-out),
-      box-shadow 0.55s var(--ease-out) !important;
+      background-color 0.45s var(--ease-out),
+      border-color 0.45s var(--ease-out),
+      color 0.45s var(--ease-out),
+      fill 0.45s var(--ease-out),
+      stroke 0.45s var(--ease-out) !important;
   }
 }
 

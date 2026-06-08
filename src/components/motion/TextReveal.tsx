@@ -81,12 +81,12 @@ export function TextReveal({
           return (
             <span
               key={`${word}-${i}`}
-              className="inline-block overflow-hidden align-bottom pr-[0.25em] pb-[0.08em]"
+              className="inline-block overflow-hidden align-bottom pr-[0.25em]"
             >
               <motion.span
                 variants={wordVariants}
                 className={cn(
-                  "inline-block will-change-transform",
+                  "inline-block will-change-transform pb-[0.15em]",
                   isHL && "italic text-gold-gradient"
                 )}
               >
@@ -137,12 +137,12 @@ export function TextRevealOnMount({
           return (
             <span
               key={`${word}-${i}`}
-              className="inline-block overflow-hidden align-bottom pr-[0.25em] pb-[0.08em]"
+              className="inline-block overflow-hidden align-bottom pr-[0.25em]"
             >
               <motion.span
                 variants={wordVariants}
                 className={cn(
-                  "inline-block will-change-transform",
+                  "inline-block will-change-transform pb-[0.15em]",
                   isHL && "italic text-gold-gradient"
                 )}
               >

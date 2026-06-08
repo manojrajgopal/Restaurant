@@ -41,7 +41,7 @@ export function AboutTeaser({ data }: AboutTeaserProps) {
 
                   {/* Editorial stamp */}
                   <div className="absolute left-6 top-6">
-                    <div className="chip">Since 2009 · San Francisco</div>
+                    <div className="chip"></div>
                   </div>
                 </motion.div>
 
