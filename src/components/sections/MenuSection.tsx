@@ -6,7 +6,9 @@ import { Star } from "lucide-react";
 import type { MenuData, MenuItem } from "@/types/brand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { RevealImage } from "@/components/motion/RevealImage";
+import { MotionCard } from "@/components/motion/MotionCard";
 import { Badge } from "@/components/ui/Badge";
+import { easing, viewportReveal } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 interface MenuSectionProps {
@@ -90,14 +92,21 @@ export function MenuSection({ data }: MenuSectionProps) {
               <motion.article
                 layout
                 key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                transition={{ duration: 0.45, delay: idx * 0.04 }}
-                whileHover={{ y: -6 }}
-                className="group relative"
+                initial={{ opacity: 0, y: 44, scale: 0.96, filter: "blur(10px)" }}
+                whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+                exit={{ opacity: 0, y: 12, scale: 0.97 }}
+                viewport={viewportReveal}
+                transition={{
+                  duration: 0.7,
+                  // Column-based stagger keeps every card lively without
+                  // long delays when there are many items.
+                  delay: (idx % 3) * 0.1,
+                  ease: easing.out,
+                }}
+                className="group relative h-full"
               >
-                <div className="relative rounded-3xl overflow-hidden glass shadow-lift h-full flex flex-col">
+                <MotionCard className="h-full" tilt={6} lift={10}>
+                <div className="relative rounded-3xl overflow-hidden glass glow-ring shadow-lift h-full flex flex-col [transform-style:preserve-3d]">
                   {/* Image */}
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <RevealImage
@@ -154,6 +163,7 @@ export function MenuSection({ data }: MenuSectionProps) {
                     className="absolute inset-0 pointer-events-none rounded-3xl ring-1 ring-inset ring-transparent group-hover:ring-gold-300/30 transition-colors"
                   />
                 </div>
+                </MotionCard>
               </motion.article>
             ))}
           </AnimatePresence>
