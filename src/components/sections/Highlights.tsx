@@ -49,9 +49,13 @@ export function Highlights({ data }: HighlightsProps) {
                 </span>
 
                 <div className="relative">
-                  <div className="grid place-items-center h-14 w-14 rounded-2xl bg-gradient-to-br from-white/10 to-white/[0.02] border border-white/10 text-gold-300 shadow-ring">
+                  <motion.div
+                    whileHover={{ rotate: 6, scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 260, damping: 18 }}
+                    className="grid place-items-center h-14 w-14 rounded-2xl bg-gradient-to-br from-white/10 to-white/[0.02] border border-white/10 text-gold-300 shadow-ring"
+                  >
                     <DynamicIcon name={item.icon} className="h-6 w-6" />
-                  </div>
+                  </motion.div>
                   <h3 className="mt-7 font-display text-xl text-cream-50">
                     {item.title}
                   </h3>

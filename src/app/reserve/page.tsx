@@ -3,6 +3,7 @@ import { loadBrandData } from "@/lib/loadBrandData";
 import { ROUTES } from "@/lib/routes";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { FAQ } from "@/components/sections/FAQ";
+import { LazyOnView } from "@/components/lazy/LazyOnView";
 import { ReserveFlow } from "./_sections/ReserveFlow";
 import { ProcessSteps } from "./_sections/ProcessSteps";
 
@@ -24,8 +25,12 @@ export default async function ReservePage() {
         form={page.form}
         brand={data.brand}
       />
-      <ProcessSteps data={page.steps} />
-      <FAQ data={data.faq} />
+      <LazyOnView minHeight={520}>
+        <ProcessSteps data={page.steps} />
+      </LazyOnView>
+      <LazyOnView minHeight={500}>
+        <FAQ data={data.faq} />
+      </LazyOnView>
     </>
   );
 }

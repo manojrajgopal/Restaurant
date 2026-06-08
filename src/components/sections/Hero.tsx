@@ -5,9 +5,13 @@ import { useRef } from "react";
 import Image from "next/image";
 import { Star, Play } from "lucide-react";
 import type { BrandData, HeroData } from "@/types/brand";
+import { MagneticButton } from "@/components/motion/MagneticButton";
 import { CTAButton } from "@/components/ui/CTAButton";
+import { TextRevealOnMount } from "@/components/motion/TextReveal";
+import { RevealImage } from "@/components/motion/RevealImage";
 import { Badge } from "@/components/ui/Badge";
 import { DynamicIcon } from "@/components/ui/DynamicIcon";
+import { easing } from "@/lib/motion";
 
 interface HeroProps {
   hero: HeroData;
@@ -23,6 +27,7 @@ export function Hero({ hero, brand }: HeroProps) {
   const y = useTransform(scrollYProgress, [0, 1], [0, 120]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
+  const cueOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   return (
     <section
@@ -31,10 +36,7 @@ export function Hero({ hero, brand }: HeroProps) {
       className="relative min-h-[100svh] pt-32 lg:pt-40 pb-24 lg:pb-32 overflow-hidden bg-noise"
     >
       {/* Background image (cinematic) */}
-      <motion.div
-        style={{ scale, opacity }}
-        className="absolute inset-0 -z-20"
-      >
+      <motion.div style={{ scale, opacity }} className="absolute inset-0 -z-20">
         <Image
           src={hero.backgroundImage}
           alt=""
@@ -51,7 +53,7 @@ export function Hero({ hero, brand }: HeroProps) {
       {/* Decorative orbs */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 -left-32 h-[480px] w-[480px] rounded-full bg-gold-400/15 blur-[140px]"
+        className="pointer-events-none absolute -top-32 -left-32 h-[480px] w-[480px] rounded-full bg-gold-400/15 blur-[140px] animate-float"
       />
       <div
         aria-hidden
@@ -65,7 +67,7 @@ export function Hero({ hero, brand }: HeroProps) {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
+              transition={{ duration: 0.7, delay: 0.1, ease: easing.out }}
               className="inline-flex items-center gap-3 px-3 py-1.5 rounded-full glass text-xs uppercase tracking-[0.28em] text-cream-100/80"
             >
               <span className="relative flex h-2 w-2">
@@ -75,40 +77,35 @@ export function Hero({ hero, brand }: HeroProps) {
               {hero.eyebrow}
             </motion.div>
 
+            {/* Animated headline — each line masks-in word by word */}
             <h1 className="mt-8 h-display text-balance">
               {hero.headline.map((line, i) => (
-                <motion.span
+                <TextRevealOnMount
                   key={i}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.9,
-                    delay: 0.15 + i * 0.1,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  className="block"
-                >
-                  {line}{" "}
-                </motion.span>
+                  text={line}
+                  as="p"
+                  className="block leading-[0.95]"
+                  delay={0.15 + i * 0.15}
+                  step={0.05}
+                />
               ))}
-              <motion.span
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.9,
-                  delay: 0.15 + hero.headline.length * 0.1,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="block italic text-gold-gradient"
-              >
-                {hero.highlight}.
-              </motion.span>
+              <TextRevealOnMount
+                text={`${hero.highlight}.`}
+                as="p"
+                className="block leading-[0.95]"
+                highlightWords={Array.from(
+                  { length: hero.highlight.split(/\s+/).length + 1 },
+                  (_, k) => k
+                )}
+                delay={0.15 + hero.headline.length * 0.15}
+                step={0.06}
+              />
             </h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.8, delay: 0.8, ease: easing.out }}
               className="mt-7 max-w-xl text-base sm:text-lg leading-relaxed text-cream-100/75 text-balance"
             >
               {hero.subheadline}
@@ -117,10 +114,10 @@ export function Hero({ hero, brand }: HeroProps) {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.75 }}
+              transition={{ duration: 0.8, delay: 0.95, ease: easing.out }}
               className="mt-9 flex flex-wrap items-center gap-3"
             >
-              <CTAButton
+              <MagneticButton
                 href={hero.primaryCta.href}
                 label={hero.primaryCta.label}
               />
@@ -136,16 +133,21 @@ export function Hero({ hero, brand }: HeroProps) {
             <motion.ul
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.9 }}
+              transition={{ duration: 0.8, delay: 1.1, ease: easing.out }}
               className="mt-10 flex flex-wrap gap-2"
             >
-              {hero.badges.map((b) => (
-                <li key={b.label}>
+              {hero.badges.map((b, i) => (
+                <motion.li
+                  key={b.label}
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.1 + i * 0.06, duration: 0.5 }}
+                >
                   <Badge variant="default">
                     <DynamicIcon name={b.icon} className="h-3 w-3 text-gold-300" />
                     {b.label}
                   </Badge>
-                </li>
+                </motion.li>
               ))}
             </motion.ul>
 
@@ -153,18 +155,23 @@ export function Hero({ hero, brand }: HeroProps) {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 1.05 }}
+              transition={{ duration: 0.9, delay: 1.25, ease: easing.out }}
               className="mt-12 grid grid-cols-3 gap-4 sm:gap-6 max-w-md"
             >
-              {hero.stats.map((s) => (
-                <div key={s.label}>
+              {hero.stats.map((s, i) => (
+                <motion.div
+                  key={s.label}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.3 + i * 0.1, duration: 0.6 }}
+                >
                   <div className="font-display text-3xl sm:text-4xl text-cream-50">
                     {s.value}
                   </div>
                   <div className="mt-1 text-[10px] uppercase tracking-[0.25em] text-cream-100/55">
                     {s.label}
                   </div>
-                </div>
+                </motion.div>
               ))}
             </motion.div>
           </motion.div>
@@ -175,39 +182,31 @@ export function Hero({ hero, brand }: HeroProps) {
               <motion.div
                 initial={{ opacity: 0, y: 40, rotateY: -10 }}
                 animate={{ opacity: 1, y: 0, rotateY: 0 }}
-                transition={{
-                  duration: 1.2,
-                  delay: 0.35,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
+                transition={{ duration: 1.2, delay: 0.35, ease: easing.out }}
                 whileHover={{ rotateY: 4, rotateX: -2 }}
                 className="preserve-3d relative mx-auto aspect-[4/5] max-w-md rounded-[2rem] overflow-hidden shadow-lift"
               >
-                <Image
+                <RevealImage
                   src={hero.foregroundImage}
                   alt={`${brand.brandName} signature dish`}
                   fill
                   sizes="(max-width: 1024px) 80vw, 40vw"
                   priority
-                  className="object-cover"
+                  cinematic
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-transparent to-transparent" />
-
-                {/* Top-right reflection highlight */}
+                <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-transparent to-transparent pointer-events-none" />
                 <div
                   aria-hidden
-                  className="absolute -top-20 -right-10 h-48 w-48 rounded-full bg-white/15 blur-2xl"
+                  className="absolute -top-20 -right-10 h-48 w-48 rounded-full bg-white/15 blur-2xl pointer-events-none"
                 />
-
-                {/* Glass frame stroke */}
-                <div className="absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-white/15" />
+                <div className="absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-white/15 pointer-events-none" />
               </motion.div>
 
               {/* Floating glass card */}
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.7 }}
+                transition={{ duration: 1, delay: 0.85 }}
                 className="absolute -left-4 sm:-left-12 bottom-10 sm:bottom-12 w-[260px] sm:w-[300px] animate-float"
               >
                 <div className="glass rounded-2xl p-4 sm:p-5 shadow-lift">
@@ -248,7 +247,11 @@ export function Hero({ hero, brand }: HeroProps) {
                         {hero.floatingCard.rating}
                       </span>
                     </div>
-                    <button className="grid place-items-center h-9 w-9 rounded-full bg-gold-400 text-ink-950 hover:bg-gold-300 transition-colors">
+                    <button
+                      type="button"
+                      aria-label="Play teaser"
+                      className="grid place-items-center h-9 w-9 rounded-full bg-gold-400 text-ink-950 hover:bg-gold-300 transition-colors"
+                    >
                       <Play className="h-3.5 w-3.5 fill-current" aria-hidden />
                     </button>
                   </div>
@@ -259,7 +262,7 @@ export function Hero({ hero, brand }: HeroProps) {
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: 0.85 }}
+                transition={{ duration: 1, delay: 1 }}
                 className="absolute -right-2 sm:-right-6 top-6 sm:top-10"
               >
                 <div className="glass rounded-2xl px-4 py-3 flex items-center gap-3 shadow-lift">
@@ -291,13 +294,17 @@ export function Hero({ hero, brand }: HeroProps) {
 
         {/* Scroll cue */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.4, duration: 1 }}
+          style={{ opacity: cueOpacity }}
           className="hidden lg:flex items-center gap-3 mt-20 text-[10px] uppercase tracking-[0.32em] text-cream-100/40"
         >
-          <span>Scroll to discover the room</span>
-          <span className="block w-12 h-px bg-gradient-to-r from-cream-100/40 to-transparent" />
+          <motion.span
+            animate={{ y: [0, 4, 0] }}
+            transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+            className="inline-flex items-center gap-3"
+          >
+            <span>Scroll to discover the room</span>
+            <span className="block w-12 h-px bg-gradient-to-r from-cream-100/40 to-transparent" />
+          </motion.span>
         </motion.div>
       </div>
     </section>

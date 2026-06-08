@@ -1,9 +1,9 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import type { GalleryData, GalleryPageData } from "@/types/brand";
+import { RevealImage } from "@/components/motion/RevealImage";
 import { cn } from "@/lib/utils";
 
 interface GalleryGridProps {
@@ -88,15 +88,15 @@ export function GalleryGrid({ gallery, filters }: GalleryGridProps) {
                   img.span ? spanMap[img.span] : "aspect-square"
                 )}
               >
-                <Image
+                <RevealImage
                   src={img.src}
                   alt={img.alt}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110"
+                  hoverZoom
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/10 to-transparent" />
-                <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl sm:rounded-3xl" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/10 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl sm:rounded-3xl pointer-events-none" />
 
                 <figcaption className="absolute left-4 right-4 bottom-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                   <p className="text-[10px] uppercase tracking-[0.25em] text-gold-300">

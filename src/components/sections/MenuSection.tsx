@@ -1,11 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { Star } from "lucide-react";
 import type { MenuData, MenuItem } from "@/types/brand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { RevealImage } from "@/components/motion/RevealImage";
 import { Badge } from "@/components/ui/Badge";
 import { cn } from "@/lib/utils";
 
@@ -100,14 +100,14 @@ export function MenuSection({ data }: MenuSectionProps) {
                 <div className="relative rounded-3xl overflow-hidden glass shadow-lift h-full flex flex-col">
                   {/* Image */}
                   <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image
+                    <RevealImage
                       src={item.image}
                       alt={item.name}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
+                      hoverZoom
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/10 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/10 to-transparent pointer-events-none" />
 
                     {/* Top labels */}
                     <div className="absolute top-4 left-4 right-4 flex justify-between items-start gap-2">

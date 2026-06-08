@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import { loadBrandData } from "@/lib/loadBrandData";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ScrollProgress } from "@/components/motion/ScrollProgress";
 
 const sans = Inter({
   subsets: ["latin"],
@@ -54,6 +55,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${sans.variable} ${display.variable}`}>
       <body className="bg-ink-950 text-cream-50 antialiased selection:bg-gold-400/30">
+        <ScrollProgress />
         <Navbar brand={data.brand} navigation={data.navigation} />
         <main className="relative">{children}</main>
         <Footer brand={data.brand} footer={data.footer} />

@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import type { GalleryData, HomeData } from "@/types/brand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { RevealImage } from "@/components/motion/RevealImage";
 import { cn } from "@/lib/utils";
 
 interface GalleryPreviewProps {
@@ -62,14 +62,14 @@ export function GalleryPreview({ data, gallery }: GalleryPreviewProps) {
                 layout[i] ?? "sm:col-span-1"
               )}
             >
-              <Image
+              <RevealImage
                 src={img.src}
                 alt={img.alt}
                 fill
                 sizes="(max-width: 640px) 50vw, 25vw"
-                className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110"
+                hoverZoom
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/10 to-transparent pointer-events-none" />
               <span className="absolute left-3 bottom-3 text-[10px] uppercase tracking-[0.22em] text-cream-50/85">
                 {img.caption}
               </span>

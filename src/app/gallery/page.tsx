@@ -4,6 +4,7 @@ import { ROUTES } from "@/lib/routes";
 import { PageBanner } from "@/components/ui/PageBanner";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { CTASection } from "@/components/sections/CTASection";
+import { LazyOnView } from "@/components/lazy/LazyOnView";
 import { GalleryGrid } from "./_sections/GalleryGrid";
 
 export const metadata: Metadata = {
@@ -20,14 +21,18 @@ export default async function GalleryPage() {
     <>
       <PageBanner data={page.banner} pageLabel={ROUTES.gallery.label} />
       <GalleryGrid gallery={data.gallery} filters={page.filters} />
-      <Testimonials data={data.testimonials} />
-      <CTASection
-        eyebrow="See it in person"
-        title="The room is even better from a table for two."
-        subtitle="A few seats remain for this season — reserve before they're gone."
-        primary={{ label: "Reserve a Table", href: "/reserve" }}
-        secondary={{ label: "Get in Touch", href: "/contact" }}
-      />
+      <LazyOnView minHeight={520}>
+        <Testimonials data={data.testimonials} />
+      </LazyOnView>
+      <LazyOnView minHeight={420}>
+        <CTASection
+          eyebrow="See it in person"
+          title="The room is even better from a table for two."
+          subtitle="A few seats remain for this season — reserve before they're gone."
+          primary={{ label: "Reserve a Table", href: "/reserve" }}
+          secondary={{ label: "Get in Touch", href: "/contact" }}
+        />
+      </LazyOnView>
     </>
   );
 }

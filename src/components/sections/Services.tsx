@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import type { ServicesData } from "@/types/brand";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { DynamicIcon } from "@/components/ui/DynamicIcon";
+import { RevealImage } from "@/components/motion/RevealImage";
 import { Stagger, staggerItem } from "@/components/animations/Reveal";
 
 interface ServicesProps {
@@ -45,14 +45,14 @@ export function Services({ data }: ServicesProps) {
                 <div className="grid sm:grid-cols-5 h-full">
                   {/* Image */}
                   <div className="relative sm:col-span-2 aspect-[5/4] sm:aspect-auto sm:min-h-[320px] overflow-hidden">
-                    <Image
+                    <RevealImage
                       src={s.image}
                       alt={s.title}
                       fill
                       sizes="(max-width:768px) 100vw, 40vw"
-                      className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                      hoverZoom
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-ink-950/40 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-ink-950/40 to-transparent pointer-events-none" />
                     {/* Number */}
                     <span className="absolute top-5 left-5 font-display text-3xl text-cream-50/90">
                       0{i + 1}
