@@ -5,3 +5,11 @@ out
 *.tsbuildinfo
 .DS_Store
 .vscode
+
+# Ignore all brand images
+# public/images/brands/*
+# !public/images/brands/sg-nisarga-family/
+
+# Ignore all restaurant data
+# src/data/*
+# !src/data/sg-nisarga-family/
