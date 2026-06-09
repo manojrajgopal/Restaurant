@@ -573,10 +573,12 @@ html {
    iPad, large phones in landscape) are completely unaffected.
    ========================================================================= */
 @media (max-width: 820px) {
-  /* 1) Drop backdrop-filter entirely — the single biggest iOS GPU cost.
-        Each frosted panel reads back the framebuffer behind it and allocates
-        a large composited layer. We compensate with a more opaque background
-        so panels stay legible. */
+  /* 1) Glass blur is RESTORED on mobile, but the blur RADIUS is capped to a
+        small value. The iOS GPU cost of `backdrop-filter` scales with the blur
+        radius (larger radius = larger sampled area + bigger backing store), so
+        the original `xl`/`2xl` (24–40px) blurs were a major contributor to the
+        4 GB-device stall. Clamping every frosted surface to ~10px keeps the
+        frosted-glass look while cutting the per-panel GPU cost dramatically. */
   .glass,
   .glass-soft,
   .glass-strong,
@@ -587,8 +589,8 @@ html {
   .backdrop-blur-xl,
   .backdrop-blur-2xl,
   .backdrop-blur-3xl {
-    -webkit-backdrop-filter: none !important;
-    backdrop-filter: none !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(10px) !important;
   }
   .glass {
     background: var(--surface-bg-strong);
@@ -620,13 +622,11 @@ html {
     display: none !important;
   }
 
-  /* 4) Stop infinite decorative loops that keep the compositor from ever going
-        idle (so the GPU can release memory). Marquee is intentionally left
-        running as it is core content. */
-  .animate-float,
-  .animate-ping {
-    animation: none !important;
-  }
+  /* 4) Decorative loops (`animate-float`, `animate-ping`) are intentionally
+        LEFT RUNNING. They animate only `transform`/`opacity`, which are
+        GPU-compositor properties (no layout/paint), so they are cheap now that
+        the heavy memory costs above (backdrop-filter + giant blurs + noise
+        buffers) have been removed. The marquee likewise keeps running. */
 
   /* 5) Release permanent layer-promotion hints. A standing `will-change`
         permanently reserves a composited layer (and its memory); on phones the
