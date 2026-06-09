@@ -1,0 +1,31 @@
+{
+  "eyebrow": "Why Nisarga",
+  "title": "A dining experience that feels like home in nature.",
+  "subtitle": "Surrounded by trees and greenery, with tasty food and good parking — everything you need for a relaxed family meal.",
+  "items": [
+    {
+      "icon": "leaf",
+      "title": "Nature-Inspired Setting",
+      "description": "Surrounded by trees and plants on the city outskirts — a nice, peaceful place to enjoy a meal away from the bustle.",
+      "accent": "from-emerald-400/30 to-green-400/10"
+    },
+    {
+      "icon": "utensils",
+      "title": "Veg & Non-Veg Options",
+      "description": "Super tasty veg and non-veg food available with vegan options. All you can eat, small plates, quick bites, and coffee.",
+      "accent": "from-orange-400/30 to-red-400/10"
+    },
+    {
+      "icon": "moon",
+      "title": "Late-Night Dining",
+      "description": "Open until 1 AM every night. Perfect for midnight buffet cravings and late-night food runs.",
+      "accent": "from-purple-400/30 to-indigo-400/10"
+    },
+    {
+      "icon": "users",
+      "title": "Family & Group Friendly",
+      "description": "Good for kids, groups, and tourists. Casual and quiet atmosphere with both table service and self-service options.",
+      "accent": "from-yellow-300/30 to-amber-400/10"
+    }
+  ]
+}

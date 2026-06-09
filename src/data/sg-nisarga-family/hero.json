@@ -1,0 +1,26 @@
+{
+  "eyebrow": "Outdoor seating · Veg & Non-Veg · Home Delivery",
+  "headline": ["Taste of Nature", "at", "Tiptur"],
+  "highlight": "& Beyond",
+  "subheadline": "A family dhaba surrounded by trees and greenery on the outskirts of Tiptur — serving authentic Indian food with outdoor seating, late-night dining, and home delivery since 2014.",
+  "primaryCta": { "label": "Reserve a Table", "href": "/reserve" },
+  "secondaryCta": { "label": "Explore the Menu", "href": "/menu" },
+  "backgroundImage": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=2000&q=80",
+  "foregroundImage": "images/brands/sg-nisarga-family/main.png",
+  "badges": [
+    { "icon": "star", "label": "3.8 ★ Google Rating" },
+    { "icon": "users", "label": "Good for Kids" },
+    { "icon": "leaf", "label": "Veg Options Available" }
+  ],
+  "stats": [
+    { "value": "375+", "label": "Google Ratings" },
+    { "value": "12+", "label": "Years in Business" },
+    { "value": "3.8", "label": "Guest Rating" }
+  ],
+  "floatingCard": {
+    "title": "Today's Special",
+    "subtitle": "Midnight Buffet & Late-Night Food",
+    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=600&q=80",
+    "rating": 3.8
+  }
+}

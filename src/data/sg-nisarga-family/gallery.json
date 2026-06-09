@@ -1,0 +1,91 @@
+{
+  "eyebrow": "Our Gallery",
+  "title": "A glimpse into the natural charm of Nisarga.",
+  "subtitle": "From our tree-lined outdoor seating to freshly served dishes — experience the atmosphere that has made us a local favorite for 12 years.",
+  "images": [
+    {
+      "src": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Outdoor dining area surrounded by trees and greenery",
+      "caption": "Outdoor Seating Area",
+      "category": "Ambience",
+      "span": "tall"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Assorted Indian breads and curries on a table",
+      "caption": "Family Feast Spread",
+      "category": "Food",
+      "span": "wide"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Rustic dhaba interior with warm lighting",
+      "caption": "Indoor Dining",
+      "category": "Ambience",
+      "span": "square"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Steaming plate of chicken biryani",
+      "caption": "Chicken Biryani",
+      "category": "Food",
+      "span": "square"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Outdoor tables under trees with evening lights",
+      "caption": "Evening Ambience",
+      "category": "Ambience",
+      "span": "wide"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Paneer butter masala served with naan",
+      "caption": "Paneer Butter Masala",
+      "category": "Food",
+      "span": "tall"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Family enjoying meal at outdoor table",
+      "caption": "Family Time",
+      "category": "Guests",
+      "span": "square"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Traditional dal served in brass bowl",
+      "caption": "Dal Tadka",
+      "category": "Food",
+      "span": "square"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Spacious parking area with vehicles",
+      "caption": "Parking Area",
+      "category": "Ambience",
+      "span": "square"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Tandoori chicken fresh from the grill",
+      "caption": "Tandoori Chicken",
+      "category": "Food",
+      "span": "square"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Group of friends dining together at the dhaba",
+      "caption": "Group Dining",
+      "category": "Guests",
+      "span": "wide"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Hot cup of tea with snacks",
+      "caption": "Great Tea Selection",
+      "category": "Food",
+      "span": "square"
+    }
+  ]
+}

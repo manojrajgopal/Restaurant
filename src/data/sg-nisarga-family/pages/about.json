@@ -1,0 +1,81 @@
+{
+  "banner": {
+    "eyebrow": "About Us",
+    "title": "A cherished culinary haven where tradition meets nature.",
+    "subtitle": "SG Nisarga Family Dhaba — serving authentic Indian food in a natural, tree-lined setting in Tiptur, Karnataka for over 12 years.",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=2000&q=80"
+  },
+  "philosophy": {
+    "eyebrow": "Our Values",
+    "title": "What makes Nisarga special.",
+    "subtitle": "Simple principles that guide everything we do — from sourcing to serving.",
+    "items": [
+      {
+        "number": "i.",
+        "title": "Natural Setting",
+        "description": "We chose a location surrounded by trees and greenery — because great food tastes even better in nature's embrace."
+      },
+      {
+        "number": "ii.",
+        "title": "Honest Food",
+        "description": "Quality ingredients, authentic spices, and no shortcuts. Every dish is made fresh with care and tradition."
+      },
+      {
+        "number": "iii.",
+        "title": "Everyone Welcome",
+        "description": "From solo diners to large groups, families with kids to tourists passing through — our doors are open to all."
+      },
+      {
+        "number": "iv.",
+        "title": "Serve with Heart",
+        "description": "Both table service and self-service available. We adapt to your preference and make sure you feel at home."
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Your Visit",
+    "title": "How a meal at Nisarga unfolds.",
+    "subtitle": "From arrival to the last sip of chai — every moment is designed for your comfort.",
+    "steps": [
+      {
+        "time": "Arrive",
+        "title": "Park & relax",
+        "description": "Pull into our spacious parking lot, take in the greenery, and choose your spot — indoor or under the trees."
+      },
+      {
+        "time": "Order",
+        "title": "Choose your style",
+        "description": "Table service or self-service — browse our diverse menu of veg, non-veg, and quick bites."
+      },
+      {
+        "time": "Savor",
+        "title": "Fresh from the kitchen",
+        "description": "Every dish prepared fresh with quality ingredients and traditional techniques."
+      },
+      {
+        "time": "Linger",
+        "title": "Enjoy the atmosphere",
+        "description": "Take your time with a masala chai, enjoy the quiet surroundings, and come back whenever you like."
+      }
+    ]
+  },
+  "team": {
+    "eyebrow": "Our Team",
+    "title": "The people behind Nisarga.",
+    "subtitle": "A dedicated team passionate about authentic food and genuine hospitality.",
+    "members": [
+      {
+        "name": "Head Chef",
+        "role": "Kitchen Lead",
+        "bio": "With years of experience in traditional Indian cooking, our head chef ensures every dish carries authentic flavors from across Karnataka and beyond.",
+        "image": "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "name": "Service Manager",
+        "role": "Guest Relations",
+        "bio": "Ensuring every guest — whether dining in, taking away, or ordering delivery — has a seamless and satisfying experience.",
+        "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80"
+      }
+    ]
+  }
+}

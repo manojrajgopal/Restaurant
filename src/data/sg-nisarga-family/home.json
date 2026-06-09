@@ -1,0 +1,36 @@
+{
+  "aboutTeaser": {
+    "eyebrow": "Our Story",
+    "title": "More than a dhaba. A natural retreat.",
+    "subtitle": "A cherished culinary haven in Tiptur where tradition meets nature — serving families for over 12 years with authentic flavors and warm hospitality.",
+    "cta": { "label": "Read Our Story", "href": "/about" },
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
+    "marks": [
+      { "value": "375+", "label": "Google Ratings" },
+      { "value": "12+", "label": "Years" },
+      { "value": "3.8★", "label": "Google Rating" }
+    ]
+  },
+  "menuPreview": {
+    "eyebrow": "From the Menu",
+    "title": "A taste of what awaits you.",
+    "subtitle": "Some of our most loved dishes — explore the full menu for even more options.",
+    "cta": { "label": "View Full Menu", "href": "/menu" },
+    "highlightIds": ["m1", "m8", "m15", "m20"]
+  },
+  "galleryPreview": {
+    "eyebrow": "Inside Nisarga",
+    "title": "Trees, greenery, and a warm family atmosphere.",
+    "subtitle": "Take a peek at our outdoor seating, rustic interiors, and freshly served dishes.",
+    "cta": { "label": "View Full Gallery", "href": "/gallery" },
+    "limit": 6
+  },
+  "closingCta": {
+    "eyebrow": "Visit Us Today",
+    "title": "Family meals. Late-night cravings. A peaceful escape.",
+    "subtitle": "Whether it's brunch, dinner, or a midnight buffet — we're open from 1 PM to 1 AM every day.",
+    "primary": { "label": "Reserve a Table", "href": "/reserve" },
+    "secondary": { "label": "View Menu", "href": "/menu" },
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80"
+  }
+}

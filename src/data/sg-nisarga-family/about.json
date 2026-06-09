@@ -1,0 +1,32 @@
+{
+  "eyebrow": "Our Story",
+  "title": "A cherished culinary haven where tradition meets nature.",
+  "paragraphs": [
+    "Located in the vibrant heart of Tiptur, S G Nisarga Family Dhaba is a cherished culinary haven where tradition meets innovation. Known for its commitment to quality ingredients, delightful flavors, and exceptional service, Nisarga invites you to savor a dining experience like no other.",
+    "The restaurant's setting is elegantly designed to provide a cozy yet refined ambiance, surrounded by trees and plants on the city outskirts. With warm lighting and tasteful decor that makes every meal feel special, whether you're here for a quick bite or a leisurely gathering.",
+    "With 12 years in business and 375 ratings on Google, Nisarga has established itself as a favorite spot for families, groups, and tourists alike — offering table service, self-service options, and a welcoming atmosphere that keeps guests coming back."
+  ],
+  "signature": { "name": "SG Nisarga Family", "role": "Proprietors" },
+  "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
+  "secondaryImage": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=900&q=80",
+  "pillars": [
+    {
+      "title": "Nature-Inspired Setting",
+      "description": "Surrounded by trees and greenery, our dhaba offers a peaceful escape from the hustle — a place to relax and enjoy good food."
+    },
+    {
+      "title": "Family Warmth",
+      "description": "Good for kids, groups, and tourists alike — we create a welcoming space where everyone feels at home."
+    },
+    {
+      "title": "All-Day Dining",
+      "description": "From brunch to late-night food, we're open from 1 PM to 1 AM every day — perfect for any craving at any hour."
+    }
+  ],
+  "stats": [
+    { "value": "375+", "label": "Google Ratings" },
+    { "value": "12+", "label": "Years in Business" },
+    { "value": "3.8", "label": "Google Rating" },
+    { "value": "100%", "label": "Family Friendly" }
+  ]
+}

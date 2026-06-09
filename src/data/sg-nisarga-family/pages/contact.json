@@ -1,0 +1,18 @@
+{
+  "banner": {
+    "eyebrow": "Contact Us",
+    "title": "We'd love to hear from you.",
+    "subtitle": "For reservations, delivery orders, feedback, or directions — reach out anytime.",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2000&q=80"
+  },
+  "map": {
+    "eyebrow": "Find Us",
+    "title": "Bengaluru - Honnavar Road, Tiptur Rural.",
+    "subtitle": "Located on the outskirts of Tiptur, easily accessible from the Bengaluru-Honnavar highway with ample parking.",
+    "directions": [
+      { "label": "By road", "value": "On Bengaluru - Honnavar Road (NH206), Tiptur Rural area. Look for the green surroundings." },
+      { "label": "Parking", "value": "Good parking area available for both two-wheelers and cars." },
+      { "label": "Plus Code", "value": "7G82+79 Tiptur [Rural], Karnataka" }
+    ]
+  }
+}

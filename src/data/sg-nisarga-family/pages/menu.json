@@ -1,0 +1,14 @@
+{
+  "banner": {
+    "eyebrow": "Our Menu",
+    "title": "Authentic Indian flavors, fresh and hearty.",
+    "subtitle": "A diverse menu featuring veg and non-veg starters, mains, biryanis, quick bites, and beverages — all freshly prepared.",
+    "image": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=2000&q=80"
+  },
+  "signatureSpotlight": {
+    "eyebrow": "Must-Try Dishes",
+    "title": "Our most loved signature dishes.",
+    "subtitle": "Dishes that our guests keep coming back for, time and time again.",
+    "ids": ["m8", "m15", "m16", "m20"]
+  }
+}

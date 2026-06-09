@@ -1,0 +1,35 @@
+{
+  "eyebrow": "Our Services",
+  "title": "More than a meal — a natural dining experience.",
+  "subtitle": "From outdoor dining under the trees to late-night food and home delivery — we serve you the way you like it.",
+  "items": [
+    {
+      "icon": "trees",
+      "title": "Outdoor Dining",
+      "description": "Dine surrounded by trees and plants in a natural setting on the city outskirts — fresh air and good food.",
+      "features": ["Natural ambience", "Evening lights", "Fresh air seating"],
+      "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "truck",
+      "title": "Home Delivery",
+      "description": "Can't come to us? We'll bring the flavors to your doorstep with our delivery service.",
+      "features": ["Within Tiptur area", "Fresh packaging", "Quick delivery"],
+      "image": "https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "moon",
+      "title": "Late-Night Dining",
+      "description": "Open until 1 AM every night — perfect for midnight cravings and late dinners.",
+      "features": ["Open till 1 AM", "Midnight buffet", "Full menu available"],
+      "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "utensils",
+      "title": "Dine-In & Takeaway",
+      "description": "Both table service and self-service available. Grab a quick bite or sit down for a full meal.",
+      "features": ["Table service", "Self-service option", "Takeaway packaging"],
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80"
+    }
+  ]
+}
