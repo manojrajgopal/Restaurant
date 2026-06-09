@@ -529,3 +529,109 @@ html {
     opacity: 0;
   }
 }
+
+/* =========================================================================
+   Page enter transition (CSS-only — replaces the framer-motion <Template>)
+
+   Compositor-driven and decoupled from React hydration, so content is never
+   held invisible waiting for JS. Deliberately avoids `filter: blur()`, which
+   is a heavy per-frame repaint on iOS WebKit.
+   ========================================================================= */
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.page-enter {
+  animation: page-enter 0.5s var(--ease-out) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-enter {
+    animation: none;
+  }
+}
+
+/* =========================================================================
+   iOS / mobile GPU-pressure relief
+   -------------------------------------------------------------------------
+   ROOT CAUSE: iPhone 13/14 ship with 4 GB RAM (iPhone 15 has 6 GB). WebKit's
+   compositor backing-store budget scales with device memory. This site layers
+   many very large GPU surfaces — `backdrop-filter` glass, 120–160px blur orbs
+   on 420–820px boxes, a full-viewport `feTurbulence` SVG-noise overlay with
+   `mix-blend-mode`, plus several infinite animations and permanent
+   `will-change` hints. Together these exceed the budget on 4 GB devices, so
+   WebKit thrashes tiles / drops to slow paint paths and the main thread +
+   compositor stall — which (because content reveal is JS-driven) presents as
+   the page staying blank for tens of seconds.
+
+   Everything below is scoped to small viewports so capable devices (desktop,
+   iPad, large phones in landscape) are completely unaffected.
+   ========================================================================= */
+@media (max-width: 820px) {
+  /* 1) Glass blur is RESTORED on mobile, but the blur RADIUS is capped to a
+        small value. The iOS GPU cost of `backdrop-filter` scales with the blur
+        radius (larger radius = larger sampled area + bigger backing store), so
+        the original `xl`/`2xl` (24–40px) blurs were a major contributor to the
+        4 GB-device stall. Clamping every frosted surface to ~10px keeps the
+        frosted-glass look while cutting the per-panel GPU cost dramatically. */
+  .glass,
+  .glass-soft,
+  .glass-strong,
+  .backdrop-blur-sm,
+  .backdrop-blur,
+  .backdrop-blur-md,
+  .backdrop-blur-lg,
+  .backdrop-blur-xl,
+  .backdrop-blur-2xl,
+  .backdrop-blur-3xl {
+    -webkit-backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+  .glass {
+    background: var(--surface-bg-strong);
+  }
+  .glass-soft {
+    background: var(--surface-bg);
+  }
+  .glass-strong {
+    background: var(--surface-bg-strong);
+  }
+
+  /* 2) Cap the giant ambient-orb blurs. A 160px blur on a 520px box expands
+        the layer's backing store enormously; clamping the radius shrinks the
+        allocated surface dramatically while keeping a soft glow. These orbs
+        only ever carry a blur filter, so overriding `filter` is safe. */
+  .blur-\[120px\],
+  .blur-\[140px\],
+  .blur-\[160px\] {
+    filter: blur(40px) !important;
+  }
+
+  /* 3) Kill the full-viewport noise overlays. `feTurbulence` + `mix-blend-mode`
+        forces an offscreen buffer of the whole section every paint. */
+  .bg-noise::after {
+    display: none !important;
+  }
+  .mix-blend-overlay,
+  .mix-blend-soft-light {
+    display: none !important;
+  }
+
+  /* 4) Decorative loops (`animate-float`, `animate-ping`) are intentionally
+        LEFT RUNNING. They animate only `transform`/`opacity`, which are
+        GPU-compositor properties (no layout/paint), so they are cheap now that
+        the heavy memory costs above (backdrop-filter + giant blurs + noise
+        buffers) have been removed. The marquee likewise keeps running. */
+
+  /* 5) Release permanent layer-promotion hints. A standing `will-change`
+        permanently reserves a composited layer (and its memory); on phones the
+        memory saving outweighs the marginal animation smoothness. */
+  .will-change-transform {
+    will-change: auto !important;
+  }
+}
