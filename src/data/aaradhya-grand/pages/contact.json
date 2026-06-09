@@ -1,0 +1,18 @@
+{
+  "banner": {
+    "eyebrow": "Contact Us",
+    "title": "We'd love to hear from you.",
+    "subtitle": "For reservations, party hall bookings, catering, or feedback — reach out anytime.",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=2000&q=80"
+  },
+  "map": {
+    "eyebrow": "Find Us",
+    "title": "NH 75, near Nandini Palace, Kolar.",
+    "subtitle": "Conveniently located on NH-75 near Nandini Palace in Kumbarahalli, Kolar — a popular stop for highway travellers.",
+    "directions": [
+      { "label": "By road", "value": "On NH-75 (Old Madras Road), near Nandini Palace, Kumbarahalli, Kolar. A gem for travellers heading towards Tirupati." },
+      { "label": "Parking", "value": "Plenty of parking — free parking lot, free street parking, paid parking lot, and paid street parking all available." },
+      { "label": "Plus Code", "value": "45PQ+25 Kolar, Karnataka 563103" }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "eyebrow": "Why Aaradhya",
+  "title": "A dining experience that combines royalty with taste.",
+  "subtitle": "From our signature dosas and thalis to great coffee and kofta specials — every visit is an experience worth repeating.",
+  "items": [
+    {
+      "icon": "leaf",
+      "title": "100% Pure Vegetarian",
+      "description": "Vegetarian options only — South Indian, North Indian, Chinese, kofta specials, soups, beverages, and desserts all under one roof.",
+      "accent": "from-emerald-400/30 to-green-400/10"
+    },
+    {
+      "icon": "coffee",
+      "title": "Great Coffee & Dessert",
+      "description": "Known for our filter coffee, masala tea, badam milk, and great desserts — the perfect companions to any meal.",
+      "accent": "from-amber-400/30 to-orange-400/10"
+    },
+    {
+      "icon": "car",
+      "title": "Highway Convenience",
+      "description": "Located on NH-75, a gem for highway travellers with ample parking, drive-through, and quick service.",
+      "accent": "from-blue-400/30 to-indigo-400/10"
+    },
+    {
+      "icon": "users",
+      "title": "All Group Sizes Welcome",
+      "description": "Good for solo dining, families, groups, tourists, and business associates. Party hall and catering available.",
+      "accent": "from-purple-400/30 to-fuchsia-400/10"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "message": "A pure vegetarian restaurant in Kolar, Karnataka — royal ambience, fresh ingredients, and masterful preparation since 2017. Also at Devanahalli, Bangalore.",
+  "columns": [
+    {
+      "title": "Visit Us",
+      "links": [
+        { "label": "Reservations", "href": "/reserve" },
+        { "label": "Party Hall", "href": "/reserve" },
+        { "label": "Directions", "href": "/contact" },
+        { "label": "Menu", "href": "/menu" }
+      ]
+    },
+    {
+      "title": "Explore",
+      "links": [
+        { "label": "About Us", "href": "/about" },
+        { "label": "Gallery", "href": "/gallery" },
+        { "label": "Full Menu", "href": "/menu" },
+        { "label": "Contact", "href": "/contact" }
+      ]
+    },
+    {
+      "title": "Help",
+      "links": [
+        { "label": "FAQ", "href": "/about" },
+        { "label": "Feedback", "href": "/contact" },
+        { "label": "Google Reviews", "href": "https://www.google.com/maps/place/Aaradhya+Grand" },
+        { "label": "Call Us", "href": "tel:+918197006999" }
+      ]
+    }
+  ],
+  "newsletter": {
+    "title": "Stay Updated",
+    "subtitle": "Get notified about new dishes, festivals, and special offers at Aaradhya Grand.",
+    "placeholder": "your@email.com",
+    "cta": "Subscribe"
+  },
+  "copyright": "© 2026 Aaradhya Grand. All rights reserved.",
+  "legal": [
+    { "label": "Privacy", "href": "#" },
+    { "label": "Terms", "href": "#" }
+  ]
+}

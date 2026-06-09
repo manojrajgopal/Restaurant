@@ -1,0 +1,30 @@
+{
+  "brandName": "Aaradhya Grand",
+  "shortName": "Aaradhya",
+  "tagline": "Delicious and Pure Veg Meals Near You",
+  "description": "A royal ambience that goes down well with the lavish spread of pure veg food. Aaradhya Grand specializes in delicious food featuring fresh ingredients and masterful preparation — perfect for dining with friends, family, clients and business associates.",
+  "logoMark": "AG",
+  "established": "Est. 2017",
+  "theme": {
+    "primary": "#6b4c1e",
+    "secondary": "#d4a017",
+    "accent": "#e85d24",
+    "background": "#0a0a08",
+    "foreground": "#fdf8f3"
+  },
+  "contact": {
+    "phone": "+91 81970 06999",
+    "email": "info@aaradhyagrand.com",
+    "address": "NH 75, near Nandini Palace, Kolar, Kumbarahalli, Karnataka 563103",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.5!2d78.1297!3d13.1357"
+  },
+  "workingHours": [
+    { "day": "Monday – Sunday", "hours": "7:00 AM – 11:00 PM" }
+  ],
+  "socialLinks": [
+    { "label": "Website", "href": "https://aaradhyagrand.com", "icon": "globe" },
+    { "label": "Instagram", "href": "https://instagram.com", "icon": "instagram" },
+    { "label": "Facebook", "href": "https://facebook.com", "icon": "facebook" },
+    { "label": "Google Maps", "href": "https://www.google.com/maps/place/Aaradhya+Grand", "icon": "map-pin" }
+  ]
+}

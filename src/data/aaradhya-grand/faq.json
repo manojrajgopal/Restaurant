@@ -1,0 +1,51 @@
+{
+  "eyebrow": "Helpful Information",
+  "title": "Things to know before your visit.",
+  "subtitle": "Have a question? Find quick answers below or reach out to us directly.",
+  "items": [
+    {
+      "question": "Is Aaradhya Grand a pure vegetarian restaurant?",
+      "answer": "Yes! We are a 100% pure vegetarian restaurant. Our entire menu is completely vegetarian with vegan options available."
+    },
+    {
+      "question": "What are your operating hours?",
+      "answer": "We are open every day from early morning to 11:00 PM. We serve breakfast, brunch, lunch, and dinner throughout the day."
+    },
+    {
+      "question": "Do you accept reservations?",
+      "answer": "Yes, we accept reservations. Brunch and lunch reservations are recommended. Call us at +91 81970 06999 to book."
+    },
+    {
+      "question": "Is there parking available?",
+      "answer": "Yes! We have plenty of parking including a free parking lot and free street parking. Paid parking options also available."
+    },
+    {
+      "question": "Do you offer delivery and drive-through?",
+      "answer": "Yes, we offer dine-in, outdoor seating, drive-through, no-contact delivery, on-site services, and takeaway options."
+    },
+    {
+      "question": "Is the restaurant wheelchair accessible?",
+      "answer": "Yes, we are fully wheelchair accessible — including car park, entrance, seating areas, and restrooms."
+    },
+    {
+      "question": "What payment methods are accepted?",
+      "answer": "We accept credit cards, debit cards, and NFC mobile payments in addition to cash."
+    },
+    {
+      "question": "Is it suitable for kids?",
+      "answer": "Absolutely! We're good for kids and kids' birthdays. The atmosphere is family-friendly and casual."
+    },
+    {
+      "question": "Are dogs allowed?",
+      "answer": "Yes, dogs are allowed in our outdoor seating area."
+    },
+    {
+      "question": "Do you have a party hall?",
+      "answer": "Yes! We have a party hall available for private events, celebrations, and group gatherings. Contact us for bookings."
+    },
+    {
+      "question": "Do you have another branch?",
+      "answer": "Yes! Our Devanahalli branch is located at BB Rd, near Nandi Cross NH75, Devanahalli, Kurubarakunte, Bangalore. Call +91 935132901."
+    }
+  ]
+}

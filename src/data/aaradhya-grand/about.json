@@ -1,0 +1,32 @@
+{
+  "eyebrow": "Our Story",
+  "title": "A royal ambience with a lavish spread of pure veg food.",
+  "paragraphs": [
+    "Aaradhya Grand specializes in delicious food featuring fresh ingredients and masterful preparation by the Aaradhya Grand culinary team. Located on NH-75 near Nandini Palace in Kolar, Karnataka, we've been serving the community since 2017.",
+    "Aaradhya Grand's lively, casual yet upscale atmosphere makes it perfect for dining with friends, family, clients and business associates. With a wide range of dosa varieties, South Indian dishes, North Indian curries, and unique items like vada curry dosa and paneer keema — there's something for everyone.",
+    "With over 7,900 Google reviews and a 4.3-star rating, Aaradhya Grand has become a must-stop destination on the highway for travellers heading to Tirupati or craving authentic South Indian veg food. Our Devanahalli branch extends this experience to more guests."
+  ],
+  "signature": { "name": "Aaradhya Grand", "role": "Proprietors" },
+  "image": "images/brands/aaradhya-grand/our-story.png",
+  "secondaryImage": "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80",
+  "pillars": [
+    {
+      "title": "Pure Vegetarian",
+      "description": "100% vegetarian restaurant with vegan options — from South Indian breakfast to North Indian curries, kofta specials, and fresh beverages."
+    },
+    {
+      "title": "Fresh Ingredients",
+      "description": "Each dish is crafted with quality, fresh ingredients and masterful preparation that brings out authentic flavors."
+    },
+    {
+      "title": "Highway Gem",
+      "description": "A perfect stop on NH-75 for families and travellers — ample parking, quick service, and food that never disappoints."
+    }
+  ],
+  "stats": [
+    { "value": "7,900+", "label": "Google Reviews" },
+    { "value": "100+", "label": "Menu Items" },
+    { "value": "4.3", "label": "Google Rating" },
+    { "value": "2", "label": "Branches" }
+  ]
+}

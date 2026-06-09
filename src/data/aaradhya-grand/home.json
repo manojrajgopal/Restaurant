@@ -1,0 +1,36 @@
+{
+  "aboutTeaser": {
+    "eyebrow": "Our Story",
+    "title": "More than a restaurant. A highway landmark.",
+    "subtitle": "Since 2017, Aaradhya Grand has been serving pure veg food with fresh ingredients and masterful preparation — trusted by 7,900+ reviewers.",
+    "cta": { "label": "Read Our Story", "href": "/about" },
+    "image": "images/brands/aaradhya-grand/our-story.png",
+    "marks": [
+      { "value": "7,900+", "label": "Reviews" },
+      { "value": "4.3★", "label": "Google Rating" },
+      { "value": "2", "label": "Branches" }
+    ]
+  },
+  "menuPreview": {
+    "eyebrow": "From the Menu",
+    "title": "A taste of what awaits you.",
+    "subtitle": "Some of our most loved dishes — explore the full menu for even more options.",
+    "cta": { "label": "View Full Menu", "href": "/menu" },
+    "highlightIds": ["m1", "m7", "m16", "m25"]
+  },
+  "galleryPreview": {
+    "eyebrow": "Inside Aaradhya",
+    "title": "Royal ambience, warm lighting, and pure veg goodness.",
+    "subtitle": "Take a peek at our upscale interiors, signature dishes, and the welcoming atmosphere.",
+    "cta": { "label": "View Full Gallery", "href": "/gallery" },
+    "limit": 6
+  },
+  "closingCta": {
+    "eyebrow": "Visit Us Today",
+    "title": "Breakfast. Lunch. Dinner. All pure vegetarian.",
+    "subtitle": "Whether it's a morning idli, afternoon thali, or evening snack — we're here every day on NH-75, Kolar.",
+    "primary": { "label": "Reserve a Table", "href": "/reserve" },
+    "secondary": { "label": "View Menu", "href": "/menu" },
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1600&q=80"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "eyebrow": "Our Gallery",
+  "title": "A glimpse into the world of Aaradhya Grand.",
+  "subtitle": "From our upscale interiors to beautifully prepared dishes — experience the atmosphere that has earned us 7,900+ reviews.",
+  "images": [
+    {
+      "src": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Elegant restaurant interior with warm lighting and tasteful décor",
+      "caption": "Main Dining Hall",
+      "category": "Interiors",
+      "span": "tall"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1727404496374-21f174663abb?q=80&w=687&auto=format&fit=crop",
+      "alt": "Crispy golden masala dosa served with chutneys and sambar",
+      "caption": "Masala Dosa",
+      "category": "Food",
+      "span": "wide"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Spacious party hall with elegant setup",
+      "caption": "Party Hall",
+      "category": "Interiors",
+      "span": "square"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Soft tatte idli with sambar and chutney",
+      "caption": "Tatte Idli",
+      "category": "Food",
+      "span": "square"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Outdoor seating area with greenery",
+      "caption": "Outdoor Seating",
+      "category": "Interiors",
+      "span": "wide"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1567337710282-00832b415979?auto=format&fit=crop&w=1200&q=80",
+      "alt": "North Indian mini thali with roti, dal, sabzi, and sweet",
+      "caption": "Mini Thali",
+      "category": "Food",
+      "span": "tall"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Restaurant counter and service area",
+      "caption": "Counter Service",
+      "category": "Interiors",
+      "span": "square"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Paneer butter masala in rich creamy gravy",
+      "caption": "Paneer Butter Masala",
+      "category": "Food",
+      "span": "square"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Filter coffee in traditional tumbler",
+      "caption": "Filter Coffee",
+      "category": "Food",
+      "span": "square"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Family enjoying meal together at the restaurant",
+      "caption": "Family Dining",
+      "category": "Guests",
+      "span": "wide"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Dal served in brass bowl with accompaniments",
+      "caption": "Comforting Dal",
+      "category": "Food",
+      "span": "square"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=1200&q=80",
+      "alt": "Ample parking area for guests",
+      "caption": "Plenty of Parking",
+      "category": "Interiors",
+      "span": "square"
+    }
+  ]
+}

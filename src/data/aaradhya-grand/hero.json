@@ -1,0 +1,26 @@
+{
+  "eyebrow": "Pure Vegetarian · Breakfast to Dinner · Drive-Through",
+  "headline": ["Delicious & Pure", "Veg Meals", "Near You"],
+  "highlight": "& Beyond",
+  "subheadline": "A royal ambience that goes down well with the lavish spread of pure veg food. Fresh ingredients, masterful preparation, and a lively yet upscale atmosphere — perfect for families, friends, and highway travellers.",
+  "primaryCta": { "label": "Reserve a Table", "href": "/reserve" },
+  "secondaryCta": { "label": "Explore the Menu", "href": "/menu" },
+  "backgroundImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=80",
+  "foregroundImage": "images/brands/aaradhya-grand/main.png",
+  "badges": [
+    { "icon": "star", "label": "4.3 ★ Google Rating" },
+    { "icon": "leaf", "label": "Pure Vegetarian" },
+    { "icon": "coffee", "label": "Great Coffee & Tea" }
+  ],
+  "stats": [
+    { "value": "7,900+", "label": "Google Reviews" },
+    { "value": "4.3", "label": "Guest Rating" },
+    { "value": "₹200–400", "label": "Per Person" }
+  ],
+  "floatingCard": {
+    "title": "Today's Special",
+    "subtitle": "Mini Thali & Tatte Idli",
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
+    "rating": 4.3
+  }
+}

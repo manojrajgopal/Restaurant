@@ -1,0 +1,81 @@
+{
+  "banner": {
+    "eyebrow": "About Us",
+    "title": "A royal ambience with a lavish spread of pure veg food.",
+    "subtitle": "Aaradhya Grand — specializing in delicious food featuring fresh ingredients and masterful preparation since 2017, on NH-75, Kolar.",
+    "image": "images/brands/aaradhya-grand/our-story.png"
+  },
+  "philosophy": {
+    "eyebrow": "Our Values",
+    "title": "What makes Aaradhya Grand special.",
+    "subtitle": "Simple principles that guide everything we do — from the kitchen to your table.",
+    "items": [
+      {
+        "number": "i.",
+        "title": "Fresh Ingredients",
+        "description": "Every dish is crafted with quality, fresh ingredients — no compromises. Masterful preparation that brings out authentic flavors."
+      },
+      {
+        "number": "ii.",
+        "title": "Pure Vegetarian",
+        "description": "A 100% vegetarian kitchen with vegan options — respecting vegetarian values without compromising on taste or variety."
+      },
+      {
+        "number": "iii.",
+        "title": "Upscale Yet Casual",
+        "description": "A lively, casual yet upscale atmosphere — perfect for families, business associates, friends, and solo diners alike."
+      },
+      {
+        "number": "iv.",
+        "title": "Innovation",
+        "description": "Unique dishes like vada curry dosa, paneer keema, and soya keema — things you rarely find anywhere else."
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Your Visit",
+    "title": "How a meal at Aaradhya Grand unfolds.",
+    "subtitle": "From highway arrival to satisfied departure — every step designed for convenience and quality.",
+    "steps": [
+      {
+        "time": "Arrive",
+        "title": "Easy highway access",
+        "description": "Plenty of parking right off NH-75. Drive-through available for quick stops, or come in for the full experience."
+      },
+      {
+        "time": "Choose",
+        "title": "Dine your way",
+        "description": "Indoor or outdoor seating, table service or counter — plus a party hall for private events."
+      },
+      {
+        "time": "Savor",
+        "title": "Freshly prepared",
+        "description": "From dosas on the tawa to koftas from the kitchen — every dish prepared fresh with care."
+      },
+      {
+        "time": "Return",
+        "title": "A place that makes you want to come back",
+        "description": "Quick service, warm staff, and consistent quality — see you on your next trip down NH-75."
+      }
+    ]
+  },
+  "team": {
+    "eyebrow": "Our Team",
+    "title": "The people behind Aaradhya Grand.",
+    "subtitle": "A dedicated culinary team passionate about pure vegetarian food and exceptional hospitality.",
+    "members": [
+      {
+        "name": "Head Chef",
+        "role": "Kitchen Lead",
+        "bio": "Specializing in South Indian breakfast, unique dosa varieties, and North Indian curries — bringing innovation to vegetarian cooking every day.",
+        "image": "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "name": "Service Manager",
+        "role": "Guest Relations",
+        "bio": "Ensuring every guest — from solo travellers to large groups — gets quick, friendly, and seamless service.",
+        "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80"
+      }
+    ]
+  }
+}

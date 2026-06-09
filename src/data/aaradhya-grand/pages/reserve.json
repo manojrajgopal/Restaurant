@@ -1,0 +1,90 @@
+{
+  "banner": {
+    "eyebrow": "Reservations",
+    "title": "Reserve your table at Aaradhya Grand.",
+    "subtitle": "Planning a family brunch, group lunch, party, or business meeting? Let us know ahead of time.",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=80"
+  },
+  "experiences": {
+    "eyebrow": "Choose Your Experience",
+    "title": "Three ways to dine with us.",
+    "subtitle": "Whether it's a quick breakfast stop or a private celebration — we have the perfect setting.",
+    "items": [
+      {
+        "id": "dine-in",
+        "name": "Indoor Dining",
+        "summary": "Royal ambience with upscale décor, warm lighting, and both table and counter service.",
+        "duration": "Flexible",
+        "guests": "2 – 20 guests",
+        "price": "₹200 – ₹400 / person",
+        "features": [
+          "Full vegetarian menu",
+          "Table & counter service",
+          "Wheelchair accessible"
+        ],
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "outdoor",
+        "name": "Outdoor Seating",
+        "summary": "Fresh air dining in our outdoor area — casual and comfortable.",
+        "duration": "Flexible",
+        "guests": "2 – 10 guests",
+        "price": "₹200 – ₹400 / person",
+        "features": [
+          "Fresh air seating",
+          "Dogs allowed outside",
+          "Full menu available"
+        ],
+        "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "party-hall",
+        "name": "Party Hall",
+        "summary": "Private party hall for celebrations, birthdays, corporate events, and group gatherings.",
+        "duration": "2 – 5 hours",
+        "guests": "20 – 80 guests",
+        "price": "Custom packages",
+        "features": [
+          "Private space",
+          "Catering service",
+          "Good for kids' birthdays"
+        ],
+        "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80"
+      }
+    ]
+  },
+  "form": {
+    "eyebrow": "Your Details",
+    "title": "Tell us about your reservation.",
+    "subtitle": "Fill in your details and we'll confirm your table. Brunch and lunch reservations recommended.",
+    "submit": "Send Reservation Request",
+    "promise": "We respond to every request. For immediate assistance, call us at +91 81970 06999 or +91 99022 62999."
+  },
+  "steps": {
+    "eyebrow": "What Happens Next",
+    "title": "From request to your table.",
+    "items": [
+      {
+        "step": "01",
+        "title": "Request received",
+        "description": "Your details reach our team — we check availability for your preferred date and time."
+      },
+      {
+        "step": "02",
+        "title": "Confirmation call",
+        "description": "We call or message you to confirm your table and discuss any special requirements."
+      },
+      {
+        "step": "03",
+        "title": "You're all set",
+        "description": "Arrive at Aaradhya Grand and your table will be ready — indoor, outdoor, or party hall."
+      },
+      {
+        "step": "04",
+        "title": "Enjoy your meal",
+        "description": "Relax in our royal ambience and enjoy pure veg flavors. Quick service, warm staff, and great food."
+      }
+    ]
+  }
+}
