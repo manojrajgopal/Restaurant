@@ -1,0 +1,90 @@
+{
+  "banner": {
+    "eyebrow": "Reservations",
+    "title": "Reserve your table at Kalpataru Grand.",
+    "subtitle": "Planning a family brunch, group lunch, or special celebration? Let us know ahead of time.",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=80"
+  },
+  "experiences": {
+    "eyebrow": "Choose Your Experience",
+    "title": "Three ways to dine with us.",
+    "subtitle": "Whether it's a quick breakfast or a leisurely lunch — we have the perfect setting.",
+    "items": [
+      {
+        "id": "dine-in",
+        "name": "First Floor Dining",
+        "summary": "Spacious first floor restaurant with table service, warm lighting, and refined ambiance.",
+        "duration": "Flexible",
+        "guests": "2 – 20 guests",
+        "price": "₹100 – ₹200 / person",
+        "features": [
+          "Full vegetarian menu",
+          "Table service",
+          "Wheelchair accessible"
+        ],
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "rooftop",
+        "name": "Rooftop Seating",
+        "summary": "Open-air rooftop dining with a relaxed atmosphere and great views.",
+        "duration": "Flexible",
+        "guests": "2 – 10 guests",
+        "price": "₹100 – ₹200 / person",
+        "features": [
+          "Open air seating",
+          "Full menu available",
+          "Evening ambience"
+        ],
+        "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "private",
+        "name": "Private Dining Room",
+        "summary": "Exclusive private dining space for group gatherings and celebrations.",
+        "duration": "2 – 4 hours",
+        "guests": "10 – 40 guests",
+        "price": "Custom packages",
+        "features": [
+          "Private space",
+          "Catering service",
+          "Good for kids' birthdays"
+        ],
+        "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80"
+      }
+    ]
+  },
+  "form": {
+    "eyebrow": "Your Details",
+    "title": "Tell us about your reservation.",
+    "subtitle": "Fill in your details and we'll confirm your table. Brunch and lunch reservations recommended.",
+    "submit": "Send Reservation Request",
+    "promise": "We respond to every request. For immediate assistance, call us at +91 76769 90122."
+  },
+  "steps": {
+    "eyebrow": "What Happens Next",
+    "title": "From request to your table.",
+    "items": [
+      {
+        "step": "01",
+        "title": "Request received",
+        "description": "Your details reach our team — we check availability for your preferred date and time."
+      },
+      {
+        "step": "02",
+        "title": "Confirmation call",
+        "description": "We call or message you to confirm your table and discuss any special requirements."
+      },
+      {
+        "step": "03",
+        "title": "You're all set",
+        "description": "Arrive at Kalpataru Grand and your table will be ready — first floor, rooftop, or private room."
+      },
+      {
+        "step": "04",
+        "title": "Enjoy your meal",
+        "description": "Relax in our cozy ambiance and enjoy pure vegetarian flavors. End with a filter coffee on us."
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "eyebrow": "Our Services",
+  "title": "More than a meal — a complete dining experience.",
+  "subtitle": "From breakfast dosas to evening desserts, dine-in to drive-through — we serve you the way you prefer.",
+  "items": [
+    {
+      "icon": "utensils",
+      "title": "Dine-In Experience",
+      "description": "Spacious first floor restaurant with warm lighting, tasteful décor, and a cozy yet refined ambiance.",
+      "features": ["Table service", "Counter service", "Rooftop seating"],
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "car",
+      "title": "Drive-Through",
+      "description": "In a hurry? Use our drive-through service for quick bites, snacks, and takeaway packages.",
+      "features": ["Quick service", "Full menu available", "Parcel packaging"],
+      "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "truck",
+      "title": "Delivery & Takeaway",
+      "description": "No-contact delivery and takeaway available. Get your favorite dishes delivered to your doorstep.",
+      "features": ["No-contact delivery", "Order online", "Parcel charges extra"],
+      "image": "https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "icon": "users",
+      "title": "Catering & Events",
+      "description": "We cater for events, parties, and celebrations. Private dining room available for special occasions.",
+      "features": ["Catering service", "Private dining room", "Custom menus"],
+      "image": "https://images.unsplash.com/photo-1530062845289-9109b2c9c868?auto=format&fit=crop&w=900&q=80"
+    }
+  ]
+}

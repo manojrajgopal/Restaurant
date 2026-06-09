@@ -1,0 +1,43 @@
+{
+  "eyebrow": "Helpful Information",
+  "title": "Things to know before your visit.",
+  "subtitle": "Have a question? Find quick answers below or reach out to us directly.",
+  "items": [
+    {
+      "question": "Is Kalpataru Grand a pure vegetarian restaurant?",
+      "answer": "Yes! We are a 100% pure vegetarian restaurant. Our entire menu — from breakfast dosas to dinner thalis — is completely vegetarian with vegan options available."
+    },
+    {
+      "question": "What are your operating hours?",
+      "answer": "We are open every day from 8:00 AM to 9:45 PM. We serve breakfast, brunch, lunch, and dinner throughout the day."
+    },
+    {
+      "question": "Do you accept reservations?",
+      "answer": "Yes, we accept reservations for both brunch and lunch. Walk-ins are also welcome. Call us at +91 76769 90122 to book your table."
+    },
+    {
+      "question": "Is there parking available?",
+      "answer": "Yes! We have plenty of parking including a free parking lot and free street parking. The parking area is wheelchair-accessible."
+    },
+    {
+      "question": "Do you offer delivery and drive-through?",
+      "answer": "Yes, we offer dine-in, drive-through, no-contact delivery, and takeaway options. Parcel charges extra."
+    },
+    {
+      "question": "Is the restaurant wheelchair accessible?",
+      "answer": "Yes, we are fully wheelchair accessible — including car park, entrance, seating areas, and restrooms."
+    },
+    {
+      "question": "What payment methods are accepted?",
+      "answer": "We accept credit cards, debit cards, Google Pay, and NFC mobile payments in addition to cash."
+    },
+    {
+      "question": "Is it suitable for kids?",
+      "answer": "Absolutely! We're good for kids and kids' birthdays. We have a dedicated kids' menu and a family-friendly atmosphere."
+    },
+    {
+      "question": "Do you have a rooftop seating area?",
+      "answer": "Yes, rooftop seating is one of our highlights. The first floor restaurant is spacious and can accommodate large crowds."
+    }
+  ]
+}

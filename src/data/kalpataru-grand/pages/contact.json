@@ -1,0 +1,18 @@
+{
+  "banner": {
+    "eyebrow": "Contact Us",
+    "title": "We'd love to hear from you.",
+    "subtitle": "For reservations, catering, delivery orders, or feedback — reach out anytime.",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=2000&q=80"
+  },
+  "map": {
+    "eyebrow": "Find Us",
+    "title": "Near KIT Engineering College, BH Road.",
+    "subtitle": "Conveniently located near KIT Engineering College in Vidya Nagar, Tiptur — a popular stop for travellers on the Tumkur-Hassan highway.",
+    "directions": [
+      { "label": "By road", "value": "On BH Road (Bengaluru-Honnavar highway), near KIT Engineering College, Vidya Nagar, Tiptur." },
+      { "label": "Parking", "value": "Free parking lot and free street parking available. Wheelchair-accessible car park." },
+      { "label": "Plus Code", "value": "7F62+XPX, Vidya Nagar, Tiptur, Karnataka 572201" }
+    ]
+  }
+}

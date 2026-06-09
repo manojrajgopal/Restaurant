@@ -1,0 +1,31 @@
+{
+  "eyebrow": "Why Kalpataru",
+  "title": "A dining experience that brings quality and tradition together.",
+  "subtitle": "From our signature dosas and thalis to great coffee and desserts — every detail is crafted to make your visit memorable.",
+  "items": [
+    {
+      "icon": "leaf",
+      "title": "100% Pure Vegetarian",
+      "description": "A completely vegetarian menu with vegan options — South Indian, North Indian, Chinese, chats, juices, and desserts.",
+      "accent": "from-emerald-400/30 to-green-400/10"
+    },
+    {
+      "icon": "coffee",
+      "title": "Great Coffee & Tea",
+      "description": "Known for our filter coffee, masala chai, and refreshing milkshakes — the perfect companions to any meal.",
+      "accent": "from-amber-400/30 to-orange-400/10"
+    },
+    {
+      "icon": "accessibility",
+      "title": "Fully Accessible",
+      "description": "Wheelchair-accessible car park, entrance, seating, and restrooms — everyone is welcome at Kalpataru Grand.",
+      "accent": "from-blue-400/30 to-indigo-400/10"
+    },
+    {
+      "icon": "users",
+      "title": "Family & Group Friendly",
+      "description": "Good for kids, groups, tourists, and university students. Private dining room available for gatherings.",
+      "accent": "from-purple-400/30 to-fuchsia-400/10"
+    }
+  ]
+}

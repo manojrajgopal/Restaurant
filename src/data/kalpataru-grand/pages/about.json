@@ -1,0 +1,81 @@
+{
+  "banner": {
+    "eyebrow": "About Us",
+    "title": "A cherished culinary haven where tradition meets innovation.",
+    "subtitle": "Kalpataru Grand — serving pure vegetarian food with quality ingredients, delightful flavors, and exceptional service in Tiptur, Karnataka.",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=80"
+  },
+  "philosophy": {
+    "eyebrow": "Our Values",
+    "title": "What makes Kalpataru Grand special.",
+    "subtitle": "Simple principles that guide everything we do — from ingredient sourcing to guest experience.",
+    "items": [
+      {
+        "number": "i.",
+        "title": "Quality First",
+        "description": "Each dish is thoughtfully crafted with quality ingredients and authentic flavors that bring out the best in every cuisine we serve."
+      },
+      {
+        "number": "ii.",
+        "title": "Pure Vegetarian",
+        "description": "A 100% vegetarian kitchen — from breakfast to dinner, every dish respects vegetarian values without compromising on taste."
+      },
+      {
+        "number": "iii.",
+        "title": "Inclusive Space",
+        "description": "Fully wheelchair-accessible, family-friendly, and welcoming to everyone — from university students to tourists and groups."
+      },
+      {
+        "number": "iv.",
+        "title": "Consistency",
+        "description": "Over 5,300 reviews and a 4.1 rating — we deliver the same quality and taste with every visit, every dish, every day."
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Your Visit",
+    "title": "How a meal at Kalpataru Grand unfolds.",
+    "subtitle": "From the moment you arrive to the last sip of filter coffee — every step is designed for your comfort.",
+    "steps": [
+      {
+        "time": "Arrive",
+        "title": "Easy access",
+        "description": "Plenty of free parking, wheelchair-accessible entrance, and a warm welcome at the door."
+      },
+      {
+        "time": "Choose",
+        "title": "Table or counter",
+        "description": "Table service on the first floor or quick counter service — pick what suits your schedule."
+      },
+      {
+        "time": "Savor",
+        "title": "Freshly prepared",
+        "description": "From dosas made on the tawa to thalis assembled fresh — every dish is prepared to order."
+      },
+      {
+        "time": "Enjoy",
+        "title": "Linger with coffee",
+        "description": "End your meal with our signature filter coffee or a cold milkshake. Take your time."
+      }
+    ]
+  },
+  "team": {
+    "eyebrow": "Our Team",
+    "title": "The people behind Kalpataru Grand.",
+    "subtitle": "A dedicated team passionate about pure vegetarian food and exceptional hospitality.",
+    "members": [
+      {
+        "name": "Head Chef",
+        "role": "Kitchen Lead",
+        "bio": "Specializing in South Indian breakfast and North Indian thalis, our head chef brings decades of experience in vegetarian cooking.",
+        "image": "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "name": "Service Manager",
+        "role": "Guest Relations",
+        "bio": "Ensuring every guest — from walk-ins to large groups — has a seamless and memorable dining experience.",
+        "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80"
+      }
+    ]
+  }
+}

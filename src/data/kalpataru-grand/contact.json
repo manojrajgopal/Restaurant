@@ -1,0 +1,15 @@
+{
+  "eyebrow": "Get in Touch",
+  "title": "We'd love to hear from you.",
+  "subtitle": "For reservations, catering inquiries, or any questions — reach out to us.",
+  "formLabels": {
+    "name": "Your Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "date": "Preferred Date",
+    "guests": "Number of Guests",
+    "message": "Any special requirements?",
+    "submit": "Send Message"
+  },
+  "promise": "We respond to every inquiry. Call us for immediate assistance at +91 76769 90122."
+}

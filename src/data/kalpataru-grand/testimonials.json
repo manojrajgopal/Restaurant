@@ -1,0 +1,42 @@
+{
+  "eyebrow": "What Our Guests Say",
+  "title": "Reviews from the people who dine with us.",
+  "subtitle": "Real feedback from our 5,300+ reviewers on Google.",
+  "items": [
+    {
+      "name": "Sandeep HN",
+      "role": "Local Guide · 22 reviews",
+      "quote": "Just had lunch everything was second to none. Actually took an extra rice to taste the rasam and sambar. Butter milk, Curd and sweet was also good. Five star for everything including ambience and service. Really tasty lunch. Do stop if you are going this way.",
+      "rating": 5,
+      "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "name": "Shaji Kumar",
+      "role": "Local Guide · 434 reviews",
+      "quote": "Good place for vegetarian food. Ample parking available. The 1st floor restaurant is big and can accommodate large crowds. The north indian thali, the daal khichdi were very good. Clean wash area and washrooms. Overall a happy customer. A must visit lunch place when you are in Tiptur.",
+      "rating": 4,
+      "avatar": "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "name": "Prakash Satyanarayan",
+      "role": "Local Guide · 80 reviews",
+      "quote": "Nice place for vegetarian food. We went there around 9pm, South Indian food, like idli/vada, dosa, rava dosa, etc were available. Good food and good coffee.",
+      "rating": 4,
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "name": "Jaikumar M P",
+      "role": "Local Guide · 331 reviews",
+      "quote": "One of the best options to stop for food when you are travelling from Tumkur to Hasan via Tiptur. Food was good. A great stop for highway travellers looking for quality vegetarian food.",
+      "rating": 4,
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "name": "Yashaswini K",
+      "role": "Local Guide · 140 reviews",
+      "quote": "Stayed here. Good service. Spacious rooms, decent washrooms. The restaurant has a nice ambiance and the food quality is consistently good.",
+      "rating": 4,
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80"
+    }
+  ]
+}

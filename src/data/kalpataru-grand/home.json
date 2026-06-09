@@ -1,0 +1,36 @@
+{
+  "aboutTeaser": {
+    "eyebrow": "Our Story",
+    "title": "More than a restaurant. A tradition of taste.",
+    "subtitle": "A cherished culinary haven in Tiptur where quality ingredients meet authentic flavors — trusted by 5,300+ happy reviewers.",
+    "cta": { "label": "Read Our Story", "href": "/about" },
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+    "marks": [
+      { "value": "5,300+", "label": "Reviews" },
+      { "value": "4.1★", "label": "Google Rating" },
+      { "value": "100+", "label": "Menu Items" }
+    ]
+  },
+  "menuPreview": {
+    "eyebrow": "From the Menu",
+    "title": "A taste of what awaits you.",
+    "subtitle": "Some of our most loved dishes — explore the full menu for even more options.",
+    "cta": { "label": "View Full Menu", "href": "/menu" },
+    "highlightIds": ["m1", "m5", "m16", "m25"]
+  },
+  "galleryPreview": {
+    "eyebrow": "Inside Kalpataru",
+    "title": "Warm lighting, tasteful décor, and an inviting atmosphere.",
+    "subtitle": "Take a peek at our elegant interiors, signature dishes, and the family-friendly ambience.",
+    "cta": { "label": "View Full Gallery", "href": "/gallery" },
+    "limit": 6
+  },
+  "closingCta": {
+    "eyebrow": "Visit Us Today",
+    "title": "Breakfast. Lunch. Dinner. Every meal, pure vegetarian.",
+    "subtitle": "Whether it's a morning dosa, afternoon thali, or evening snack — we're here from 8 AM to 9:45 PM every day.",
+    "primary": { "label": "Reserve a Table", "href": "/reserve" },
+    "secondary": { "label": "View Menu", "href": "/menu" },
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1600&q=80"
+  }
+}
