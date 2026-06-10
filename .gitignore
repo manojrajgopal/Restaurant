@@ -7,9 +7,9 @@ out
 .vscode
 
 # Ignore all brand images
-# public/images/brands/*
-# !public/images/brands/sg-nisarga-family/
+public/images/brands/*
+!public/images/brands/royal-bistro/
 
 # Ignore all restaurant data
-# src/data/*
-# !src/data/sg-nisarga-family/
+src/data/*
+!src/data/royal-bistro/
